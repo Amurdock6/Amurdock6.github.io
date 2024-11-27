@@ -78,6 +78,7 @@ h2 {
 .title-area h4 {
   font-size: 1rem;
   color: grey;
+  text-align: end;
 }
 
 .short-description {
