@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- TODO some different styling in the code portion? Add pictures -->
 <head>
       <meta name="keywords"
-            content="Alexander Murdock, Alex Murdock, Alexander Murdock Portfolio, Alex Murdock Portfolio, Riverton High Auto">
+            content="RaspberryPi Digital Dash, Digital Dash, RaspberryPi, OBD-II, 350z, 350z Digital Dash, Alexander Murdock, Alex Murdock, Alexander Murdock Portfolio, Alex Murdock Portfolio">
       <meta name="description" content="The Portfolio of Alexander Murdock, Web Developer and Designer.">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta name="author" content="Alexander Murdock">
-      <link rel="icon" href="icons/portfolio-logo.png">
+      <link rel="icon" href="/icons/portfolio-logo.png">
 
-      <title>Alexander Murdock - RHS Auto</title>
+      <title>Alex Murdock - Raspbery Pi Digital Dash</title>
 
       <!-- stylesheet -->
       <link rel="stylesheet" href="/css/style.css">
       <link rel="stylesheet" href="/css/nav.css">
       <link rel="stylesheet" href="/css/projects.css">
+      <link rel="stylesheet" href="/css/blogpage.css">
 
       <!-- bootstrap -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -30,164 +31,580 @@
 
 
       <!-- for on scroll animations -->
-      <link rel="stylesheet" href="css/animate.css">
-      <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="/css/animate.css">
+      <script src="/js/wow.min.js"></script>
 </head>
 
 <body>
-      <div class="wrapper">
-            <nav>
-                  <span id="brand">
-                        <a href="index.html">Alex Murdock</a>
-                        <br>
-                        <a href="index.html" id="freelance">Software Engineer</a>
-                  </span>
+      <nav>
+            <span id="brand">
+                  <a href="/index.html">Alex Murdock</a>
+                  <br>
+                  <a href="/index.html" id="freelance">Software Engineer</a>
+            </span>
 
-                  <ul id="menu">
-                        <li>
-                              <a href="/index.html">
-                                    <span>.</span>
-                                    <span>home</span>
-                                    <span>home</span>
-                              </a>
-                        </li>
+            <ul id="menu">
+                  <li>
+                        <a href="/index.html">
+                              <span>.</span>
+                              <span>home</span>
+                              <span>home</span>
+                        </a>
+                  </li>
 
-                        <li>
-                              <a href="/index.html#projects">
-                                    <span>.</span>
-                                    <span>projects</span>
-                                    <span>projects</span>
-                              </a>
-                        </li>
+                  <li>
+                        <a href="/index.html#projects">
+                              <span>.</span>
+                              <span>projects</span>
+                              <span>projects</span>
+                        </a>
+                  </li>
 
-                        <li>
-                              <a href="/work.html">
-                                    <span>.</span>
-                                    <span>work</span>
-                                    <span>work</span>
-                              </a>
-                        </li>
+                  <li>
+                        <a href="/work.html">
+                              <span>.</span>
+                              <span>work</span>
+                              <span>work</span>
+                        </a>
+                  </li>
 
-                        <li>
-                              <a href="/certifications.html">
-                                    <span>.</span>
-                                    <span>certifications</span>
-                                    <span>certifications</span>
-                              </a>
-                        </li>
+                  <li>
+                        <a href="/certifications.html">
+                              <span>.</span>
+                              <span>certifications</span>
+                              <span>certifications</span>
+                        </a>
+                  </li>
 
-                        <li>
-                              <a href="/blog.html">
-                                    <span>.</span>
-                                    <span>blog</span>
-                                    <span>blog</span>
-                              </a>
-                        </li>
+                  <li>
+                        <a href="/blog.html">
+                              <span>.</span>
+                              <span>blog</span>
+                              <span>blog</span>
+                        </a>
+                  </li>
 
-                        <li>
-                              <a href="/about.html">
-                                    <span>.</span>
-                                    <span>about me</span>
-                                    <span>about me</span>
-                              </a>
-                        </li>
+                  <li>
+                        <a href="/about.html">
+                              <span>.</span>
+                              <span>about me</span>
+                              <span>about me</span>
+                        </a>
+                  </li>
 
-                        <li>
-                              <a href="/contact.html">
-                                    <span>.</span>
-                                    <span>contact</span>
-                                    <span>contact</span>
-                              </a>
-                        </li>
-                  </ul>
+                  <li>
+                        <a href="/contact.html">
+                              <span>.</span>
+                              <span>contact</span>
+                              <span>contact</span>
+                        </a>
+                  </li>
+            </ul>
 
-                  <div id="toggle">
-                        <div class="span">menu</div>
-                  </div>
-            </nav>
-
-            <div id="resize">
-                  <div class="close-btn">close</div>
-                  <ul id="menu">
-                        <li><a href="/index.html">home<span>.</span></a></li>
-                        <li><a href="/work.html">work<span>.</span></a></li>
-                        <li><a href="/certifications.html">certifications<span>.</span></a></li>
-                        <li><a href="/blog.html" id="active-selector" class="">blog<span>.</span></a></li>
-                        <li><a href="/about.html">about me<span>.</span></a></li>
-                        <li><a href="/contact.html">contact<span>.</span></a></li>
-                  </ul>
+            <div id="toggle">
+                  <div class="span">menu</div>
             </div>
+      </nav>
 
-            <div class="whitespace"></div>
-
-            <!-- Opening image full width -->
-            <h2 style="text-align: center; margin-top: 10%;">Post Coming Soon</h2>
-            <!-- header and first section subject-->
-
-            <!-- images on side taking up 50% of widt with text wraping around other 50% -->
-
-            <!-- section 2 same idea as above -->
-
-            <!-- conclusion/ wrap up -->
-
-            <div class="whitespace"></div>
-
-            <div class="footer">
-                  <div class="container">
-                        <br><br>
-
-                        <div class="collab">
-                              <div class="row">
-                                    <div class="col-lg-12">
-                                          <p class="wow fadeInUp">Got an interesting project? I can help.</p>
-                                    </div>
-                              </div>
-                        </div>
-
-                        <br>
-
-                        <div class="hr">
-                              <div class="row"></div>
-                        </div>
-
-                        <br><br>
-
-                        <div class="info">
-                              <div class="row">
-                                    <div class="col-lg-4" id="personal">
-                                          <p class="wow fadeInUp">connect with me</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a href="https://www.linkedin.com/in/alex-murdock/">ln @Alexander Murdock</a></h4>
-                                          <br><br>
-                                    </div>
-
-                                    <div class="col-lg-4" id="media">
-                                          <p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
-
-                                          <ul>
-                                                <li id="gh" class="wow fadeInUp" data-wow-delay="0.4s"><a href="https://github.com/Amurdock6">gh</a></li>
-                                                <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s"><a href="https://www.linkedin.com/in/alex-murdock/">ln</a>
-                                                </li>
-                                          </ul>
-
-                                          <br><br>
-                                    </div>
-
-                                    <div class="col-lg-4" id="address">
-                                          <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>
-                                          </h4>
-                                          <br><br>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <br><br><br><br>
-
+      <div id="resize">
+            <div class="close-btn">close</div>
+            <ul id="menu">
+                  <li><a href="/index.html">home<span>.</span></a></li>
+                  <li><a href="/work.html">work<span>.</span></a></li>
+                  <li><a href="/certifications.html">certifications<span>.</span></a></li>
+                  <li><a href="/blog.html" id="active-selector" class="">blog<span>.</span></a></li>
+                  <li><a href="/about.html">about me<span>.</span></a></li>
+                  <li><a href="/contact.html">contact<span>.</span></a></li>
+            </ul>
       </div>
+
+      <div class="whitespace"></div>
+
+      <!-- main content -->
+      <div class="container blogpost">
+            
+            <!-- <div class="whitespace"></div> -->
+
+            <header>
+                  <h1>Raspbery pi/350z Digital Dash</h1>
+
+                  <div class="hr wow fadeInUp" data-wow-delay="1.65s"
+                        style="visibility: visible; animation-delay: 1.65s; animation-name: fadeInUp;">
+                        <div class="row"></div>
+                  </div>
+
+                  <div class="post-date-read-time">
+                        <h2>posted: <span>11/29/2024</span></h2><h3>10 minute read</h3>
+                  </div>
+            </header>
+
+            <hr />
+            
+            <h4>quick links</h4>
+            <div class="tableOfContents">
+                  <a href="#overview">overview</a> |
+                  <a href="#intro">intro</a> |
+                  <a href="#whyapi">why a pi</a> |
+                  <a href="#displayandoutput">display and output</a> |
+                  <a href="#mountingthescreen">mounting the screen</a> |
+                  <a href="#software">the software</a> |
+                  <a href="#poweringthepi">powering the pi</a> |
+                  <a href="#shutdownscript">shutdown script</a> |
+                  <a href="#outro">outro and final thoughts</a> |
+                  <a href="#materials_hardware">material list</a> 
+
+
+
+            </div>
+            <hr />
+
+            <br>
+
+            <!-- Opening image Carousel -->
+            <div class="carousel">
+                  <!-- Prev Button -->
+                  <button class="carousel-btn prev" id="prevBtn">&#9664;</button>
+                  
+                  <!-- Main Carousel Images -->
+                  <div class="carousel-images" id="carouselImages">
+                        <img src="/images/blog-posts/post1/glovebox.webp" alt="Complete set up including pi and all electronics in back of 350z glovebox." class="carousel-image">
+                        <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4b 8gb with ada fruit HAT." class="carousel-image">
+                        <img src="/images/blog-posts/post1/wiring-diagram.webp" alt="Complete Wiring Diagram." class="carousel-image">
+                  </div>
+      
+                  <!-- Progress Bar Container with Pause/Play Button -->
+                  <div class="progress-bar-container">
+                        <button class="carousel-btn pause-play" id="pausePlayBtn">&#10074;&#10074;</button> <!-- Pause Icon -->
+                        <div class="progress-bar" id="progressBar"></div>
+                  </div>
+      
+                  <!-- Next Button -->
+                  <button class="carousel-btn next" id="nextBtn">&#9654;</button>
+            </div>
+
+            <hr />
+            <br>
+
+            <main> <!-- maybe a listen button? -->
+                  <div class="hero-content">
+                        <h3 id="overview">Project Overview:</h3>
+                        <p>
+                              When I set out to create a Digital Dash for my 350z I faced many challenges and unanswered questions. I spent many
+                              weekends testing and figuring out solutions that simply weren't documented anywhere online. This post is my way of
+                              sharing what I've learned so that others attempting a similar project have the information I wish I'd had at the
+                              start. If you're looking, to build your own Digital Dash, consider this a guide or at least some
+                              inspiration.<br><br>
+                        
+                              So, what exactly is this Digital Dash? As the name suggests, it's a system that displays and logs a wide range of
+                              real-time data from your car, sourced from various inputs including an OBDII scanner, accelerometer, gyroscope,
+                              and
+                              GPS. This data can be displayed and logged for virtually any use case you can imagine. A few examples include: AFR
+                              (air fuel ratio), boost pressure, oil temp, coolant temp, throttle position, intake manifold pressure, fuel
+                              pressure, RPM, speed, check engine lights, G-force meter, 0-60 timer, lap timer, maintenance interval tacking,
+                              etc. The possibilities are endless, limited only by your creativity and the available data inputs. This project is
+                              powered by a Raspberry pi 4 Model B (8GB) running <a href="https://konstakang.com/devices/rpi4/AOSP13/">AOSP (Android 13)</a>, equipped with an Adafruit Ultimate GPS HAT
+                              and MPU-6050 6-axis module for enhanced data collection. All of this is powered by the car's 12v system and
+                              displayed through a custom Android app I'm developing to visualize and log the data.
+                        </p>
+                        
+                        <h3 id="intro">Okay now let's jump into it: </h3>
+                        <p>
+                              This project began when I was having constant overheating issues with my 350z and realized that the factory coolant
+                              temperature gauge wasn't cutting it. The stock gauge is very low resolution and by the time it indicates
+                              temperatures are rising it's too late and the car’s already overheating. I needed a better solution, one that
+                              could provide real-time, accurate numerical readings. Luckily, I had a Raspberry pi 4B (8GB) sitting around from
+                              an old project of mine where I had it running Pi-hole. After I did some research on what the best way to do this
+                              would be. I found there was a project out there called KonstaKANG.com where they were able to get LineageOS
+                              working on a Raspberry pi. So, I downloaded <a href="https://konstakang.com/devices/rpi4/AOSP13/"> AOSP (Android 13)</a> off their website and got that installed. I followed this fantastic <a href="https://www.youtube.com/watch?v=reuH6NEk6B4">YouTube tutorial</a> to get it up and running on my pi.
+                              This laid the groundwork for the custom Digital Dash I was about to create.
+                        </p>
+
+                        <h3 id="whyapi">Why I chose a Pi:</h3>
+                        <p>
+                              Let me explain the reasoning on why I decided to go with a Raspberry pi, specifically a pi that is running android
+                              13 on it. I was looking to learn more about android development and when I needed some gauges for the Z this just
+                              seemed like the perfect opportunity. Why use a pi? Well because they are cheap, I had one lying around, they have
+                              bluetooth which in order to retrieve data from the ECU I had two options either tap into the CAN bus of the Z and
+                              try to decode the data or two simply use a OBDII scanner and connect to that via bluetooth. I opted for option two
+                              and am using an OBDII scanner, specifically <a href="https://www.amazon.com/BAFX-Products-Wireless-Bluetooth-Diagnostic/dp/B005NLQAHS">this one</a>. 
+                              The downside to this compared to CAN bus is that in my case I
+                              get slightly less data, for example I can not access the oil temp sensor data and the data transfer speeds are
+                              also slower. But for my purposes and must other purposes this is perfectly fine and I still get access to all the
+                              important data I want. Another plus is that the GPIO pins on the Raspberry pi allowed me to set up a shut down script easily
+                              plus the added benefit is that I could expanded the features I need in the future to use hardwired data inputs
+                              like (gps, accelerometer, gyroscope, etc.) all of which are features I ended up adding. More on those additional
+                              add ons, I am running a <a href="https://www.adafruit.com/product/2324">Adafruit Ultimate GPS HAT for Raspberry pi</a> this gives me access to GPS features so I can
+                              track things like lap times, 0-60 times, speed and other GPS related features. In the future, I plan to integrate these capabilities into the Android app I’m developing to display all this data. Now I also
+                              have another add-on board that has an accelerometer, and gyroscope on it to collect more data for things like a
+                              G-meter and another way to collect data during track days. Here is <a href="https://www.amazon.com/HiLetgo-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B01DK83ZYQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A30QSGOJR8LMXA&th=1">the module I am using</a>. 
+                              To get this all working together I soldered on some new pins to the adafruit HAT on the: SDA, SCD, #18 pin (for shutdown script), three
+                              GND, one 5v, one 3v and then was able to connect that to my MPU-6050 module. All you need to do to get this
+                              working is connect the SDA and SCD pins plus a 5v power and ground from the pi to the MPU-6050 module to the ones
+                              on the adafruit or GPIO pins on the Raspberry pi. This lets everything talk and work together.
+                        </p>
+
+                        <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4B with all the hardware attached. Including adafruit Ultimate GPS HAT"/>
+
+                        <hr />
+
+                        <h3 id="displayandoutput">Display and Outputs:</h3>
+                        <p>
+                              Finally, how do we actually display the data, and how can you, the user, interact with it? Well I found the perfect
+                              solution for my self. My 350Z has an opening where the factory navigation system used to be. Since it hasn’t worked since I’ve
+                              owned the car, I decided to remove it and replace it with a <a href="https://www.amazon.com/SunFounder-Raspberry-Touchscreen-1024%C3%97600-Capacitive/dp/B07Y889J3X/ref=sr_1_21?crid=222H27RJNFPZ3&dib=eyJ2IjoiMSJ9.jR_TlBjuixZvAHi-ZnuXc7X_T_IJLCVz3qjyNpoAUSxNQm1zg_yx_JEBNMIUrmbwJbWVSBCUrjTX8EwAAOAIiR3loRKPiVOPr9ZLpXlvSznaGCAMsGusoVv5_1vf3Zgp8gp6WuZtbdtBMj_lRBBoi_aP0vYirC5y4-8Dho087zHVxPb5VNMBSCuAAAkFIEvU0a5bcjAKuI7SINIFbQs9epztgYQ-ZdahH8ljqRMJjlxCN-4vMzcwYeG7kChzt6GMOvZpessbHsfS33DvHuezoLOdXB7P_5xbkj83zvsf1bw.OlIqTvJ-sgmdMbSFXoTZPbzHDfl4wW99XLQ0nx6Vzug&dib_tag=se&keywords=raspberry+pi+4+display+touchscreen&qid=1732762110&s=electronics&sprefix=raspberry+pi+4+display+touchscreen,electronics,144&sr=1-21&th=1">7-inch touchscreen display</a> like this one.
+                        </p>
+                        
+                        <img src="" alt="Show case of the 7-inch touch screen display that I mounted in my 350z." />
+
+                        <hr/>
+                        
+                        <p>
+                              To install the screen, I ran an HDMI cable and a Micro USB to USB-A cable from the screen’s location back to the
+                              glove box area behind the passenger seat, where I store the Raspberry pi and all the additional hardware. Note
+                              that I had to use a 270-degree HDMI adapter to make the screen fit properly and also trim a bit of the plastic
+                              inside the dash. All the cutting is internal and not visible once installed.
+                        </p>
+                        
+                        <br>
+                        
+                        <p>
+                              In my case, the cover that normally goes over the navigation opening is missing, so trimming the inside wasn’t an
+                              issue. However, if you still have the cover in your 350z, you’ll want to make sure your modifications don’t interfere with its
+                              opening and closing mechanism.
+                        </p>
+
+                        <br>
+
+                        <img src="" alt="Screen mounted in the 350z factory navigation location." />
+
+                        <hr /> 
+
+                        <h3 id="mountingthescreen">Mounting the Screen:</h3>
+                        <p>
+                              In order to get the screen to sit flush with the trim I made a custom mount using parts of the old factory nav
+                              mounting system to get the angle right plus my own custom bits using some bolts and nuts to get the depth right.
+                              If I were to make this again I would 3D print something. But if I learned anything from intro to engineering it’s that
+                              adjustability can make your life much easier and in this situation it did, as it took a lot of adjusting to get the
+                              screen to sit just right.
+                        </p>
+
+                        <br>
+
+                        <img src="" alt="The Screen and it's mouting mechanism" />
+
+                        <hr />
+
+                        <h3 id="software">The Software:</h3>
+                        <p>
+                              The software I am running on this is a custom android app called Android Race Dash or ARD for short that I am
+                              working on in my free time. Though I don’t have much of it these days, so development is pretty slow since I am not
+                              only learning how to develop android apps in the process but also need to engineer some pretty complex operations
+                              to get all the features I want to run efficiently given the OBDII protocol is not the fastest thing in the world.
+                              If you are wanting to do this yourself, I would recommend going with the torque pro app while I am still in the
+                              process of developing Android Race Dash. Here is the <a href="https://github.com/Amurdock6/Android-Race-Dash">GitHub Repo</a> if you want to fork my work or contribute to the
+                              project. 
+                        </p>
+
+                        <h3 id="poweringthepi">Powering the Raspberry pi 4B in a Automotive Environment:</h3>
+                        <p>
+                              Now let’s dive into the wiring, the nitty-gritty details of connecting the Raspberry pi to the car's electrical
+                              system efficiently, while avoiding unnecessary battery drain when the car is off. Below is the complete wiring
+                              diagram I created. Following this and installing my shut down script will yield you the same results that I have
+                              in my set up.
+                        </p>
+                        
+                        <img id="wiring-diagram" src="/images/blog-posts/post1/wiring-diagram.webp" alt="Complete wiring diagram showing how the pi and all its related hardware is wired into the cars 12v system." />
+                        
+                        <hr />
+                        
+                        <p>
+                              I am no electrical engineer so there might be an easier way to do this without the relays. That being said, this
+                              setup is working great and I’ve had no issues.
+                        </p>
+                        
+                        <p>
+                              The Raspberry pi 4B requires 5V to run, but since cars provide 12V, I needed to step the voltage down. To do this,
+                              I used 12V to 5V DC-DC Buck Converters, <a href="https://www.amazon.com/Converter-Voltage-Waterproof-Regulator-Step-Down/dp/B07Y2V1F8V/ref=asc_df_B07Y2V1F8V?mcid=4f9b9e4c200333ecafe22a27f0155c4e&tag=hyprod-20&linkCode=df0&hvadid=693558272631&hvpos=&hvnetw=g&hvrand=12734499194843680300&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-843941145334&th=1">these ones</a> 
+                              specifically. While you can buy these converters with a
+                              built-in USB-C output (making them plug-and-play), I decided to make my own connector instead of waiting for
+                              another part to arrive.
+                        </p>
+
+                        <p>Here's what I did:</p>
+                        <ul>
+                              <li>
+                                    I cut the USB-C connector off an old cable, stripped the wires, and soldered the positive and negative wires
+                                    to the 5V output of the buck converter. This DIY approach works just as well and retains the Raspberry pi’s
+                                    factory surge protection system, which is important for automotive environments with potential voltage
+                                    spikes.
+                              </li>
+                        </ul>
+
+                        <p>
+                              I would recommend the simpler solution and just buy a buck converter that already comes with a 5V USB-C output and
+                              another with the 5v bare wire output for the GPIO pins, but the way I did it is just as good if you have the spare
+                              parts lying around and the know-how.
+                        </p>
+
+                        <h3>
+                              Wiring the System: Accessory, Ground, and Constant Power   
+                        </h3>
+                        <p>
+                              Next, I tapped into the car’s wiring harness behind the stereo to get power. Specifically, I used:
+                        </p>
+                        <ul>
+                              <li>
+                                    Accessory power wire: This wire only provides power when the key is in the ignition and turned to the "ON"
+                                    position. It serves as the trigger to start the system.
+                              </li>
+                              <li>
+                                    Constant power wire: This wire supplies 12V at all times, even when the car is off, to keep the Raspberry pi
+                                    powered during the shutdown process.
+                              </li>
+                        </ul>
+                        <p>
+                              For the ground, I connected the circuit to a ground wire in the stereo harness, which is grounded to the chassis.
+                              You can also ground it directly to any suitable point on the car’s frame.
+                        </p>
+
+                        <h3>Managing Shutdown with Relays</h3>
+                        <p>
+                              To avoid cutting power to the Pi abruptly (which could corrupt data or damage the SD card), I added a Main Power Timer Relay and a Normally Closed Relay:  
+                        </p>
+
+                        <ol>
+                              <li>
+                                    Main Power Timer Relay:<br>
+                                    When the accessory power wire loses power (e.g., the car turns off), this relay continues supplying power to
+                                    the Raspberry pi for 50 seconds. This gives the Pi enough time to execute a safe shutdown sequence.
+                        
+                              </li>
+                              <li>
+                                    Normally Closed Relay:<br>
+                                    This relay monitors the accessory power wire. When it detects that accessory power is off, it sends a signal
+                                    to one of the Pi’s GPIO pins (I used GPIO Pin 18) to initiate the shutdown script.
+                              </li>
+                        </ol>
+                        <p>
+                              Finally, I added a kill switch to the system. This allows me to manually cut all power to the Raspberry pi and
+                              relays when the car will be parked for an extended period, preventing battery drain.                  
+                        </p>
+
+                        <h3 id="shutdownscript">Writing the Shutdown Script for the Raspberry pi:</h3>
+                        <p>
+                              The shutdown script is a small piece of code I wrote in C, which monitors GPIO Pin 18 for a high signal. When the
+                              Normally Closed Relay sends power to this pin, the script tells the Raspberry pi to begin the shutdown process.
+                        </p>
+                        
+                        <p>
+                              The script itself was straightforward to write, but getting it to work on an Android-based OS running on the Pi
+                              took some trial and error. Here’s what I did:
+                        </p>
+                        
+                        <!-- Code Section -->
+                        <p>Place the script in the <code>/system/bin</code> directory, as this is where executable scripts are stored in Android. Set the correct permissions using the following command:</p>
+
+                        <div class="code-container">
+                            <button class="copy-btn" onclick="copyToClipboard(event)">Copy</button>
+                            <pre><code>chmod 755 /system/bin/shutdown_script.sh</code></pre>
+                        </div>
+                        
+                        <p>Since modifying files in the <code>/system</code> directory requires root access, use the <code>su</code> command before copying the script to the directory:</p>
+                        
+                        <div class="code-container">
+                            <button class="copy-btn" onclick="copyToClipboard(event)">Copy</button>
+                            <pre><code>su 
+cp shutdown_script.sh /system/bin/</code></pre>
+                        </div>
+                        
+                        <hr />
+                        <h3>Mounting the Kill Switch:</h3>
+                        <p>
+                              Like the screen, I again got lucky and the kill switch mounts perfectly where the blank button used to go next to the VSC button in the 350z. The actual switch I used was this <a href="https://www.amazon.com/DaierTek-Marine-Rocker-Waterproof-Automotive/dp/B09JB4V82P/ref=sr_1_19?crid=J76MHEG5DM1F&dib=eyJ2IjoiMSJ9.pRnmmeigyRI_X5VOp81cNEVRgosQGUY4RBMBjpF0O1DGjHj071QN20LucGBJIEps.sa5u2PYtYm3f8qTQEcsyCuaukA9BV1pZWn_eqcx4iUk&dib_tag=se&keywords=2+input+on+off+switch&qid=1732768760&sprefix=2+input+on+of+switch%2Caps%2C164&sr=8-19">2 pin on/off switch</a>.
+                        </p>
+
+                        <img src="" alt="Kill Switch housed next to VSC button in 350z." />
+
+                        <img src="" alt="The mount I used to place the kill switch in." />
+
+                        <hr />
+
+                        <h3>Result: </h3>
+                        <ul>
+                              <li>When the car is turned on the pi automatically starts up. </li>
+                              <li>When the car is turned off, the relays signal the Pi to shut down and keep it powered for 50 seconds to let the shutdown script run. </li>
+                              <li>The kill switch prevents battery drain during extended periods of inactivity. </li>
+                        </ul>
+
+                        <h3>Link to Shutdown Script:</h3>
+                        <a href="https://github.com/Amurdock6/Raspberry-Pi-4-Android-Shut-Down-Script">https://github.com/Amurdock6/Raspberry-Pi-4-Android-Shut-Down-Script</a>
+
+                        <hr />
+                        <h3 id="outro">Outro and Final Thoughts:</h3>
+                        <p>
+                              It’s been a few months since I installed the digital dash, and I’m happy to report that it’s been holding up
+                              great! Overall, this project was well worth the time and money. I’d highly recommend it to anyone who needs a
+                              digital dash and doesn’t mind tinkering or even someone who just wants to display or log data. All in all, I spent
+                              around $280, and with this setup, I can monitor any data point the ECU supplies via OBDII, as well as additional
+                              inputs from other sensors. Plus, the customization options and functionality far outweigh the limitations of
+                              traditional single-use gauges.
+                              <br>
+                              <br>
+                              For example, a single AEM gauge costs around $200, only displays one data point, and takes up significant space.
+                              With this digital dash, not only do I save money, but I also get the freedom to customize the interface however I
+                              like. The amount of functionality at this price point is unbeatable.
+                              <br>
+                              <br>
+                              The main limitations are software and OBDII data transfer speeds. Torque Pro is an excellent app and meets most
+                              needs, but it has its constraints. This is where my next project, Android Race Dash, will come in. I’m working on
+                              creating an app tailored for this setup, but between school and work, progress is slower than I’d like. Stay tuned
+                              for a future blog post about the state of the app and my plans for development.
+                              <br>
+                              <br>
+                              OBDII speed concerns can also be addressed by utilizing the Pi’s GPIO pins to connect custom sensors for
+                              time-sensitive data. This would allow for much faster readings, though it requires additional programming to make
+                              use of these inputs. For less time-critical data, like temperatures, OBDII is plenty fast.
+                              <br>
+                              <br>
+                              What would I do differently if I were to redo this project? Honestly, not much! One upgrade I plan to make is
+                              switching to a faster OBDII scanner, like the OBDLink MX+, which is considered one of the fastest wireless options
+                              for Android and is more compact than my current one.
+                              <br>
+                              <br>
+                              I’d also 3D print a better mount for the screen. While my current mount has held up well, installing it was a bit
+                              of a pain. The bolts were so close to the old nav housing that tightening them required some awkward maneuvering,
+                              and the process involved a lot of dremeling and drilling. Although it works fine and keeps the screen flush, a
+                              3D-printed mount would have been much easier to install and replicate in the future.
+                              <br>
+                              <br>
+                              Aside from those small tweaks, I wouldn’t change much. This project went surprisingly smoothly, and I hope this
+                              blog post saves you some of the research and trial-and-error I had to go through. It was a quick and rewarding
+                              project overall, and I’m excited to see how it evolves over time.
+                              <br>
+                              <br>
+                              Thank you for reading! I hope you found this guide helpful and that it saves you time on your own project. If you
+                              have any questions or need advice, feel free to email me at <a href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>. 
+                              I’ll be happy to help however I can.
+                        </p>
+
+                        <br>
+
+                        <h3 id="materials_hardware">Materials/Hardware needed: </h3>
+                        <a href="https://www.amazon.com/SunFounder-Raspberry-Touchscreen-1024%C3%97600-Capacitive/dp/B07Y889J3X/ref=sr_1_21?crid=222H27RJNFPZ3&dib=eyJ2IjoiMSJ9.jR_TlBjuixZvAHi-ZnuXc7X_T_IJLCVz3qjyNpoAUSxNQm1zg_yx_JEBNMIUrmbwJbWVSBCUrjTX8EwAAOAIiR3loRKPiVOPr9ZLpXlvSznaGCAMsGusoVv5_1vf3Zgp8gp6WuZtbdtBMj_lRBBoi_aP0vYirC5y4-8Dho087zHVxPb5VNMBSCuAAAkFIEvU0a5bcjAKuI7SINIFbQs9epztgYQ-ZdahH8ljqRMJjlxCN-4vMzcwYeG7kChzt6GMOvZpessbHsfS33DvHuezoLOdXB7P_5xbkj83zvsf1bw.OlIqTvJ-sgmdMbSFXoTZPbzHDfl4wW99XLQ0nx6Vzug&dib_tag=se&keywords=raspberry%2Bpi%2B4%2Bdisplay%2Btouchscreen&qid=1732762110&s=electronics&sprefix=raspberry%2Bpi%2B4%2Bdisplay%2Btouchscreen%2Celectronics%2C144&sr=1-21&th=1">Screen</a> - $50 <br>
+                        <a href="https://www.amazon.com/Raspberry-Pi-Computer-Suitable-Workstation/dp/B0899VXM8F/ref=sr_1_1?crid=1JP5B5MVLECEO&dib=eyJ2IjoiMSJ9.LKIixZXBwb4Zq5ODnlzUGZoAqqzYhFtFKQbFBryO3eotWRRuuEv8l9HFn3LXXaDfxTT6Y8H17VH4-1xHXLw33YAfKgVZ6wsXuoDfFrFRMNkxmKS_UcO-vS4a9TR_cruhFXFbYT72VvR5FBBFI_SNYDsBS4jzh5Sf8G-SUrxvJnUcU4SiijDxklVA1FNxBuakY7GX3xcugEV31r7MCXHOkwkwdJ3j2GVdXkE4HE6rbBgoMk38IykLZg_3-eZFDtsZXc9s-Hne7H9pk1KXGSOvZHQ5Uj3GJjQvTiFzFVx7W_E.2FjT-2paXyvowes-va5xADucCQyjBLxxvht4PGoir6E&dib_tag=se&keywords=raspberry+pi+4+model+b+8gb&qid=1732761535&s=electronics&sprefix=Raspberry+Pi+4+Model+B%2Celectronics%2C138&sr=1-1">Raspberry pi</a> - $83 (you can use a model with less memory and get the same result) <br>
+                        <a href="https://www.amazon.com/BAFX-Products-Wireless-Bluetooth-Diagnostic/dp/B005NLQAHS">OBDII Scanner</a> - $32 <br>
+                        <a href="">Wire</a> - $ <br>
+                        <a href="https://www.amazon.com/Converter-Voltage-Waterproof-Regulator-Step-Down/dp/B07Y2V1F8V/ref=asc_df_B07Y2V1F8V?mcid=4f9b9e4c200333ecafe22a27f0155c4e&tag=hyprod-20&linkCode=df0&hvadid=693558272631&hvpos=&hvnetw=g&hvrand=12734499194843680300&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-843941145334&th=1">12v to 5v buck converters x2</a> - $18 <br>
+                        <a href="https://www.amazon.com/Comidox-Automation-Display-Digital-Adjustable/dp/B07JC38GLS/ref=asc_df_B07JC38GLS?mcid=1a03b4b7f5af3179aaec05e771e731df&tag=hyprod-20&linkCode=df0&hvadid=693410589815&hvpos=&hvnetw=g&hvrand=8946551872795157077&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-1042291508314&psc=1">Timer Relay</a> - $10 <br>
+                        <a href="https://www.amazon.com/Bosch-0332209150-Fuel-Injection-Relay/dp/B004Z0U1IW/ref=asc_df_B004Z0U1IW?mcid=79fe8df7df383fad960e35365b06d4f0&tag=hyprod-20&linkCode=df0&hvadid=693547612743&hvpos=&hvnetw=g&hvrand=12200118343782118384&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-310538454416&psc=1">Normally Closed Relay</a> - $7 <br>
+                        <a href="https://www.amazon.com/ONLINE-LED-STORE-Pack-Interlocking/dp/B01KVZ2MCW/ref=pd_ci_mcx_pspc_dp_2_t_5?pd_rd_w=061P9&content-id=amzn1.sym.9cb932c3-e29e-44db-929c-bdc1460b3774&pf_rd_p=9cb932c3-e29e-44db-929c-bdc1460b3774&pf_rd_r=1PWY0QCEEZ8DZEB6TZF9&pd_rd_wg=0UZYp&pd_rd_r=8cbfb4a5-d4bc-40f2-b4a1-0abc3324593f&pd_rd_i=B01KVZ2MCW">Relay Connectors</a> - $11 <br>
+                        <a href="https://www.amazon.com/Togconn-Adapter-Vertical-Extender-Supports/dp/B0BN697DWH/ref=sr_1_3?crid=2F4GTN13IFP42&dib=eyJ2IjoiMSJ9.31fbzj6fVNQ_dnWt7D0vgEkZ_k3KUIqslxG_GhaZGF_Mt1cQRGsqiOpyhXjvMca4cfNVEHpIL1r1iEy-Qk59zSkQ4Ff2NjK56LLOWy3Wrpon4L7CFp8PBvuwW_UGIIStgLs9jwwJR1RP1H6vJXM-wxfiI7eJtDjmoA7tMZnsjqqIZMo4zUbHusfe9R6YavpvSfColusiE25OmYCk-j_6L70aCjfChsyuloKvBLHrEE-YzO8ugh_Ry-xxuX9GwY8LoPD3_NRaN8V88d0OTp52Ag19VNYR2bTJ2YZwpIwtdlw.abKX4fAaxPcGYLE5IQW6qEKnt_ybkxds7aaROeelBIM&dib_tag=se&keywords=hdmi+right+angle+adapter&qid=1732762471&s=electronics&sprefix=HDMI+right+angle%2Celectronics%2C150&sr=1-3">HDMI right angle adapter</a> - $5 <br>
+                        <a href="https://www.amazon.com/PowerBear-Cable-Braided-Nylon-Connectors/dp/B07X37CG9V/ref=sr_1_5?crid=35WOT6GLX1SAX&dib=eyJ2IjoiMSJ9.JRMESQ0LYY3UYMtpg0vDhmWNtMZ7-0RmuvsZEi3VhCjoZT_WRvubWZAJn7lc5XMgswbNI3VFvUeAPAW9k38h7--z2Rk_buJl9jS0mcqStq52Rd9b2Z9udU1rlIn_9G1d9KajN0ivTstYrIH211YzJci5bK_saTzI9EYtWwue5kVMZ8rsGbjkyfVbvIAWDUxOzsFvYSRQ0qeNeaWZNVfYVeeovl05hSFf_7U0H9HJjp0Z_2Q7SpsrNI5Vsk8ZTOEeB2nYW-o-VsS01Batnb2PGgV4BLmkELSWxdlrDqoBsDc.pBb-l3wlm9jxRjAyI8gDj5NDXfoolYUCVGc9C2jS6hU&dib_tag=se&keywords=10ft+hdmi+cable&qid=1732762606&s=electronics&sprefix=10ft+hdmi+cable%2Celectronics%2C141&sr=1-5">HDMI cable</a> - $7 <br>
+                        <a href="">HDMI to Micro HDMI adapter</a> - $6 <br>
+                        <a href="https://www.amazon.com/Amazon-Basics-Charging-Transfer-Gold-Plated/dp/B071S5NTDR/ref=sr_1_4?crid=107VRC33Y4375&dib=eyJ2IjoiMSJ9.jnNJwjOvloaH1HfBXAT3_5SylzzSkZb7h1lBQP3fYW1RdIVIMA4KfnlXGRDoDbFpeRv0IxY9_qpaIN5HZes6yFY1d_msM4hLJoKsfRhHsaKQLn_ZhhuMf8wsrHVgrwCRge30XCFDbyBYmrhyCfhD88oTzgn67Lafy16TS_FXQ3KbI6iWufQ-gUHeXUqGqrBOEZHxwcT3heW9StkkkrvtXM-P1K76PYQ_LfAEibfSMiRoY3A1fCYI1ySdPlla8sBd6vUehLfNgE0vLsB5YzoBId1jwaxtSP6CMZ4MH5Rfm3c.qkCULF54ZubpohY_bCf6oWl703k7M1sBX67KKTskHQw&dib_tag=se&keywords=10+ft+Micro+USB+to+USB+A+cord&qid=1732762671&s=electronics&sprefix=10+ft+micro+usb+to+usb+a+cord%2Celectronics%2C165&sr=1-4">Micro USB to USB A cord</a> - $8 (make sure you get one that supports file transfer) <br>
+                        <a href="https://www.amazon.com/dp/B0BRTJXND9/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B0BRTJXND9&pd_rd_w=wiZGU&content-id=amzn1.sym.8c2f9165-8e93-42a1-8313-73d3809141a2&pf_rd_p=8c2f9165-8e93-42a1-8313-73d3809141a2&pf_rd_r=382FMRZFS2WNFW2FH349&pd_rd_wg=79Eqh&pd_rd_r=fce0e718-840b-4805-a6c3-ee7fb2fb922a&s=industrial&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw">Dupont Wires</a> - $6 <br>
+
+                        <br>
+                        <h4>Optionals for more data:</h4> 
+                        <a href="https://www.amazon.com/HiLetgo-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B01DK83ZYQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A30QSGOJR8LMXA&th=1">Accelerometer and Gyroscope</a> - $7 <br>
+                        <a href="https://www.adafruit.com/product/2324">Adafruit Ultimate GPS HAT for Raspberry pi</a> - $30 <br>
+                  </div>
+            </main>
+      
+            <div class="whitespace"></div>
+      
+      </div>
+      <div class="footer">
+            <div class="container">
+                  <br><br>
+
+                  <div class="collab">
+                        <div class="row">
+                              <div class="col-lg-12">
+                                    <p class="wow fadeInUp">Got an interesting project? I can help.</p>
+                              </div>
+                        </div>
+                  </div>
+
+                  <br>
+
+                  <div class="hr">
+                        <div class="row"></div>
+                  </div>
+
+                  <br><br>
+
+                  <div class="info">
+                        <div class="row">
+                              <div class="col-lg-4" id="personal">
+                                    <p class="wow fadeInUp">connect with me</p>
+                                    <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a href="https://www.linkedin.com/in/alex-murdock/">ln @Alexander Murdock</a></h4>
+                                    <br><br>
+                              </div>
+
+                              <div class="col-lg-4" id="media">
+                                    <p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
+
+                                    <ul>
+                                          <li id="gh" class="wow fadeInUp" data-wow-delay="0.4s"><a href="https://github.com/Amurdock6">gh</a></li>
+                                          <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s"><a href="https://www.linkedin.com/in/alex-murdock/">ln</a>
+                                          </li>
+                                    </ul>
+
+                                    <br><br>
+                              </div>
+
+                              <div class="col-lg-4" id="address">
+                                    <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
+                                    <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>
+                                    </h4>
+                                    <br><br>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <br><br><br><br>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script src="/js/carousel.js"></script>
+      <script src="/js/blog.js"></script>
+      <script type="text/javascript">
+
+            $("#toggle").click(function () {
+                  $(this).toggleClass('on');
+                  $("#resize").toggleClass("active");
+            });
+
+            $("#resize ul li a").click(function () {
+                  $(this).toggleClass('on');
+                  $("#resize").toggleClass("active");
+            });
+
+            $(".close-btn").click(function () {
+                  $(this).toggleClass('on');
+                  $("#resize").toggleClass("active");
+            });
+
+            TweenMax.from("#brand", 1, {
+                  delay: 0.4,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+
+            TweenMax.staggerFrom("#menu li a", 1, {
+                  delay: 0.4,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            }, 0.1);
+
+            new WOW().init();
+
+
+      </script>
 </body>
+
 </html>
