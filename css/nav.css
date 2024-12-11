@@ -368,6 +368,35 @@ a#freelance {
     }
 }
 
+@media screen and (min-width: 2250px) {
+    nav #brand {
+            line-height: 7.15vh;
+    }
+}
+
+@media screen and (min-width: 3250px) {
+    nav #brand {
+        line-height: 6.15vh;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1562px) and (max-height: 4000px) {
+    nav #brand {
+        line-height: 6.15vh;
+    }
+
+    nav #menu {
+        right: 0vw;
+        top: 1.3vh;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 868px) and (min-height: 1200px) and (max-height: 1450px) {
+    nav #brand {
+        line-height: 7.15vh;
+    }
+}
+
 /* on hover split */
 li span:nth-child(2){
 	position: absolute;

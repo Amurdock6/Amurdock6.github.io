@@ -41,7 +41,7 @@ html {
 .carousel-image {
     min-width: 100%;
     min-height: 100%;
-    object-fit: cover; /* Scale the image to cover the entire container without distortion */
+    object-fit: contain; /* Scale the image to cover the entire container without distortion */
     object-position: center; /* Keep the image centered within the container */
     user-select: none;
     background-color: #000; /* Optional fallback color in case the image doesn't load */
@@ -147,6 +147,10 @@ img {
     font-size: 1.5rem;
 }
 
+/* .hero-content h4 {
+    font-size: 1.75rem;
+} */
+
 .post-date-read-time span {
     color: grey;
 }
@@ -159,8 +163,17 @@ img {
     border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
 }
 
-.hero-content img {
-    width: 50%;
+.hero-content  img {
+    width: 40%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container img {
+    border-radius: 1px;
 }
 
 img#wiring-diagram {

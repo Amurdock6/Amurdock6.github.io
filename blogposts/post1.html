@@ -134,30 +134,13 @@
                   </div>
 
                   <div class="post-date-read-time">
-                        <h2>posted: <span>11/29/2024</span></h2><h3>10 minute read</h3>
+                        <h2>posted: <span>12/10/2024</span></h2><h3>10 minute read</h3>
                   </div>
             </header>
 
-            <hr />
+            <!-- <hr /> -->
             
-            <h4>quick links</h4>
-            <div class="tableOfContents">
-                  <a href="#overview">overview</a> |
-                  <a href="#intro">intro</a> |
-                  <a href="#whyapi">why a pi</a> |
-                  <a href="#displayandoutput">display and output</a> |
-                  <a href="#mountingthescreen">mounting the screen</a> |
-                  <a href="#software">the software</a> |
-                  <a href="#poweringthepi">powering the pi</a> |
-                  <a href="#shutdownscript">shutdown script</a> |
-                  <a href="#outro">outro and final thoughts</a> |
-                  <a href="#materials_hardware">material list</a> 
-
-
-
-            </div>
             <hr />
-
             <br>
 
             <!-- Opening image Carousel -->
@@ -183,10 +166,27 @@
             </div>
 
             <hr />
+
             <br>
 
             <main> <!-- maybe a listen button? -->
                   <div class="hero-content">
+                        <h4>Quick Links:</h4>
+                        <div class="tableOfContents">
+                              <a href="#overview">overview</a> |
+                              <a href="#intro">intro</a> |
+                              <a href="#whyapi">why a pi</a> |
+                              <a href="#displayandoutput">display and output</a> |
+                              <a href="#mountingthescreen">mounting the screen</a> |
+                              <a href="#software">the software</a> |
+                              <a href="#poweringthepi">powering the pi</a> |
+                              <a href="#shutdownscript">shutdown script</a> |
+                              <a href="#outro">outro and final thoughts</a> |
+                              <a href="#materials_hardware">material list</a> 
+                        </div>
+                        <hr />
+                        <br>
+
                         <h3 id="overview">Project Overview:</h3>
                         <p>
                               When I set out to create a Digital Dash for my 350z I faced many challenges and unanswered questions. I spent many
@@ -206,7 +206,10 @@
                               and MPU-6050 6-axis module for enhanced data collection. All of this is powered by the car's 12v system and
                               displayed through a custom Android app I'm developing to visualize and log the data.
                         </p>
-                        
+
+                        <br>
+
+
                         <h3 id="intro">Okay now let's jump into it: </h3>
                         <p>
                               This project began when I was having constant overheating issues with my 350z and realized that the factory coolant
@@ -232,8 +235,8 @@
                               also slower. But for my purposes and must other purposes this is perfectly fine and I still get access to all the
                               important data I want. Another plus is that the GPIO pins on the Raspberry pi allowed me to set up a shut down script easily
                               plus the added benefit is that I could expanded the features I need in the future to use hardwired data inputs
-                              like (gps, accelerometer, gyroscope, etc.) all of which are features I ended up adding. More on those additional
-                              add ons, I am running a <a href="https://www.adafruit.com/product/2324">Adafruit Ultimate GPS HAT for Raspberry pi</a> this gives me access to GPS features so I can
+                              like (gps, accelerometer, gyroscope, etc.) all of which are features I ended up adding. 
+                              More on those additional add ons, I am running a <a href="https://www.adafruit.com/product/2324">Adafruit Ultimate GPS HAT for Raspberry pi</a> this gives me access to GPS features so I can
                               track things like lap times, 0-60 times, speed and other GPS related features. In the future, I plan to integrate these capabilities into the Android app I’m developing to display all this data. Now I also
                               have another add-on board that has an accelerometer, and gyroscope on it to collect more data for things like a
                               G-meter and another way to collect data during track days. Here is <a href="https://www.amazon.com/HiLetgo-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B01DK83ZYQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A30QSGOJR8LMXA&th=1">the module I am using</a>. 
@@ -243,7 +246,10 @@
                               on the adafruit or GPIO pins on the Raspberry pi. This lets everything talk and work together.
                         </p>
 
-                        <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4B with all the hardware attached. Including adafruit Ultimate GPS HAT"/>
+                        <div class="image-container">
+                              <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4B with all the hardware attached. Including adafruit Ultimate GPS HAT"/>
+                              <img src="/images/blog-posts/post1/pimpuada.webp" alt="Raspberry pi 4B with all the hardware blown up in a nice display. Including adafruit Ultimate GPS HAT and MPU-6050"/>
+                        </div>
 
                         <hr />
 
@@ -442,7 +448,7 @@ cp shutdown_script.sh /system/bin/</code></pre>
                         <hr />
                         <h3 id="outro">Outro and Final Thoughts:</h3>
                         <p>
-                              It’s been a few months since I installed the digital dash, and I’m happy to report that it’s been holding up
+                              It’s been over a year since I installed the digital dash, and I’m happy to report that it’s been holding up
                               great! Overall, this project was well worth the time and money. I’d highly recommend it to anyone who needs a
                               digital dash and doesn’t mind tinkering or even someone who just wants to display or log data. All in all, I spent
                               around $280, and with this setup, I can monitor any data point the ECU supplies via OBDII, as well as additional
@@ -493,7 +499,7 @@ cp shutdown_script.sh /system/bin/</code></pre>
                         <a href="https://www.amazon.com/SunFounder-Raspberry-Touchscreen-1024%C3%97600-Capacitive/dp/B07Y889J3X/ref=sr_1_21?crid=222H27RJNFPZ3&dib=eyJ2IjoiMSJ9.jR_TlBjuixZvAHi-ZnuXc7X_T_IJLCVz3qjyNpoAUSxNQm1zg_yx_JEBNMIUrmbwJbWVSBCUrjTX8EwAAOAIiR3loRKPiVOPr9ZLpXlvSznaGCAMsGusoVv5_1vf3Zgp8gp6WuZtbdtBMj_lRBBoi_aP0vYirC5y4-8Dho087zHVxPb5VNMBSCuAAAkFIEvU0a5bcjAKuI7SINIFbQs9epztgYQ-ZdahH8ljqRMJjlxCN-4vMzcwYeG7kChzt6GMOvZpessbHsfS33DvHuezoLOdXB7P_5xbkj83zvsf1bw.OlIqTvJ-sgmdMbSFXoTZPbzHDfl4wW99XLQ0nx6Vzug&dib_tag=se&keywords=raspberry%2Bpi%2B4%2Bdisplay%2Btouchscreen&qid=1732762110&s=electronics&sprefix=raspberry%2Bpi%2B4%2Bdisplay%2Btouchscreen%2Celectronics%2C144&sr=1-21&th=1">Screen</a> - $50 <br>
                         <a href="https://www.amazon.com/Raspberry-Pi-Computer-Suitable-Workstation/dp/B0899VXM8F/ref=sr_1_1?crid=1JP5B5MVLECEO&dib=eyJ2IjoiMSJ9.LKIixZXBwb4Zq5ODnlzUGZoAqqzYhFtFKQbFBryO3eotWRRuuEv8l9HFn3LXXaDfxTT6Y8H17VH4-1xHXLw33YAfKgVZ6wsXuoDfFrFRMNkxmKS_UcO-vS4a9TR_cruhFXFbYT72VvR5FBBFI_SNYDsBS4jzh5Sf8G-SUrxvJnUcU4SiijDxklVA1FNxBuakY7GX3xcugEV31r7MCXHOkwkwdJ3j2GVdXkE4HE6rbBgoMk38IykLZg_3-eZFDtsZXc9s-Hne7H9pk1KXGSOvZHQ5Uj3GJjQvTiFzFVx7W_E.2FjT-2paXyvowes-va5xADucCQyjBLxxvht4PGoir6E&dib_tag=se&keywords=raspberry+pi+4+model+b+8gb&qid=1732761535&s=electronics&sprefix=Raspberry+Pi+4+Model+B%2Celectronics%2C138&sr=1-1">Raspberry pi</a> - $83 (you can use a model with less memory and get the same result) <br>
                         <a href="https://www.amazon.com/BAFX-Products-Wireless-Bluetooth-Diagnostic/dp/B005NLQAHS">OBDII Scanner</a> - $32 <br>
-                        <a href="">Wire</a> - $ <br>
+                        <a href="https://www.amazon.com/Silicone-Electrical-Colors-Stranded-Flexible/dp/B08F79YG8Q/ref=sr_1_2?crid=7K6TLM62GVSG&dib=eyJ2IjoiMSJ9.KIHVHiAcdVbpS0_xyHdfueDQGreOWh6yUZUMLyB2amIKGE__Y6npGl6lmSxgbTe0H5g2urG7wwnIMIZ64USiqczLELUf1pF8CCsBS0Mm5lAru9x6VQJo49UNYOz6XIZ_RUNbXL1op1t9E2XQIKFVX3yAQlh943wPjzXPv3nybMDMgu4kQc6RVLadikyk-umdvsiShJ6sbMchiOHTZPDtkckq_keJ3XnzGyaRTRa8TcED8dQR066Jj1HM40bmt6PEj8BDjgTfBtUcMMVnVOhbOYxIkM7FsrDhPYuodgbdtUc.OABC-IPy2W-qwnsLpz6QgwOzpMLk_g4cm9oplBxvIug&dib_tag=se&keywords=20+awg+silicone+electrical+wire+cable+2+colors+%2823ft+each%29+20+gauge+hookup+wires+kit+stranded+tinned+copper+wire+flexible+and+soft+for+diy&qid=1733109303&sprefix=20+awg+silicone+electrical+wire+cable+2+colors+23ft+each+20+gauge+hookup+wires+kit+stranded+tinned+copper+wire+flexible+and+soft+for+diy%2Caps%2C128&sr=8-2">20 AWG Wire</a> - $8 <br>
                         <a href="https://www.amazon.com/Converter-Voltage-Waterproof-Regulator-Step-Down/dp/B07Y2V1F8V/ref=asc_df_B07Y2V1F8V?mcid=4f9b9e4c200333ecafe22a27f0155c4e&tag=hyprod-20&linkCode=df0&hvadid=693558272631&hvpos=&hvnetw=g&hvrand=12734499194843680300&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-843941145334&th=1">12v to 5v buck converters x2</a> - $18 <br>
                         <a href="https://www.amazon.com/Comidox-Automation-Display-Digital-Adjustable/dp/B07JC38GLS/ref=asc_df_B07JC38GLS?mcid=1a03b4b7f5af3179aaec05e771e731df&tag=hyprod-20&linkCode=df0&hvadid=693410589815&hvpos=&hvnetw=g&hvrand=8946551872795157077&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-1042291508314&psc=1">Timer Relay</a> - $10 <br>
                         <a href="https://www.amazon.com/Bosch-0332209150-Fuel-Injection-Relay/dp/B004Z0U1IW/ref=asc_df_B004Z0U1IW?mcid=79fe8df7df383fad960e35365b06d4f0&tag=hyprod-20&linkCode=df0&hvadid=693547612743&hvpos=&hvnetw=g&hvrand=12200118343782118384&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-310538454416&psc=1">Normally Closed Relay</a> - $7 <br>
