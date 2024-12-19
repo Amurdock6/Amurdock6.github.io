@@ -1,6 +1,61 @@
+/* blogpage.css */
 html {
     scroll-behavior: smooth;
 }
+
+.title-and-theme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Theme Toggle Container */
+#theme-toggle {
+    position: relative;
+    width: 2.2rem; /* Adjust size as needed */
+    height: 2.2rem;
+    display: inline-block;
+}
+
+/* Common Styles for Both Icons */
+#theme-toggle .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: inherit;
+}
+
+/* Sun Icon Initial State */
+#theme-toggle .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Moon Icon Initial State */
+#theme-toggle .moon-icon {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+/* When Light Mode is Active */
+body.light-mode #theme-toggle .sun-icon {
+    opacity: 0;
+    transform: rotate(360deg); /* Rotate for animation */
+}
+
+body.light-mode #theme-toggle .moon-icon {
+    opacity: 1;
+    transform: rotate(360deg); /* Rotate for animation */
+}
+
+/* Enhance Icon Hover Effects */
+#theme-toggle .icon:hover {
+    transform: scale(1.1);
+}
+
 
 /* Container Top */
 .container.blogpost {
@@ -160,7 +215,7 @@ img {
     padding-top: 1vh;
     padding-bottom: 1vh;
     border-top: grey 1px solid;
-    border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
+    border-bottom: grey 1px solid;
 }
 
 .hero-content  img {

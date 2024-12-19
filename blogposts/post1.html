@@ -14,8 +14,10 @@
       <!-- stylesheet -->
       <link rel="stylesheet" href="/css/style.css">
       <link rel="stylesheet" href="/css/nav.css">
-      <link rel="stylesheet" href="/css/projects.css">
       <link rel="stylesheet" href="/css/blogpage.css">
+
+      <!-- Light Mode CSS (Disabled by Default) -->
+      <link rel="stylesheet" href="/css/lightmode.css" id="light-mode-style" disabled>
 
       <!-- bootstrap -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -25,7 +27,8 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
       <!-- ionicons -->
-      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
       <!-- for on scroll animations -->
       <link rel="stylesheet" href="/css/animate.css">
@@ -33,6 +36,9 @@
 
       <!-- Image Enlarging Script -->
       <script type="module" src="/js/onClickImageEnlarge.js"></script>
+
+      <!-- Lightmode Script -->
+      <script src="/js/lightmode.js"></script>
 </head>
 
 <body>
@@ -124,9 +130,17 @@
       <div class="container blogpost">
 
             <header>
-                  <h1>Raspbery pi/350z Digital Dash</h1>
+                  <div class="title-and-theme">
+                        <h1>Raspbery pi/350z Digital Dash</h1>
 
-                  <div class="hr wow fadeInUp" data-wow-delay="1.65s" style="visibility: visible; animation-delay: 1.65s; animation-name: fadeInUp;">
+                        <!-- Light/Dark Mode Toggle -->
+                        <span id="theme-toggle" aria-label="Toggle Light/Dark Mode" role="button" tabindex="0">
+                              <ion-icon name="sunny-outline" class="icon sun-icon"></ion-icon>
+                              <ion-icon name="moon-outline" class="icon moon-icon"></ion-icon>
+                        </span>
+                  </div>
+
+                  <div class="hr" style="visibility: visible; animation-delay: 1.65s; animation-name: fadeInUp;">
                         <div class="row"></div>
                   </div>
 
