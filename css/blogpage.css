@@ -61,7 +61,7 @@ img {
     font-size: 2rem;
     cursor: pointer;
     padding: 10px;
-    z-index: 10;
+    z-index: 1;
 }
 
 .carousel-btn:hover {
@@ -176,7 +176,7 @@ img {
     border-radius: 1px;
 }
 
-img#wiring-diagram {
+img.full-size-image {
     width: 100%;
 }
 

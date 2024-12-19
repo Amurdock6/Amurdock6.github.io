@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pausePlayBtn = document.getElementById('pausePlayBtn'); // Pause/Play Button
 
     let currentIndex = 1;
-    const intervalTime = 6500; // Time in ms (6.5 Seconds)
+    const intervalTime = 10000; // Time in ms (10 Seconds)
     let autoSwitch;
     let isPaused = false;
 
