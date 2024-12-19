@@ -1,0 +1,301 @@
+/* blogpage.css */
+html {
+    scroll-behavior: smooth;
+}
+
+.title-and-theme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Theme Toggle Container */
+#theme-toggle {
+    position: relative;
+    width: 2.2rem; /* Adjust size as needed */
+    height: 2.2rem;
+    display: inline-block;
+}
+
+/* Common Styles for Both Icons */
+#theme-toggle .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: inherit;
+}
+
+/* Sun Icon Initial State */
+#theme-toggle .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Moon Icon Initial State */
+#theme-toggle .moon-icon {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+/* When Light Mode is Active */
+body.light-mode #theme-toggle .sun-icon {
+    opacity: 0;
+    transform: rotate(360deg); /* Rotate for animation */
+}
+
+body.light-mode #theme-toggle .moon-icon {
+    opacity: 1;
+    transform: rotate(360deg); /* Rotate for animation */
+}
+
+/* Enhance Icon Hover Effects */
+#theme-toggle .icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Container Top */
+.container.blogpost {
+    padding-top: 6vh;
+}
+
+@media screen and (max-width: 1020px) {
+    .container.blogpost {
+        padding-top: 14vh;
+    }
+}
+
+@media screen and (max-width: 750px) and (min-width: 500px) and (max-height: 420px) and (min-height: 300px) {
+    .container.blogpost {
+        padding-top: 24vh;
+    }
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 100%; /* Full width */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 ratio */
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fallback color */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain; /* Scale the image to cover the entire container without distortion */
+    object-position: center; /* Keep the image centered within the container */
+    user-select: none;
+    background-color: #000; /* Optional fallback color in case the image doesn't load */
+}
+
+img {
+    width: 50%;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Progress Bar Container with Pause/Play Button */
+.progress-bar-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center items */
+    background-color: rgba(255, 255, 255, 0.3); /* Add this line for background */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Pause/Play Button Styling */
+.carousel .pause-play {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: -50px;
+}
+
+.carousel .pause-play:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 5px;
+    background-color: #007bff; /* Progress color */
+    transition: none; /* No initial transition */
+    border-radius: 3px;
+    width: 0%; /* Start at 0% */
+}
+
+@media screen and (max-width: 500px) {
+    .carousel-btn {
+        font-size: 1.25rem;
+    }
+
+    .carousel .pause-play {
+        margin-left: -30px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .container.blogpost h1 {
+        font-size: 2rem;
+    }
+}
+
+.post-date-read-time {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 0.75vh;
+}
+
+.post-date-read-time h2 {
+    font-size: 1.5rem;
+}
+
+.post-date-read-time h3 {
+    font-size: 1.5rem;
+}
+
+/* .hero-content h4 {
+    font-size: 1.75rem;
+} */
+
+.post-date-read-time span {
+    color: grey;
+}
+
+.tableOfContents {
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-top: grey 1px solid;
+    border-bottom: grey 1px solid;
+}
+
+.hero-content  img {
+    width: 40%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container img {
+    border-radius: 1px;
+}
+
+img.full-size-image {
+    width: 100%;
+}
+
+.hero-content li {
+    color: grey;
+}
+
+/* Styling for the code section */
+.code-container {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.code-container pre {
+    margin: 0;
+    padding: 0;
+    color: #e83e8c;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.code-container p {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.code-container code {
+    background-color: #e8e8e8;
+    padding: 3px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.code-container:hover{
+    cursor: auto;
+}
+
+/* Enlarge Styling */
+.img-enlargeable {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.img-enlargeable:hover {
+    transform: scale(1.025);
+}

@@ -1,0 +1,80 @@
+html, body {
+    background: #ffffff !important;
+    color: #121212 !important;
+}
+
+/* Light Mode Styles */
+body {
+    background: #ffffff !important;
+    color: #121212 !important;
+    font-weight: 600 !important;
+}
+
+/* Icon Color */
+#theme-toggle ion-icon {
+    color: #121212 !important;
+}
+
+a {
+    color: #007bff !important;
+}
+
+::selection {
+    color: #121212;
+    background-color: #ffcc00;
+}
+
+/* nav */
+nav {
+    background: #ffffff !important;
+}
+
+nav #brand a {
+    color: #000 !important;
+}
+
+li span:nth-child(1) {
+    color: #000 !important;
+}
+
+li span:nth-child(2) {
+    color: #000 !important;
+}
+
+li span:nth-child(3) {
+    color: #000 !important;
+}
+
+.hr {
+    background: #000 !important;
+}
+
+hr {
+    opacity: 0;
+}
+
+.footer {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+
+/* Image Borders */
+.post img, .image-container img, .full-size-image {
+    border: 1px solid #ccc !important;
+}
+
+
+/* Main content */
+#resize {
+    background-color: #ffffff !important;
+    color: #121212 !important;
+}
+
+.container.blogpost {
+    background-color: #ffffff;
+    color: #121212 !important;
+}
+
+.hero-content p {
+    color: black !important;
+}
