@@ -3,7 +3,7 @@ nav {
     background: #0f0f0f;
     height: 80px;
     position: fixed;
-    z-index: 1;
+    z-index: 12;
 }
 
 nav #brand {
@@ -244,7 +244,7 @@ a#freelance {
 }
 
 #resize {
-    z-index: 1;
+    z-index: 12;
     top: 0px;
     position: fixed;
     background: #0f0f0f;
