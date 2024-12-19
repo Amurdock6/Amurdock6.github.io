@@ -27,10 +27,12 @@
       <!-- ionicons -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 
-
       <!-- for on scroll animations -->
       <link rel="stylesheet" href="/css/animate.css">
       <script src="/js/wow.min.js"></script>
+
+      <!-- Image Enlarging Script -->
+      <script type="module" src="/js/onClickImageEnlarge.js"></script>
 </head>
 
 <body>
@@ -143,12 +145,12 @@
                   
                   <!-- Main Carousel Images -->
                   <div class="carousel-images" id="carouselImages">
-                        <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4b 8gb with ada fruit HAT." class="carousel-image" />
-                        <img src="/images/blog-posts/post1/shutDownRelay.webp" alt="Picture showing the main power timer relay wired up in the glovebox." class="carousel-image" />
-                        <img src="/images/blog-posts/post1/mountedScreen.webp" alt="Show case of finished project in the car." class="carousel-image" />
-                        <img src="/images/blog-posts/post1/wiring-diagram.webp" alt="Complete Wiring Diagram." class="carousel-image" />
-                        <img src="/images/blog-posts/post1/backSeatWiring.webp" alt="Complete set up including pi and all electronics in back of 350z glovebox." class="carousel-image" />
-                        <img src="/images/blog-posts/post1/laptopInDaZ.webp" alt="Show casing screen and ARD being developed in the car." class="carousel-image" />
+                        <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4b 8gb with ada fruit HAT." class="carousel-image" data-enlargeable/>
+                        <img src="/images/blog-posts/post1/shutDownRelay.webp" alt="Picture showing the main power timer relay wired up in the glovebox." class="carousel-image" data-enlargeable/>
+                        <img src="/images/blog-posts/post1/mountedScreen.webp" alt="Show case of finished project in the car." class="carousel-image" data-enlargeable/>
+                        <img src="/images/blog-posts/post1/wiring-diagram.webp" alt="Complete Wiring Diagram." class="carousel-image" data-enlargeable/>
+                        <img src="/images/blog-posts/post1/backSeatWiring.webp" alt="Complete set up including pi and all electronics in back of 350z glovebox." class="carousel-image" data-enlargeable/>
+                        <img src="/images/blog-posts/post1/laptopInDaZ.webp" alt="Show casing screen and ARD being developed in the car." class="carousel-image" data-enlargeable/>
                   </div>
       
                   <!-- Progress Bar Container with Pause/Play Button -->
@@ -243,8 +245,8 @@
                         </p>
 
                         <div class="image-container">
-                              <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4B with all the hardware attached. Including adafruit Ultimate GPS HAT"/>
-                              <img src="/images/blog-posts/post1/pimpuada.webp" alt="Raspberry pi 4B with all the hardware blown up in a nice display. Including adafruit Ultimate GPS HAT and MPU-6050"/>
+                              <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4B with all the hardware attached. Including adafruit Ultimate GPS HAT" data-enlargeable/>
+                              <img src="/images/blog-posts/post1/pimpuada.webp" alt="Raspberry pi 4B with all the hardware blown up in a nice display. Including adafruit Ultimate GPS HAT and MPU-6050" data-enlargeable/>
                         </div>
 
                         <hr />
@@ -275,7 +277,7 @@
 
                         <br>
 
-                        <img class="full-size-image" src="/images/blog-posts/post1/mountedScreen.webp" alt="Screen mounted in the 350z factory navigation location." />
+                        <img class="full-size-image" src="/images/blog-posts/post1/mountedScreen.webp" alt="Screen mounted in the 350z factory navigation location." data-enlargeable/>
 
                         <hr /> 
 
@@ -291,8 +293,8 @@
                         <br>
 
                         <div class="image-container">
-                              <img src="/images/blog-posts/post1/screen.webp" alt="Show case of the 7-inch touch screen display that I mounted in my 350z."/>
-                              <img src="/images/blog-posts/post1/sideanglescreen.webp" alt="Another angle show caseing the touch screen display and its mounting mechanism."/>
+                              <img src="/images/blog-posts/post1/screen.webp" alt="Show case of the 7-inch touch screen display that I mounted in my 350z." data-enlargeable/>
+                              <img src="/images/blog-posts/post1/sideanglescreen.webp" alt="Another angle show caseing the touch screen display and its mounting mechanism." data-enlargeable/>
                         </div>
 
                         <hr />
@@ -316,7 +318,7 @@
                               in my set up.
                         </p>
                         
-                        <img class="full-size-image" src="/images/blog-posts/post1/wiring-diagram.webp" alt="Complete wiring diagram showing how the pi and all its related hardware is wired into the cars 12v system." />
+                        <img class="full-size-image" src="/images/blog-posts/post1/wiring-diagram.webp" alt="Complete wiring diagram showing how the pi and all its related hardware is wired into the cars 12v system." data-enlargeable/>
                         
                         <hr />
                         
@@ -390,8 +392,8 @@
                         </ol>
 
                         <div class="image-container">
-                              <img src="/images/blog-posts/post1/shutDownRelay.webp" alt="Picture showing the main power timer relay wired up in the glovebox." />
-                              <img src="/images/blog-posts/post1/normallyOpenRelay.webp" alt="Picture showing the exact normally closed relay that I used." />
+                              <img src="/images/blog-posts/post1/shutDownRelay.webp" alt="Picture showing the main power timer relay wired up in the glovebox." data-enlargeable/>
+                              <img src="/images/blog-posts/post1/normallyOpenRelay.webp" alt="Picture showing the exact normally closed relay that I used." data-enlargeable/>
                         </div>
 
                         <p>
@@ -433,8 +435,8 @@ cp shutdown_script.sh /system/bin/</code></pre>
                         </p>
 
                         <div class="image-container">
-                              <img src="/images/blog-posts/post1/killSwitchNextToVSC.webp" alt="Kill Switch housed next to VSC button in 350z." />
-                              <img src="/images/blog-posts/post1/killSwitchMount.webp" alt="The mount I used to place the kill switch in." />
+                              <img src="/images/blog-posts/post1/killSwitchNextToVSC.webp" alt="Kill Switch housed next to VSC button in 350z." data-enlargeable/>
+                              <img src="/images/blog-posts/post1/killSwitchMount.webp" alt="The mount I used to place the kill switch in." data-enlargeable/>
                         </div>
 
                         <hr />

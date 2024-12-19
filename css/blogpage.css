@@ -234,3 +234,13 @@ img.full-size-image {
 .code-container:hover{
     cursor: auto;
 }
+
+/* Enlarge Styling */
+.img-enlargeable {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.img-enlargeable:hover {
+    transform: scale(1.025);
+}
