@@ -110,6 +110,14 @@ div#visual-enlarge img {
     margin-left: 31vw;
 }
 
+div#solidworks-enlarge img {
+    margin-left: -18.5vw;
+}
+
+div#react-enlarge img {
+    margin-left: 18.5vw;
+}
+
 .container2-enlarge{
     width: 100%;
     padding-right: 6vw;
