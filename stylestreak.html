@@ -1,89 +1,448 @@
-# Privacy Policy for StyleStreak
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Privacy Policy for StyleStreak.">
+      <meta name="author" content="Alexander Murdock">
+      <link rel="icon" href="icons/fav-icon.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <title>StyleStreak Privacy Policy</title>
+      <style>
+            :root {
+                  --bg-top: #1fd0cb;
+                  --bg-bottom: #3d8fe9;
+                  --panel: rgba(255, 255, 255, 0.88);
+                  --panel-strong: rgba(255, 255, 255, 0.96);
+                  --border: rgba(35, 101, 152, 0.12);
+                  --text: #12314d;
+                  --muted: #4f6780;
+                  --accent: #129fcb;
+                  --accent-strong: #3d8fe9;
+                  --accent-soft: rgba(18, 159, 203, 0.1);
+                  --shadow: 0 24px 60px rgba(31, 98, 153, 0.18);
+            }
 
-Effective Date: March, 26, 2026
+            * {
+                  box-sizing: border-box;
+            }
 
-StyleStreak ("StyleStreak," "we," "our," or "us") provides wardrobe management, outfit planning, trip planning, image scanning, and related social and AI-powered features. This Privacy Policy explains what information we collect, how we use it, when we share it, and the choices available to you.
+            html {
+                  scroll-behavior: smooth;
+            }
 
-## 1. Information We Collect
+            body {
+                  margin: 0;
+                  min-height: 100vh;
+                  font-family: "Roboto Mono", monospace;
+                  color: var(--text);
+                  background:
+                        radial-gradient(circle at top left, rgba(255, 255, 255, 0.28), transparent 26%),
+                        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.16), transparent 22%),
+                        linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+            }
 
-We may collect the following categories of information:
+            body::before {
+                  content: "";
+                  position: fixed;
+                  inset: 0;
+                  pointer-events: none;
+                  opacity: 0.2;
+                  background-image:
+                        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+                  background-size: 28px 28px;
+            }
 
-- Account and profile information, such as your email address, sign-in method, username, display name, authentication provider, and internal account identifiers.
-- User content, such as wardrobe photos, outfit data, trip details, itinerary uploads, notes, tags, preferences, and other content you choose to create, upload, or save in the app.
-- Camera and photo data, when you choose to take or upload photos for wardrobe items, scan features, or image-based workflows.
-- Location data, when you grant permission, to retrieve weather information and improve outfit suggestions. We use foreground location while the app is in use.
-- Calendar data, when you grant permission, such as event titles, times, and locations, to tailor outfit suggestions around your schedule.
-- Social feature data, such as friend connections, borrowing requests, and related item-sharing information, if you use those features.
-- Device, app, and local storage data, such as app settings, cached image URLs, locally stored drafts, and authentication session state needed for app functionality.
-- Support, safety, and operational data, such as error details, request metadata, and account-deletion requests needed to secure and operate the service.
+            a {
+                  color: var(--accent-strong);
+            }
 
-## 2. How We Use Information
+            .page {
+                  width: min(1120px, calc(100% - 32px));
+                  margin: 0 auto;
+                  padding: 56px 0 72px;
+                  position: relative;
+                  z-index: 1;
+            }
 
-We use information to:
+            .hero {
+                  display: grid;
+                  gap: 24px;
+                  margin-bottom: 32px;
+            }
 
-- create and manage your account;
-- authenticate you and keep you signed in;
-- store, sync, and display your wardrobe, outfits, trips, and uploads;
-- process garment images, scans, itinerary files, and related media;
-- provide AI-powered outfit suggestions, trip planning, image generation, and related features;
-- retrieve weather information using your location to improve suggestions;
-- use your calendar information, if permitted, to tailor suggestions to your schedule;
-- support friend, sharing, and borrowing features if you use them;
-- protect the app, prevent abuse, troubleshoot issues, and comply with legal obligations; and
-- process account deletion and related data-removal requests.
+            .hero-card,
+            .section-card,
+            .contact-card {
+                  border: 1px solid var(--border);
+                  background: var(--panel);
+                  backdrop-filter: blur(12px);
+                  box-shadow: var(--shadow);
+            }
 
-## 3. How We Share Information
+            .hero-card {
+                  padding: 36px;
+                  border-radius: 28px;
+                  overflow: hidden;
+                  position: relative;
+            }
 
-We do not sell your personal information.
+            .hero-brand {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 16px;
+                  margin-bottom: 18px;
+            }
 
-We may share information with service providers and infrastructure providers that help us operate the app, including:
+            .hero-logo {
+                  width: 64px;
+                  height: 64px;
+                  border-radius: 18px;
+                  display: block;
+                  box-shadow: 0 12px 30px rgba(31, 98, 153, 0.18);
+            }
 
-- Google Firebase and Google Cloud, for authentication, databases, file storage, and backend functions;
-- Apple or Google, when you choose Sign in with Apple or Google Sign-In;
-- AI service providers, including OpenAI and Google Gemini or related Google AI services, when needed to process AI-powered features you choose to use;
-- Open-Meteo or similar weather providers, to retrieve weather data using location information; and
-- other users, but only where the product is designed to do so, such as friend, borrowing, or sharing features you choose to use.
+            .hero-card::after {
+                  content: "";
+                  position: absolute;
+                  inset: auto -80px -80px auto;
+                  width: 240px;
+                  height: 240px;
+                  border-radius: 999px;
+                  background: radial-gradient(circle, rgba(61, 143, 233, 0.18), transparent 70%);
+            }
 
-We may also disclose information if required by law, to enforce our terms, to protect rights or safety, or in connection with a merger, acquisition, or asset transfer.
+            .eyebrow {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin-bottom: 18px;
+                  padding: 8px 14px;
+                  border-radius: 999px;
+                  background: var(--accent-soft);
+                  color: var(--accent);
+                  font-size: 0.8rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.14em;
+            }
 
-## 4. AI Features
+            .eyebrow::before {
+                  content: "";
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: var(--accent);
+                  box-shadow: 0 0 16px rgba(18, 159, 203, 0.35);
+            }
 
-If you use AI features, we may send relevant inputs to our backend systems and AI providers to generate results. These inputs may include wardrobe metadata, your prompts, trip context, itinerary content, images you upload, and calendar- or location-derived context when those features are enabled by you. We use this information only to provide and improve the requested feature, operate the service, and maintain safety and reliability.
+            h1,
+            h2,
+            h3,
+            p,
+            ul {
+                  margin-top: 0;
+            }
 
-## 5. Permissions
+            h1 {
+                  max-width: 12ch;
+                  margin-bottom: 18px;
+                  font-size: clamp(2.4rem, 5vw, 4.8rem);
+                  line-height: 0.96;
+                  letter-spacing: -0.08em;
+                  color: #2b76d5;
+            }
 
-You can choose whether to grant camera, photos, location, and calendar permissions. If you deny these permissions, some features may not work, but you can still use other parts of the app. You can also change permissions later in your device settings.
+            .lede {
+                  max-width: 720px;
+                  margin-bottom: 24px;
+                  color: var(--muted);
+                  font-size: 1rem;
+                  line-height: 1.9;
+            }
 
-## 6. Data Retention
+            .meta {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 12px;
+            }
 
-We retain account and app data for as long as needed to provide the service, maintain your account, and support the features you use. If you delete content or request account deletion, we will delete or de-identify the relevant data within a reasonable period, except where limited retention is necessary for legal compliance, security, fraud prevention, dispute resolution, or backup and recovery purposes.
+            .meta-chip {
+                  padding: 12px 14px;
+                  border: 1px solid var(--border);
+                  border-radius: 14px;
+                  background: var(--panel-strong);
+                  color: var(--muted);
+                  font-size: 0.9rem;
+            }
 
-## 7. Account Deletion and Your Choices
+            .meta-chip strong {
+                  color: var(--text);
+                  font-weight: 500;
+            }
 
-You may request deletion of your account from within the app through the account deletion feature, and you may also use our web deletion request page at: [Account Deletion URL].
+            .layout {
+                  display: grid;
+                  grid-template-columns: minmax(0, 1fr) 280px;
+                  gap: 24px;
+                  align-items: start;
+            }
 
-You may also contact us at [Support Email] to request access, correction, or deletion of your information, subject to applicable law. You may stop using the app at any time and revoke device permissions through your system settings.
+            .content {
+                  display: grid;
+                  gap: 20px;
+            }
 
-## 8. Security
+            .section-card {
+                  padding: 28px;
+                  border-radius: 22px;
+            }
 
-We use reasonable administrative, technical, and organizational safeguards to protect information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.
+            .section-card h2 {
+                  margin-bottom: 18px;
+                  font-size: 1.1rem;
+                  letter-spacing: 0.04em;
+                  text-transform: uppercase;
+                  color: var(--accent-strong);
+            }
 
-## 9. Children's Privacy
+            .section-card p,
+            .section-card li {
+                  color: var(--muted);
+                  line-height: 1.9;
+                  font-size: 0.95rem;
+            }
 
-StyleStreak is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information, contact us and we will take appropriate steps.
+            .section-card ul {
+                  margin-bottom: 0;
+                  padding-left: 20px;
+            }
 
-## 10. International Transfers
+            .section-card li + li {
+                  margin-top: 10px;
+            }
 
-Your information may be processed and stored in countries other than your own, including the United States, where our service providers operate.
+            .sidebar {
+                  position: sticky;
+                  top: 24px;
+            }
 
-## 11. Changes to This Privacy Policy
+            .contact-card {
+                  padding: 24px;
+                  border-radius: 22px;
+            }
 
-We may update this Privacy Policy from time to time. If we make material changes, we will update the Effective Date and may provide additional notice where required.
+            .contact-card h3 {
+                  margin-bottom: 14px;
+                  font-size: 1rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                  color: var(--accent-strong);
+            }
 
-## 12. Contact Us
+            .contact-card p,
+            .contact-card li {
+                  color: var(--muted);
+                  line-height: 1.8;
+                  font-size: 0.92rem;
+            }
 
-If you have questions about this Privacy Policy or our privacy practices, contact us at:
+            .contact-list {
+                  list-style: none;
+                  padding: 0;
+                  margin: 0 0 18px;
+              }
 
-Alexander Murdock
-likelysphinx707@gmail.com
-https://alexanderrmurdock.com/
+            .contact-list li + li {
+                  margin-top: 10px;
+            }
+
+            .contact-list a {
+                  text-decoration: none;
+                  border-bottom: 1px solid rgba(61, 143, 233, 0.25);
+            }
+
+            .notice {
+                  margin-top: 16px;
+                  padding: 14px;
+                  border-radius: 16px;
+                  background: linear-gradient(135deg, rgba(31, 208, 203, 0.12), rgba(61, 143, 233, 0.12));
+                  border: 1px solid rgba(61, 143, 233, 0.16);
+            }
+
+            .notice strong {
+                  color: var(--text);
+            }
+
+            code {
+                  color: var(--accent-strong);
+                  font-family: inherit;
+                  font-weight: 500;
+            }
+
+            @media (max-width: 920px) {
+                  .layout {
+                        grid-template-columns: 1fr;
+                  }
+
+                  .sidebar {
+                        position: static;
+                  }
+            }
+
+            @media (max-width: 640px) {
+                  .page {
+                        width: min(100% - 20px, 1120px);
+                        padding: 20px 0 40px;
+                  }
+
+                  .hero-card,
+                  .section-card,
+                  .contact-card {
+                        padding: 22px;
+                        border-radius: 18px;
+                  }
+
+                  h1 {
+                        letter-spacing: -0.06em;
+                  }
+
+                  .lede,
+                  .section-card p,
+                  .section-card li,
+                  .contact-card p,
+                  .contact-card li {
+                        line-height: 1.75;
+                  }
+            }
+      </style>
+</head>
+<body>
+      <main class="page">
+            <section class="hero">
+                  <div class="hero-card">
+                        <div class="hero-brand">
+                              <img class="hero-logo" src="icons/StyleStreakLogo.png" alt="StyleStreak logo">
+                              <div class="eyebrow">StyleStreak Legal</div>
+                        </div>
+                        <h1>Privacy Policy</h1>
+                        <p class="lede">
+                              StyleStreak ("StyleStreak," "we," "our," or "us") provides wardrobe management, outfit planning, trip planning, image scanning, and related social and AI-powered features. This Privacy Policy explains what information we collect, how we use it, when we share it, and the choices available to you.
+                        </p>
+                        <div class="meta">
+                              <div class="meta-chip"><strong>Effective Date:</strong> March 26, 2026</div>
+                              <div class="meta-chip"><strong>Scope:</strong> App, web, and related services</div>
+                        </div>
+                  </div>
+            </section>
+
+            <section class="layout">
+                  <div class="content">
+                        <article class="section-card">
+                              <h2>1. Information We Collect</h2>
+                              <ul>
+                                    <li>Account and profile information, such as your email address, sign-in method, username, display name, authentication provider, and internal account identifiers.</li>
+                                    <li>User content, such as wardrobe photos, outfit data, trip details, itinerary uploads, notes, tags, preferences, and other content you choose to create, upload, or save in the app.</li>
+                                    <li>Camera and photo data, when you choose to take or upload photos for wardrobe items, scan features, or image-based workflows.</li>
+                                    <li>Location data, when you grant permission, to retrieve weather information and improve outfit suggestions. We use foreground location while the app is in use.</li>
+                                    <li>Calendar data, when you grant permission, such as event titles, times, and locations, to tailor outfit suggestions around your schedule.</li>
+                                    <li>Social feature data, such as friend connections, borrowing requests, and related item-sharing information, if you use those features.</li>
+                                    <li>Device, app, and local storage data, such as app settings, cached image URLs, locally stored drafts, and authentication session state needed for app functionality.</li>
+                                    <li>Support, safety, and operational data, such as error details, request metadata, and account-deletion requests needed to secure and operate the service.</li>
+                              </ul>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>2. How We Use Information</h2>
+                              <ul>
+                                    <li>Create and manage your account.</li>
+                                    <li>Authenticate you and keep you signed in.</li>
+                                    <li>Store, sync, and display your wardrobe, outfits, trips, and uploads.</li>
+                                    <li>Process garment images, scans, itinerary files, and related media.</li>
+                                    <li>Provide AI-powered outfit suggestions, trip planning, image generation, and related features.</li>
+                                    <li>Retrieve weather information using your location to improve suggestions.</li>
+                                    <li>Use your calendar information, if permitted, to tailor suggestions to your schedule.</li>
+                                    <li>Support friend, sharing, and borrowing features if you use them.</li>
+                                    <li>Protect the app, prevent abuse, troubleshoot issues, and comply with legal obligations.</li>
+                                    <li>Process account deletion and related data-removal requests.</li>
+                              </ul>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>3. How We Share Information</h2>
+                              <p>We do not sell your personal information.</p>
+                              <p>We may share information with service providers and infrastructure providers that help us operate the app, including:</p>
+                              <ul>
+                                    <li>Google Firebase and Google Cloud, for authentication, databases, file storage, and backend functions.</li>
+                                    <li>Apple or Google, when you choose Sign in with Apple or Google Sign-In.</li>
+                                    <li>AI service providers, including OpenAI and Google Gemini or related Google AI services, when needed to process AI-powered features you choose to use.</li>
+                                    <li>Open-Meteo or similar weather providers, to retrieve weather data using location information.</li>
+                                    <li>Other users, but only where the product is designed to do so, such as friend, borrowing, or sharing features you choose to use.</li>
+                              </ul>
+                              <p>We may also disclose information if required by law, to enforce our terms, to protect rights or safety, or in connection with a merger, acquisition, or asset transfer.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>4. AI Features</h2>
+                              <p>If you use AI features, we may send relevant inputs to our backend systems and AI providers to generate results. These inputs may include wardrobe metadata, your prompts, trip context, itinerary content, images you upload, and calendar- or location-derived context when those features are enabled by you.</p>
+                              <p>We use this information only to provide and improve the requested feature, operate the service, and maintain safety and reliability.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>5. Permissions</h2>
+                              <p>You can choose whether to grant camera, photos, location, and calendar permissions. If you deny these permissions, some features may not work, but you can still use other parts of the app. You can also change permissions later in your device settings.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>6. Data Retention</h2>
+                              <p>We retain account and app data for as long as needed to provide the service, maintain your account, and support the features you use. If you delete content or request account deletion, we will delete or de-identify the relevant data within a reasonable period, except where limited retention is necessary for legal compliance, security, fraud prevention, dispute resolution, or backup and recovery purposes.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>7. Account Deletion and Your Choices</h2>
+                              <p>You may request deletion of your account from within the app through the account deletion feature, and you may also use our web deletion request page at: <a href="#">[Account Deletion URL]</a>.</p>
+                              <p>You may also contact us at <a href="mailto:likelysphinx707@gmail.com">[Support Email]</a> to request access, correction, or deletion of your information, subject to applicable law. You may stop using the app at any time and revoke device permissions through your system settings.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>8. Security</h2>
+                              <p>We use reasonable administrative, technical, and organizational safeguards to protect information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>9. Children's Privacy</h2>
+                              <p>StyleStreak is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information, contact us and we will take appropriate steps.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>10. International Transfers</h2>
+                              <p>Your information may be processed and stored in countries other than your own, including the United States, where our service providers operate.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>11. Changes to This Privacy Policy</h2>
+                              <p>We may update this Privacy Policy from time to time. If we make material changes, we will update the Effective Date and may provide additional notice where required.</p>
+                        </article>
+
+                        <article class="section-card">
+                              <h2>12. Contact Us</h2>
+                              <p>If you have questions about this Privacy Policy or our privacy practices, contact us using the details in the contact panel.</p>
+                        </article>
+                  </div>
+
+                  <aside class="sidebar">
+                        <section class="contact-card">
+                              <h3>Contact</h3>
+                              <ul class="contact-list">
+                                    <li>Alexander Murdock</li>
+                                    <li><a href="mailto:likelysphinx707@gmail.com">likelysphinx707@gmail.com</a></li>
+                                    <li><a href="https://alexanderrmurdock.com/">alexanderrmurdock.com</a></li>
+                              </ul>
+                        </section>
+                  </aside>
+            </section>
+      </main>
+</body>
+</html>
