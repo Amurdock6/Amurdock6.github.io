@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta name="keywords" content="Alexander Murdock, Alex Murdock, Alexander Murdock Portfolio, Alex Murdock Portfolio, Web Developer, Web Designer, web design">
-      <meta name="description" content="Alexander Murdock is a Freelance Web Developer and designer with 8 industry certifications and over 5 years of experience Designing and Developing many different projects in various different languages including JavaScript, Java, MERN, Python, PHP, WordPress, CSS and HTML.">
+      <meta name="keywords" content="Alexander Murdock, Alex Murdock, Software Engineer, Mobile Developer, React Native, ServiceNow, StyleStreak, Android Race Dash">
+      <meta name="description" content="Alex Murdock is a software engineer building mobile products, full-stack applications, and enterprise automation. Explore StyleStreak, AndroidRaceDash, and selected work.">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,6 +18,8 @@
 
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+            rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
             rel="stylesheet">
 
       <!-- Bootstrap CSS -->
@@ -116,7 +118,8 @@
 
             <div class="hero">
                   <div class="header">
-                        <h1 class="line anim-typewriter">I make cool software take a look.</h1>
+                        <h1 class="line anim-typewriter">I build cool software, take a look.</h1>
+                        <p class="hero-focus">full-stack / mobile / AI </p>
                   </div>
             </div>
 
@@ -133,7 +136,122 @@
                   <br>
 
                   <div class="whitespace"></div>
-                  <div class="whitespace"></div>
+
+                  <section class="stylestreak-feature" id="stylestreak-feature" aria-label="Featured StyleStreak project">
+                        <span class="project-ribbon stylestreak-feature__ribbon">
+                              <span class="project-ribbon__tails" aria-hidden="true"></span>
+                              <span class="project-ribbon__face" aria-hidden="true"></span>
+                              <strong>1st</strong>
+                              <small>U of U<br>Demo Day</small>
+                        </span>
+
+                        <div class="about-hero__shell">
+                              <div class="about-hero__copy">
+                                    <span class="eyebrow">Built for real-life outfit planning</span>
+                                    <h2>Outfit planning that keeps up with real life.</h2>
+                                    <p class="about-hero__support">
+                                          StyleStreak is a smart wardrobe app that helps you plan outfits, track what
+                                          you actually wear, pack for trips, and figure out what to wear for events when
+                                          you are not sure where to start. It is designed to help users organize their
+                                          closet, make faster outfit decisions, and get more value out of the clothes
+                                          they already own. Our edge is fast wardrobe digitization paired with a simple,
+                                          polished, and easy-to-use UI/UX. Available on both Android and iOS.
+                                    </p>
+
+                                    <div class="about-hero__story" aria-label="How StyleStreak works">
+                                          <article class="about-story-card">
+                                                <span class="about-story-card__step">01</span>
+                                                <strong>Capture your closet</strong>
+                                                <p>Use live scan, saved photos, or a quick manual add when you need one missing piece in the app fast.</p>
+                                          </article>
+                                          <article class="about-story-card">
+                                                <span class="about-story-card__step">02</span>
+                                                <strong>Build the look</strong>
+                                                <p>Filter what you own, preview the fit, and save the main outfit plus a backup before the day gets moving.</p>
+                                          </article>
+                                          <article class="about-story-card">
+                                                <span class="about-story-card__step">03</span>
+                                                <strong>Pack and repeat smarter</strong>
+                                                <p>Turn the same wardrobe into trip plans, wear tracking, and stats that show what is actually working.</p>
+                                          </article>
+                                    </div>
+
+                                    <div class="hero-actions" data-style-actions>
+                                          <a class="button" href="project7.html">View details</a>
+                                          <a class="button-secondary" href="https://stylestreak.fashion/"
+                                                target="_blank" rel="noopener noreferrer">Visit website</a>
+                                          <a class="button-ghost" href="https://stylestreak.fashion/tutorial/"
+                                                target="_blank" rel="noopener noreferrer">Open tutorial</a>
+                                    </div>
+
+                                    <div class="about-hero__metrics" aria-label="StyleStreak highlights">
+                                          <span class="about-hero__metric">Outfit planning</span>
+                                          <span class="about-hero__metric">Wear tracking</span>
+                                          <span class="about-hero__metric">Trip packing</span>
+                                          <span class="about-hero__metric">Fast digitization</span>
+                                    </div>
+                              </div>
+
+                              <div class="about-hero__stage" id="stylestreak-preview"
+                                    aria-label="StyleStreak product showcase">
+                                    <div class="about-stage__top">
+                                          <span>Product preview</span>
+                                          <strong>See how StyleStreak helps you plan, pack, and get dressed faster.</strong>
+                                          <p>Swipe through the three main flows to see the product in motion.</p>
+                                    </div>
+
+                                    <div class="scroll-cue scroll-cue--showcase">
+                                          <button class="scroll-cue__button scroll-cue__button--prev"
+                                                type="button" aria-label="Show previous preview" data-scroll-prev>
+                                                <span aria-hidden="true">&lsaquo;</span>
+                                          </button>
+                                          <div class="about-stage__showcase" data-scroll-track>
+                                                <article class="about-phone about-phone--scan">
+                                                      <span class="about-phone__label">Wardrobe</span>
+                                                      <video autoplay muted loop playsinline preload="metadata"
+                                                            poster="https://stylestreak.fashion/assets/images/app-screenshots/items%20tab.webp"
+                                                            aria-label="StyleStreak wardrobe filtering recording">
+                                                            <source src="https://stylestreak.fashion/assets/images/app-screenrecordings/item%20filtering%20and%20item%20details%20page.mp4" type="video/mp4">
+                                                      </video>
+                                                      <p class="about-phone__caption">Plan for the moment.</p>
+                                                </article>
+
+                                                <article class="about-phone about-phone--hero">
+                                                      <span class="about-phone__label">Live Auto Scan</span>
+                                                      <video autoplay muted loop playsinline preload="metadata"
+                                                            poster="https://stylestreak.fashion/assets/images/app-screenshots/upload%20from%20library%20scanning.webp"
+                                                            aria-label="StyleStreak live auto scan recording">
+                                                            <source src="https://stylestreak.fashion/assets/images/app-screenrecordings/Live%20Auto%20Scan.mp4" type="video/mp4">
+                                                      </video>
+                                                      <p class="about-phone__caption">Digitize your closet fast.</p>
+                                                </article>
+
+                                                <article class="about-phone about-phone--preview">
+                                                      <span class="about-phone__label">Outfit Preview</span>
+                                                      <video autoplay muted loop playsinline preload="metadata"
+                                                            poster="https://stylestreak.fashion/assets/images/app-screenshots/outfit%20previw%20page%20fitted%20outfit.webp"
+                                                            aria-label="StyleStreak outfit preview recording">
+                                                            <source src="https://stylestreak.fashion/assets/images/app-screenrecordings/Dress%20Me%20and%20Outfit%20Preview.mp4" type="video/mp4">
+                                                      </video>
+                                                      <p class="about-phone__caption">Save the perfect fit.</p>
+                                                </article>
+                                          </div>
+                                          <button class="scroll-cue__button scroll-cue__button--next"
+                                                type="button" aria-label="Show next preview" data-scroll-next>
+                                                <span aria-hidden="true">&rsaquo;</span>
+                                          </button>
+                                    </div>
+
+                                    <div class="about-stage__pills" aria-label="Additional feature highlights">
+                                          <span>Outfit Planning</span>
+                                          <span>Wear Tracking</span>
+                                          <span>Trip Packing</span>
+                                          <span>Wardrobe Stats</span>
+                                    </div>
+                              </div>
+                        </div>
+                  </section>
+
                   <div class="whitespace"></div>
                   <div class="whitespace"></div>
 
@@ -294,6 +412,40 @@
                   let scrollAmount = (windowScroll / windowHeight) * 100;
                   document.getElementById("mybar").style.width = scrollAmount + "%";
             };
+      </script>
+      <script>
+            const previewTrack = document.querySelector("[data-scroll-track]");
+            const previewPrevious = document.querySelector("[data-scroll-prev]");
+            const previewNext = document.querySelector("[data-scroll-next]");
+
+            if (previewTrack && previewPrevious && previewNext) {
+                  const updatePreviewButtons = function () {
+                        const maxScroll = previewTrack.scrollWidth - previewTrack.clientWidth;
+                        previewPrevious.disabled = previewTrack.scrollLeft < 8;
+                        previewNext.disabled = previewTrack.scrollLeft > maxScroll - 8;
+                  };
+
+                  previewPrevious.addEventListener("click", function () {
+                        previewTrack.scrollBy({ left: -previewTrack.clientWidth * 0.8, behavior: "smooth" });
+                  });
+                  previewNext.addEventListener("click", function () {
+                        previewTrack.scrollBy({ left: previewTrack.clientWidth * 0.8, behavior: "smooth" });
+                  });
+                  previewTrack.addEventListener("scroll", updatePreviewButtons);
+                  window.addEventListener("resize", updatePreviewButtons);
+                  updatePreviewButtons();
+            }
+
+            const styleActions = document.querySelectorAll("[data-style-actions] a");
+
+            styleActions.forEach(function (action) {
+                  action.addEventListener("click", function () {
+                        styleActions.forEach(function (link) {
+                              link.classList.remove("is-selected");
+                        });
+                        action.classList.add("is-selected");
+                  });
+            });
       </script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8X4JLV9SC"></script>
       <script>

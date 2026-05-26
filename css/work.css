@@ -15,6 +15,28 @@ h6 {
     height: 575px;
 }
 
+.project8 {
+    background: url(../images/projects/stylestreak/wardrobe.webp) no-repeat 50% 12%;
+    background-size: cover;
+    cursor: pointer;
+    display: block;
+    height: 700px;
+    position: relative;
+}
+
+.project8::after {
+    content: "stylestreak.";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: absolute;
+    color: #fff;
+    display: block;
+    top: 56%;
+    left: calc(100% + 30px);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
 .project1 {
     background: url(../images/projects/axis-home.webp) no-repeat 50% 0%;
     background-size: cover;
@@ -208,11 +230,16 @@ h6 {
           background-position: center;
     }
 
+    .project8 {
+          height: 580px;
+          background-position: center top;
+    }
+
     .vertical {
           display: none;
     }
 
-    .project1::after, .project1_work::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after {
+    .project1::after, .project1_work::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after, .project8::after {
           left:0;
           right:0;
           top: 100%;

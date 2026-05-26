@@ -38,7 +38,7 @@ a{
 
 /* typewriter effect */
 .line {
-      width: 24em;
+      width: 35ch;
       top: 50%;
       margin: auto;
       border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -58,7 +58,7 @@ a{
             width: 0;
       }
       to {
-            width: 18em;
+            width: 35ch;
       }
 }
 
@@ -68,7 +68,7 @@ a{
                   width: 0;
             }
             to {
-                  width: 17em;
+                  width: 35ch;
             }
       }
 }
@@ -148,9 +148,145 @@ a{
       line-height: 58px;
 }
 
+.hero-focus {
+      margin: 28px auto 0;
+      color: #8b8b8b;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      text-align: center;
+      text-transform: uppercase;
+}
+
 @media(max-width: 768px) {
       .header h1 {
-            font-size: 20px;
+            font-size: clamp(13px, 4vw, 20px);
+      }
+
+      .line {
+            max-width: calc(100vw - 32px);
+      }
+
+      .hero-focus {
+            max-width: 290px;
+            font-size: 11px;
+            line-height: 24px;
+      }
+}
+
+.project-ribbon {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 28px;
+      left: -42px;
+      z-index: 2;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      background: #0f0f0f;
+      box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.04), 0 12px 25px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-family: "Roboto Mono";
+      text-align: center;
+      animation: ribbon-float 3.6s ease-in-out infinite;
+}
+
+.project-ribbon::before {
+      content: "";
+      position: absolute;
+      inset: -9px;
+      border: 1px dashed rgba(255, 255, 255, 0.55);
+      border-radius: 50%;
+      animation: ribbon-spin 12s linear infinite;
+}
+
+.project-ribbon::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 50%;
+}
+
+.project-ribbon__tails {
+      position: absolute;
+      top: 82px;
+      left: 16px;
+      width: 88px;
+      height: 84px;
+      z-index: -1;
+}
+
+.project-ribbon__tails::before, .project-ribbon__tails::after {
+      content: "";
+      width: 48px;
+      height: 76px;
+      position: absolute;
+      top: 0;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: linear-gradient(90deg, #0b0b0b 0%, #1d1d1d 52%, #333 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
+}
+
+.project-ribbon__tails::before {
+      left: 2px;
+      transform: rotate(8deg);
+}
+
+.project-ribbon__tails::after {
+      right: 2px;
+      transform: rotate(-8deg);
+}
+
+.project-ribbon strong {
+      position: relative;
+      z-index: 1;
+      font-size: 25px;
+      font-weight: 500;
+}
+
+.project-ribbon small {
+      position: relative;
+      z-index: 1;
+      margin-top: 4px;
+      color: #aaa;
+      font-size: 9px;
+      line-height: 14px;
+      text-transform: uppercase;
+}
+
+@keyframes ribbon-spin {
+      to {
+            transform: rotate(360deg);
+      }
+}
+
+@keyframes ribbon-float {
+      0%, 100% {
+            transform: translateY(0);
+      }
+      50% {
+            transform: translateY(-7px);
+      }
+}
+
+@media(prefers-reduced-motion: reduce) {
+      .project-ribbon, .project-ribbon::before {
+            animation: none;
+      }
+}
+
+@media(max-width: 768px) {
+      .project-ribbon {
+            top: 18px;
+            left: auto;
+            right: 18px;
+            width: 98px;
+            height: 98px;
       }
 }
 

@@ -47,7 +47,373 @@
   background-size: cover;
 }
 
+.image7 {
+  background: linear-gradient(rgba(15, 15, 15, 0.05), rgba(15, 15, 15, 0.18)), url(../images/projects/stylestreak/wardrobe-hero.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.tutorial-hero__stage {
+  box-sizing: border-box;
+  display: grid;
+  gap: 25px;
+  min-width: 0;
+  padding: 34px 30px 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 216, 213, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(40, 147, 227, 0.2), transparent 26%),
+    linear-gradient(180deg, #0b1524, #12243b);
+  box-shadow: 0 30px 72px rgba(17, 80, 124, 0.2);
+}
+
+.tutorial-hero__stage::before,
+.tutorial-hero__stage::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(24px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.tutorial-hero__stage::before {
+  top: 72px;
+  left: 28px;
+  width: 160px;
+  height: 160px;
+  background: rgba(0, 216, 213, 0.18);
+}
+
+.tutorial-hero__stage::after {
+  right: 22px;
+  bottom: 104px;
+  width: 220px;
+  height: 220px;
+  background: rgba(40, 147, 227, 0.22);
+}
+
+.tutorial-stage__top {
+  display: grid;
+  gap: 11px;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tutorial-stage__eyebrow {
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #80ecf0;
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.tutorial-stage__top strong {
+  display: block;
+  max-width: 850px;
+  color: #eef9ff;
+  font-family: "Space Grotesk", "Roboto Mono", sans-serif;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: -0.05em;
+}
+
+.tutorial-stage__top p {
+  max-width: 1020px;
+  margin: 0;
+  color: rgba(214, 236, 255, 0.8);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+.tutorial-scroll-cue {
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tutorial-scroll-cue__button {
+  display: none;
+}
+
+.tutorial-stage__showcase {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 29px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px 12px 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.tutorial-phone {
+  position: relative;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 27px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    #07111f;
+  box-shadow: 0 25px 52px rgba(0, 0, 0, 0.4);
+}
+
+.tutorial-phone__frame {
+  position: relative;
+}
+
+.tutorial-phone__frame::before,
+.tutorial-phone__frame::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+}
+
+.tutorial-phone__frame::before {
+  right: -39px;
+  width: 38px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(128, 236, 240, 0.24), rgba(128, 236, 240, 0.86));
+}
+
+.tutorial-phone__frame::after {
+  right: -37px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgba(128, 236, 240, 0.86);
+  border-right: 2px solid rgba(128, 236, 240, 0.86);
+  transform: translateY(-5px) rotate(45deg);
+}
+
+.tutorial-phone:last-child .tutorial-phone__frame::before,
+.tutorial-phone:last-child .tutorial-phone__frame::after {
+  display: none;
+}
+
+.tutorial-phone__frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  border-radius: 19px;
+  border-radius: 22px;
+  background: #050c15;
+}
+
+.tutorial-phone__step {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  left: -7px;
+  z-index: 2;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2893e3, #00d8d5);
+  box-shadow: 0 14px 30px rgba(18, 120, 190, 0.28);
+  color: #fff;
+  font-size: 13px;
+}
+
+.tutorial-phone__label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  padding: 7px 10px;
+  border-radius: 18px;
+  background: rgba(6, 15, 28, 0.76);
+  color: #ebf7ff;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tutorial-phone__caption {
+  margin: 12px 4px 2px;
+  color: #d6ecff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.tutorial-phone--upload {
+  transform: translateY(18px) rotate(-3.5deg);
+}
+
+.tutorial-phone--wardrobe {
+  transform: translateY(4px) rotate(-1.5deg);
+}
+
+.tutorial-phone--outfit {
+  z-index: 2;
+  transform: translateY(-8px) rotate(1deg);
+}
+
+.tutorial-phone--travel {
+  transform: translateY(14px) rotate(3deg);
+}
+
+.tutorial-stage__route {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.tutorial-stage__route span {
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-family: "Space Grotesk", "Roboto Mono", sans-serif;
+  font-size: 12px;
+}
+
+.project-cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2893e3, #00d8d5);
+  box-shadow: 0 18px 36px rgba(18, 120, 190, 0.2);
+  font-family: "Space Grotesk", "Roboto Mono", sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-cta:hover {
+  box-shadow: 0 22px 42px rgba(18, 120, 190, 0.32);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.award-callout {
+  margin: 36px 0 48px;
+  padding: 27px 30px;
+  border: 1px solid rgba(40, 147, 227, 0.22);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 216, 213, 0.15), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(234, 247, 255, 0.9));
+  box-shadow: 0 22px 50px rgba(17, 80, 124, 0.15);
+  color: #0f3150;
+}
+
+.award-callout h2 {
+  font-size: 22px;
+  color: #0f3150;
+  font-family: "Space Grotesk", "Roboto Mono", sans-serif;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.award-callout p {
+  color: #4f7394;
+  margin-bottom: 0;
+}
+
+.case-study-section {
+  margin: 20px 0 56px;
+}
+
+.case-study-section h2 {
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+.case-study-section h3 {
+  color: #80ecf0;
+  font-family: "Space Grotesk", "Roboto Mono", sans-serif;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.case-study-section p {
+  font-weight: 300;
+  line-height: 32px;
+  color: grey;
+}
+
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack-list li {
+  padding: 10px 14px;
+  border: 1px solid rgba(40, 147, 227, 0.28);
+  border-radius: 999px;
+  background: rgba(40, 147, 227, 0.1);
+  color: #d6ecff;
+  font-family: "Space Grotesk", "Roboto Mono", sans-serif;
+  font-size: 14px;
+}
+
+.phone-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.phone-gallery figure {
+  margin: 0;
+  padding: 12px 12px 16px;
+  border: 1px solid rgba(40, 147, 227, 0.18);
+  border-radius: 22px;
+  background: rgba(18, 36, 59, 0.52);
+}
+
+.phone-gallery img {
+  display: block;
+  width: 100%;
+  height: 590px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #f7f8fb;
+}
+
+.phone-gallery figcaption {
+  margin-top: 14px;
+  color: #b8d7ee;
+  font-size: 13px;
+  line-height: 24px;
+}
+
 @media screen and (max-width: 600px){
+  .project-img .container {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    overflow: hidden;
+  }
+
   .image{
     background: url(../images/projects/axis/main.png) no-repeat  50% 70%;
     background-size: cover;
@@ -66,6 +432,113 @@
   .image3{
     background: url(../images/projects/e46_finder/e46-mobile.webp) no-repeat  50% 70%;
     background-size: cover;
+  }
+
+  .image7 {
+    height: 420px;
+    background-position: center;
+  }
+
+  .tutorial-hero__stage {
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    display: block;
+    gap: 18px;
+    margin-top: 22px;
+    padding: 22px 14px 18px;
+  }
+
+  .tutorial-stage__top {
+    min-width: 0;
+    margin-bottom: 18px;
+  }
+
+  .tutorial-stage__top strong {
+    max-width: calc(100vw - 60px);
+    font-size: 23px;
+  }
+
+  .tutorial-stage__top p {
+    max-width: calc(100vw - 60px);
+    font-size: 13px;
+    line-height: 23px;
+  }
+
+  .tutorial-stage__showcase {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    gap: 14px;
+    margin: 0;
+    padding: 8px 6px 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .tutorial-stage__showcase::-webkit-scrollbar,
+  .tutorial-stage__route::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tutorial-phone,
+  .tutorial-phone--upload,
+  .tutorial-phone--wardrobe,
+  .tutorial-phone--outfit,
+  .tutorial-phone--travel {
+    flex: 0 0 min(232px, calc(100vw - 70px));
+    transform: none;
+    scroll-snap-align: center;
+  }
+
+  .tutorial-phone__frame::before,
+  .tutorial-phone__frame::after {
+    display: none;
+  }
+
+  .tutorial-scroll-cue__button {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 22px);
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    background: rgba(8, 18, 33, 0.9);
+    color: #fff;
+    font-size: 23px;
+  }
+
+  .tutorial-scroll-cue__button:disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .tutorial-scroll-cue__button--prev {
+    left: 0;
+  }
+
+  .tutorial-scroll-cue__button--next {
+    right: 0;
+  }
+
+  .tutorial-scroll-cue {
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+
+  .tutorial-stage__route {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex-wrap: nowrap;
+    justify-content: start;
+    overflow-x: auto;
+    padding: 0 2px 5px;
+    scrollbar-width: none;
   }
 }
 
@@ -177,5 +650,23 @@ p.no-previous{
 
   .project {
       margin-bottom: 8vh;
+  }
+
+  .award-callout {
+      margin: 28px 0 40px;
+      padding: 20px;
+  }
+
+  .case-study-section {
+      margin-bottom: 40px;
+  }
+
+  .phone-gallery {
+      grid-template-columns: 1fr;
+  }
+
+  .phone-gallery img {
+      height: auto;
+      max-height: 680px;
   }
 }
