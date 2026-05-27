@@ -448,22 +448,190 @@ a{
 .about {
       height: 600px;
       margin-top: 120px;
+      padding: 0 !important;
 }
 
-.image {
-      background: url(../images/projects/about.webp) no-repeat  100% 85%;
-      background-size: cover;
-  }
+.about-carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      background: #080808;
+}
+
+.about-carousel .carousel-images {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+}
+
+.about-carousel__slide {
+      position: relative;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) 64px;
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+}
+
+.about-carousel__slide picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+}
+
+.about-carousel__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      user-select: none;
+}
+
+.about-carousel__image--contain {
+      object-fit: contain;
+      padding: 34px;
+}
+
+.about-carousel__image--portrait {
+      object-position: 100% 85%;
+}
+
+.about-carousel__slide figcaption {
+      display: flex;
+      align-items: center;
+      min-height: 64px;
+      padding: 0 min(46%, 420px) 0 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: #101010;
+}
+
+.about-carousel__slide figcaption::before {
+      content: "";
+      flex: 0 0 22px;
+      height: 1px;
+      margin-right: 12px;
+      background: rgba(255, 255, 255, 0.65);
+}
+
+.about-carousel .carousel-btn {
+      position: absolute;
+      top: calc((100% - 64px) / 2);
+      z-index: 2;
+      padding: 10px;
+      border: 0;
+      background: rgba(0, 0, 0, 0.52);
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: background-color 0.2s ease;
+}
+
+.about-carousel .carousel-btn:hover,
+.about-carousel .carousel-btn:focus-visible {
+      background: rgba(0, 0, 0, 0.82);
+}
+
+.about-carousel .carousel-btn:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+}
+
+.about-carousel .prev {
+      left: 12px;
+}
+
+.about-carousel .next {
+      right: 12px;
+}
+
+.about-carousel .progress-bar-container {
+      position: absolute;
+      right: 34px;
+      bottom: 30px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      width: min(31%, 280px);
+      height: 5px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+}
+
+.about-carousel .pause-play {
+      top: 50%;
+      left: -48px;
+      padding: 5px 9px;
+      border-radius: 3px;
+      font-size: 0.9rem;
+}
+
+.about-carousel #progressBar {
+      height: 5px;
+      width: 0%;
+      border-radius: 3px;
+      background-color: #fff !important;
+}
 
 @media screen and (max-width: 650px){
-      .image {
-            background: url(../images/projects/about-mobile.webp) no-repeat  50% 50%;
-            background-size: cover;
-      }
-      
       .about {
             height: 445px;
             margin-top: 100px;
+      }
+
+      .about-carousel__image--contain {
+            padding: 20px;
+      }
+
+      .about-carousel__image--portrait {
+            object-position: center;
+      }
+
+      .about-carousel__slide {
+            grid-template-rows: minmax(0, 1fr) 88px;
+      }
+
+      .about-carousel__slide figcaption {
+            align-items: flex-start;
+            min-height: 88px;
+            padding: 14px 18px 0;
+            font-size: 11px;
+      }
+
+      .about-carousel .carousel-btn {
+            top: calc((100% - 88px) / 2);
+            padding: 8px;
+            font-size: 1.1rem;
+      }
+
+      .about-carousel .prev {
+            left: 8px;
+      }
+
+      .about-carousel .next {
+            right: 8px;
+      }
+
+      .about-carousel .progress-bar-container {
+            right: 18px;
+            bottom: 20px;
+            width: calc(100% - 72px);
+      }
+
+      .about-carousel .pause-play {
+            left: -36px;
+            font-size: 0.8rem;
       }
       
       .hero-content {

@@ -11,10 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoSwitch;
     let isPaused = false;
 
+    pausePlayBtn.setAttribute('aria-label', 'Pause slideshow');
+
     // Clone images for infinite loop
     const images = Array.from(carouselImages.children);
     const firstClone = images[0].cloneNode(true);
     const lastClone = images[images.length - 1].cloneNode(true);
+    firstClone.setAttribute('aria-hidden', 'true');
+    lastClone.setAttribute('aria-hidden', 'true');
     carouselImages.appendChild(firstClone);
     carouselImages.insertBefore(lastClone, images[0]);
 
@@ -116,12 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
             stopAutoSwitch();
             stopProgressBar();
             pausePlayBtn.innerHTML = '&#9654;'; // Play Icon
+            pausePlayBtn.setAttribute('aria-label', 'Play slideshow');
         } else {
             // Play the carousel
             isPaused = false;
             resetProgressBar();
             startAutoSwitch();
             pausePlayBtn.innerHTML = '&#10074;&#10074;'; // Pause Icon
+            pausePlayBtn.setAttribute('aria-label', 'Pause slideshow');
         }
     });
 

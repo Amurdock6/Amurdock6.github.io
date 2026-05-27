@@ -111,7 +111,54 @@
 
             <div class="container">
                   <div class="row">
-                        <div class="col-lg-12 about image wow fadeInUp" data-wow-delay="1s"></div>
+                        <div class="col-lg-12 about wow fadeInUp" data-wow-delay="1s">
+                              <section class="about-carousel carousel" aria-label="Photos of Alex and his interests">
+                                    <button class="carousel-btn prev" id="prevBtn" type="button"
+                                          aria-label="Previous photo">&#9664;</button>
+
+                                    <div class="carousel-images" id="carouselImages" aria-live="polite">
+                                          <figure class="about-carousel__slide">
+                                                <picture>
+                                                      <source media="(max-width: 650px)"
+                                                            srcset="images/projects/about-mobile.webp">
+                                                      <img class="about-carousel__image about-carousel__image--portrait" src="images/projects/about.webp"
+                                                            alt="Alex Murdock standing beside his car.">
+                                                </picture>
+                                                <figcaption>Alex Murdock</figcaption>
+                                          </figure>
+
+                                          <figure class="about-carousel__slide">
+                                                <img class="about-carousel__image"
+                                                      src="images/blog-posts/post1/mountedScreen.webp"
+                                                      alt="The custom Raspberry Pi digital dash mounted in Alex's 350Z.">
+                                                <figcaption>My 350Z digital dash build</figcaption>
+                                          </figure>
+
+                                          <figure class="about-carousel__slide">
+                                                <img class="about-carousel__image"
+                                                      src="images/blog-posts/post1/laptopInDaZ.webp"
+                                                      alt="A laptop connected while developing the custom digital dash inside the 350Z.">
+                                                <figcaption>Developing automotive software</figcaption>
+                                          </figure>
+
+                                          <figure class="about-carousel__slide">
+                                                <img class="about-carousel__image about-carousel__image--contain"
+                                                      src="images/projects/stylestreak/wardrobe-hero.png"
+                                                      alt="StyleStreak app wardrobe interface displayed on a phone.">
+                                                <figcaption>Building StyleStreak</figcaption>
+                                          </figure>
+                                    </div>
+
+                                    <div class="progress-bar-container">
+                                          <button class="carousel-btn pause-play" id="pausePlayBtn" type="button"
+                                                aria-label="Pause slideshow">&#10074;&#10074;</button>
+                                          <div class="progress-bar" id="progressBar"></div>
+                                    </div>
+
+                                    <button class="carousel-btn next" id="nextBtn" type="button"
+                                          aria-label="Next photo">&#9654;</button>
+                              </section>
+                        </div>
                   </div>
             </div>
 
@@ -267,6 +314,7 @@
       <script>
             document.getElementById('active-selector').className = 'active-page';
       </script>
+      <script src="js/carousel.js"></script>
 </body>
 
 </html>
