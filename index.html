@@ -137,7 +137,7 @@
 
                   <div class="whitespace"></div>
 
-                  <section class="stylestreak-feature" id="stylestreak-feature" aria-label="Featured StyleStreak project">
+                  <section class="stylestreak-feature wow fadeInUp" id="stylestreak-feature" aria-label="Featured StyleStreak project">
                         <span class="project-ribbon stylestreak-feature__ribbon">
                               <span class="project-ribbon__tails" aria-hidden="true"></span>
                               <span class="project-ribbon__face" aria-hidden="true"></span>
@@ -145,8 +145,15 @@
                               <small>U of U<br>Demo Day</small>
                         </span>
 
-                        <div class="about-hero__shell">
+                        <div class="about-hero__shell" data-project-card-link="project7.html" role="link" tabindex="0" aria-label="View the StyleStreak project page">
                               <div class="about-hero__copy">
+                                    <div class="stylestreak-brandlockup" aria-label="StyleStreak - smart wardrobe and outfit planning app">
+                                          <img src="images/projects/stylestreak/logo-mark.png" alt="">
+                                          <div>
+                                                <strong>StyleStreak</strong>
+                                                <span>Smart wardrobe + outfit planning app</span>
+                                          </div>
+                                    </div>
                                     <span class="eyebrow">Built for real-life outfit planning</span>
                                     <h2>Outfit planning that keeps up with real life.</h2>
                                     <p class="about-hero__support">
@@ -446,6 +453,29 @@
                         action.classList.add("is-selected");
                   });
             });
+
+            const styleProjectCard = document.querySelector("[data-project-card-link]");
+
+            if (styleProjectCard) {
+                  const openStyleProject = function () {
+                        window.location.href = styleProjectCard.dataset.projectCardLink;
+                  };
+
+                  styleProjectCard.addEventListener("click", function (event) {
+                        if (event.target.closest("a, button")) {
+                              return;
+                        }
+
+                        openStyleProject();
+                  });
+
+                  styleProjectCard.addEventListener("keydown", function (event) {
+                        if (event.target === styleProjectCard && event.key === "Enter") {
+                              event.preventDefault();
+                              openStyleProject();
+                        }
+                  });
+            }
       </script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8X4JLV9SC"></script>
       <script>
