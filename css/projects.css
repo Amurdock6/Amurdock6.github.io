@@ -341,27 +341,40 @@
 }
 
 .award-callout {
+  position: relative;
+  overflow: hidden;
   margin: 36px 0 48px;
   padding: 27px 30px;
-  border: 1px solid rgba(40, 147, 227, 0.22);
+  border: 1px solid rgba(128, 236, 240, 0.24);
   border-radius: 28px;
   background:
-    radial-gradient(circle at top left, rgba(0, 216, 213, 0.15), transparent 34%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(234, 247, 255, 0.9));
-  box-shadow: 0 22px 50px rgba(17, 80, 124, 0.15);
-  color: #0f3150;
+    radial-gradient(circle at top left, rgba(0, 216, 213, 0.2), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(40, 147, 227, 0.18), transparent 34%),
+    linear-gradient(145deg, #0b1524, #12243b);
+  box-shadow: 0 22px 50px rgba(5, 18, 32, 0.3);
+  color: #eef9ff;
+}
+
+.award-callout::before {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 4px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00d8d5, #2893e3);
 }
 
 .award-callout h2 {
   font-size: 22px;
-  color: #0f3150;
+  color: #eef9ff;
   font-family: "Space Grotesk", "Roboto Mono", sans-serif;
   font-weight: 700;
   margin-bottom: 14px;
 }
 
 .award-callout p {
-  color: #4f7394;
+  color: rgba(214, 236, 255, 0.82);
   margin-bottom: 0;
 }
 
