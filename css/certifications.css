@@ -43,11 +43,10 @@
 
 .container3{
     width: 100%;
-    padding-right: 6vw;
-    padding-left: 6vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-top: 11vh;
 }
 
 /* css for image enlarge */
@@ -86,11 +85,15 @@
 }
 
 div#html5-enlarge img {
-    margin-left: 28vw;
+    margin-left: 0vw;
+}
+
+div#html-enlarge img {
+    margin-left: 27.75vw;
 }
 
 div#success-enlarge img{
-    margin-left: -28vw;
+    margin-left: -31vw;
 }
 
 .container1-enlarge{
@@ -103,19 +106,27 @@ div#success-enlarge img{
 }
 
 div#js-enlarge img {
-    margin-left: -31vw;
+    margin-left: -27.75vw;
 }
 
 div#visual-enlarge img {
+    margin-left: 0vw;
+}
+
+div#secriuty-enlarge img {
     margin-left: 31vw;
 }
 
 div#solidworks-enlarge img {
-    margin-left: -18.5vw;
+    margin-left: 31vw;
 }
 
 div#react-enlarge img {
-    margin-left: 18.5vw;
+    margin-left: 0vw;
+}
+
+div#web-and-mobile-dev-enlarge img {
+    margin-left: -28vw;
 }
 
 .container2-enlarge{
@@ -131,27 +142,24 @@ div#react-enlarge img {
 }
 
 div#illustrator-enlarge img {
-    margin-left: -27.75vw;
+    margin-left: -31vw;
 }
 
 div#photoshop-enlarge img {
-    margin-left: 0vw;
+    margin-left: 28vw;
 }
 
 div#carbonfiber img {
-    margin-left: 27.75vw;
+    margin-left: 0vw;
 }
 
 .container3-enlarge{
     width: 100%;
-    padding-right: 6vw;
-    padding-left: 6vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 11vh;
     position: relative;
-    bottom: 21vh;
+    bottom: 22.7vh;
 }
 
 @media screen and (max-width: 1550px){
@@ -178,11 +186,11 @@ div#carbonfiber img {
         margin-bottom: -5vh;
     }
 
-    .container0 img,.container1 img,.container2 img{
+    .container0 img,.container1 img,.container2 img,.container3 img{
         padding-bottom: 8vh;
     }
 
-    img#carbonfiber {
+    img#solidworks-enlarge {
         padding-bottom: 0;
     }
     
@@ -210,14 +218,13 @@ div#carbonfiber img {
     }
 
     .container3{
-        padding-right: 0;
-        padding-left: 0;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 0vh;
+        padding-top: 2vh;
         align-items: center;
+        margin-bottom: -4vh;
     }
 
     .container3-enlarge{
