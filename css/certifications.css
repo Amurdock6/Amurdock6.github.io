@@ -136,9 +136,8 @@ div#web-and-mobile-dev-enlarge img {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 11vh;
     position: relative;
-    bottom: 21vh;
+    bottom: 22.7vh;
 }
 
 div#illustrator-enlarge img {
