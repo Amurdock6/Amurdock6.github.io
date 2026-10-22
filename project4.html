@@ -15,8 +15,6 @@
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="css/projects.css">
-      <link rel="stylesheet" href="css/work.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -36,9 +34,12 @@
       <!-- Additional Scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="case-page" style="--case-accent: #e6b5b1">
       <div class="wrapper">
 
             <nav>
@@ -110,85 +111,107 @@
                   </ul>
             </div>
 
-            <div class="whitespace"></div>
-
-            <div class="container">
-                  <div class="hero-content">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-lg-12">
-                                    <br>
-
-                                    <h1 class="wow fadeInUp" data-wow-delay="1s">University of Utah CHERP</h1><br><br>
-
-                                    <div class="row">
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.2s">service :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Webmaster</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.4s">started :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">July 2022</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.6s">end date :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">November 2025</h6>
-                                          </div>
-
-
-                                    </div>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">
-                                          At the University of Utah's Collaborative for Higher
-                                          Education Research and Policy (CHERP) I worked as a
-                                          webmaster where I designed and developed rich content for many pages and blog
-                                          posts. I also added updates to existing pages and collaborated closely with many
-                                          members of the CHERP research team to create and add their research findings
-                                          to the website. I primarily use Omni CMS
-                                          and basic HTML/CSS while working on the CHERP website.
-                                    </p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <a href="https://cherp.utah.edu/">
-                  <div class="project-img">
-                        <div class="container">
-                              <br><br>
-                              <div class="row">
-                                    <div class="col-md-8">
-                                          <div class="project image4 wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                          <div class="project image4 wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </a>
-            <br><br>
-
-            <div class="project-nav">
-                  <div class="container">
-                        <div class="row">
-                              <div class="col-lg-6 prev">
-                                    <p class="arrow-left"><ion-icon name="arrow-back"></ion-icon><a
-                                                href="project5.html">previous</a></p>
-                              </div>
-                              <div class="col-lg-6 next">
-                                    <p class="arrow-right"><a href="project3.html">next</a><ion-icon
-                                                name="arrow-forward"></ion-icon></p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="whitespace"></div>
-
-
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero case-hero--screen">
+<div class="case-hero__copy">
+<p class="case-kicker">Webmaster</p>
+<h1>
+<span class="case-title-line">University of Utah</span>
+<span class="case-title-line">CHERP</span>
+</h1>
+<p class="case-lede">At the University of Utah&#x27;s Collaborative for Higher Education Research and Policy (CHERP) I worked as a webmaster where I designed and developed rich content for many pages and blog posts.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+<a class="case-action" href="https://cherp.utah.edu/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+<figure class="case-media">
+<button type="button" class="case-image-button" data-case-image aria-label="University of Utah CHERP — View details">
+<img src="images/projects/cherp/cherp.webp" alt="University of Utah CHERP" fetchpriority="high" decoding="async">
+</button>
+</figure>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Webmaster</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>July 2022</dd>
+</div>
+<div>
+<dt>end date :</dt>
+<dd>November 2025</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>research findings</h3>
+<p>I also added updates to existing pages and collaborated closely with many members of the CHERP research team to create and add their research findings to the website.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>Omni CMS</h3>
+<p>I primarily use Omni CMS and basic HTML/CSS while working on the CHERP website.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>At the University of Utah&#x27;s Collaborative for Higher Education Research and Policy (CHERP) I worked as a webmaster where I designed and developed rich content for many pages and blog posts. I also added updates to existing pages and collaborated closely with many members of the CHERP research team to create and add their research findings to the website.</p>
+<p>I primarily use Omni CMS and basic HTML/CSS while working on the CHERP website.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>Omni CMS</li>
+<li>HTML/CSS</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>University of Utah CHERP</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-screen">
+<div class="case-screen__bar" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<button type="button" class="case-image-button" data-case-image aria-label="University of Utah CHERP — View details">
+<img src="images/projects/cherp/cherp.webp" alt="University of Utah CHERP" loading="lazy" decoding="async">
+</button>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="project5.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">University of Utah SDEII</span>
+</a>
+<a href="project7.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">StyleStreak</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="University of Utah CHERP">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
             <div class="footer">
                   <div class="container">
                         <br><br>

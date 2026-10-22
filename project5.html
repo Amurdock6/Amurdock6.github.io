@@ -14,8 +14,6 @@
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="css/projects.css">
-      <link rel="stylesheet" href="css/work.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -35,9 +33,12 @@
       <!-- Additional Scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="case-page" style="--case-accent: #d6efad">
       <div class="wrapper">
 
             <!--------------- navbar starts here --------------->
@@ -110,118 +111,137 @@
                   </ul>
             </div>
 
-            <div class="whitespace"></div>
-
-            <div class="container">
-                  <div class="hero-content">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-lg-12">
-                                    <br>
-
-                                    <h1 class="wow fadeInUp" data-wow-delay="1s">University of Utah - SDEII</h1>
-                                    <br><br>
-
-                                    <div class="row">
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.2s">service :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Software Development</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.4s">started :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">October 2022</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.6s">end date :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">Present</h6>
-                                          </div>
-                                    </div>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">
-                                          As a Software Development Engineer II at the University of Utah, my
-                                          work focuses mainly on integrations, complex flow logic, and
-                                          more general areas in ServiceNow for campus and healthcare operations. I
-                                          joined the team as a part-time ServiceNow Developer in October 2022 while completing my Bachelors degree
-                                          and officially moved into my current role in July 2026, after taking
-                                          on the same responsibilities and hours in May. I’ve worked across
-                                          the platform, from ITOM, ITSM, and HRSD, to CMDB
-                                          processes, REST/SOAP integrations, testing, operational support, and
-                                          on-call work.
-                                    </p>
-
-                                    <h3 class="wow fadeInUp">Highlighted work</h3>
-
-                                    <h4 class="wow fadeInUp">AI-Assisted ServiceNow Development</h4>
-                                    <p class="wow fadeInUp">
-                                          I proposed and demonstrated an AI-assisted ServiceNow development
-                                          workflow using VS Code, Git, Codex, and the ServiceNow SDK/Fluent. I
-                                          built a custom Node.js MCP bridge to provide platform metadata and
-                                          test-record context, and used project instructions to guide
-                                          implementation around ServiceNow-specific requirements. My work
-                                          included addressing record references, approvals, access controls,
-                                          and catalog behavior, with backend and browser acceptance checks to
-                                          evaluate the generated applications.
-                                    </p>
-                                    <p class="wow fadeInUp">
-                                          For a Temporary Privileged Access workflow, I found an 18× productivity improvement compared with developing the same
-                                          functionality manually. I presented the approach and findings to
-                                          management and demonstrated the workflow to peers.
-                                    </p>
-
-                                    <h4 class="wow fadeInUp">Printer Automation &amp; Integrations</h4>
-                                    <p class="wow fadeInUp">
-                                          I built end-to-end printer provisioning automation by integrating
-                                          the existing ServiceNow, Infoblox, Cisco ISE, and LRS systems
-                                          through their APIs. The work included substantially rebuilding an
-                                          inherited ISE component and coordinating configuration-item
-                                          creation, IP provisioning, endpoint registration, and printer/DNS
-                                          operations. The automation replaces the manual technical fulfillment
-                                          steps, leaving Client Engineering with request approval. I also
-                                          built reservation and validation logic, retry handling, status
-                                          tracking, and remediation paths for collisions, timeouts, and
-                                          partial failures.
-                                    </p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="project-img">
-                  <div class="container">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-md-8">
-                                    <div class="project image5 wow fadeInUp" data-wow-delay="0.8s"></div>
-                              </div>
-                              <div class="col-md-4">
-                                    <div class="project image5 wow fadeInUp" data-wow-delay="0.8s"></div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <br><br>
-
-            <div class="project-nav">
-                  <div class="container">
-                        <div class="row">
-                              <div class="col-lg-6 prev">
-                                    <p class="arrow-left"><ion-icon name="arrow-back"></ion-icon><a
-                                                href="project6.html">previous</a></p>
-                              </div>
-                              <div class="col-lg-6 next">
-                                    <p class="arrow-right"><a href="project4.html">next</a><ion-icon
-                                                name="arrow-forward"></ion-icon></p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="whitespace"></div>
-
-
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero">
+<div class="case-hero__copy">
+<p class="case-kicker">Software Development</p>
+<h1>
+<span class="case-title-line">University of Utah</span>
+<span class="case-title-line">SDEII</span>
+</h1>
+<p class="case-lede">As a Software Development Engineer II at the University of Utah, my work focuses mainly on integrations, complex flow logic, and more general areas in ServiceNow for campus and healthcare operations.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<div class="case-system case-system--hero">
+<div class="case-system__nodes">
+<div class="case-system__node">
+<small>configuration-item creation</small>
+<strong>ServiceNow</strong>
+</div>
+<div class="case-system__node">
+<small>IP provisioning</small>
+<strong>Infoblox</strong>
+</div>
+<div class="case-system__node">
+<small>endpoint registration</small>
+<strong>Cisco ISE</strong>
+</div>
+<div class="case-system__node">
+<small>printer</small>
+<strong>LRS</strong>
+</div>
+</div>
+</div>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Software Development</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>October 2022</dd>
+</div>
+<div>
+<dt>end date :</dt>
+<dd>Present</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>Printer Automation &amp; Integrations</h3>
+<p>I built end-to-end printer provisioning automation by integrating the existing ServiceNow, Infoblox, Cisco ISE, and LRS systems through their APIs.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>AI-Assisted ServiceNow Development</h3>
+<p>I proposed and demonstrated an AI-assisted ServiceNow development workflow using VS Code, Git, Codex, and the ServiceNow SDK/Fluent.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">03</span>
+<h3>retry handling</h3>
+<p>I also built reservation and validation logic, retry handling, status tracking, and remediation paths for collisions, timeouts, and partial failures.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>As a Software Development Engineer II at the University of Utah, my work focuses mainly on integrations, complex flow logic, and more general areas in ServiceNow for campus and healthcare operations. I joined the team as a part-time ServiceNow Developer in October 2022 while completing my Bachelors degree and officially moved into my current role in July 2026, after taking on the same responsibilities and hours in May.</p>
+<p>I’ve worked across the platform, from ITOM, ITSM, and HRSD, to CMDB processes, REST/SOAP integrations, testing, operational support, and on-call work.</p>
+<p>I proposed and demonstrated an AI-assisted ServiceNow development workflow using VS Code, Git, Codex, and the ServiceNow SDK/Fluent. I built a custom Node.js MCP bridge to provide platform metadata and test-record context, and used project instructions to guide implementation around ServiceNow-specific requirements.</p>
+<p>My work included addressing record references, approvals, access controls, and catalog behavior, with backend and browser acceptance checks to evaluate the generated applications.</p>
+<p>For a Temporary Privileged Access workflow, I found an 18× productivity improvement compared with developing the same functionality manually. I presented the approach and findings to management and demonstrated the workflow to peers.</p>
+<p>I built end-to-end printer provisioning automation by integrating the existing ServiceNow, Infoblox, Cisco ISE, and LRS systems through their APIs. The work included substantially rebuilding an inherited ISE component and coordinating configuration-item creation, IP provisioning, endpoint registration, and printer/DNS operations.</p>
+<p>The automation replaces the manual technical fulfillment steps, leaving Client Engineering with request approval. I also built reservation and validation logic, retry handling, status tracking, and remediation paths for collisions, timeouts, and partial failures.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>ServiceNow</li>
+<li>REST/SOAP</li>
+<li>Node.js</li>
+<li>ServiceNow SDK/Fluent</li>
+<li>Git</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>AI-Assisted ServiceNow Development</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-system">
+<div class="case-system__nodes">
+<div class="case-system__node">
+<small>ServiceNow development workflow</small>
+<strong>SDK/Fluent</strong>
+</div>
+<div class="case-system__node">
+<small>platform metadata and test-record context</small>
+<strong>Node.js MCP</strong>
+</div>
+<div class="case-system__node">
+<small>acceptance checks</small>
+<strong>backend and browser</strong>
+</div>
+</div>
+<p class="case-system__note">I presented the approach and findings to management and demonstrated the workflow to peers.</p>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="project1.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">Riverton High Auto</span>
+</a>
+<a href="project4.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">University of Utah CHERP</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="University of Utah - SDEII">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
             <div class="footer">
                   <div class="container">
                         <br><br>

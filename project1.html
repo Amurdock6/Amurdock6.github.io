@@ -15,8 +15,6 @@
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="css/projects.css">
-      <link rel="stylesheet" href="css/work.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -36,9 +34,12 @@
       <!-- Additional Scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="case-page" style="--case-accent: #edc199">
       <div class="wrapper">
 
             <nav>
@@ -110,83 +111,114 @@
                   </ul>
             </div>
 
-            <div class="whitespace"></div>
-
-            <div class="container">
-                  <div class="hero-content">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-lg-12">
-                                    <br>
-
-                                    <h1 class="wow fadeInUp" data-wow-delay="1s">Riverton High Auto</h1><br><br>
-
-                                    <div class="row">
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.2s">service :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Web Development/Design
-                                                </h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.4s">started :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">September 2020</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.6s">completed :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">December 2020</h6>
-                                          </div>
-                                    </div>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">The Riverton High Auto website was the
-                                          first website that I built for a client. I built this website for an
-                                          internship I had at the Jordan Academy for Technology and Careers. The website
-                                          taught me a lot about working with clients and how to meet their requirements
-                                          as well as explaining things to them in a way that makes sense to a person who
-                                          knows nothing about web development or design. I used HTML, CSS and JS as well
-                                          as a little bit of PHP to develop this site.</p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <a href="http://www.jatcwebsouth.org/mr.hales_website/">
-                  <div class="project-img">
-                        <div class="container">
-                              <br><br>
-                              <div class="row">
-                                    <div class="col-md-8">
-                                          <div class="project image1 wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                          <div class="project image1 wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </a>
-
-            <br><br>
-
-            <div class="project-nav">
-                  <div class="container">
-                        <div class="row">
-                              <div class="col-lg-6 prev">
-                                    <p class="arrow-left"><ion-icon name="arrow-back"></ion-icon><a
-                                                href="project.html">previous</a></p>
-                              </div>
-                              <div class="col-lg-6 next">
-                                    <p class="arrow-right"><a href="project7.html">next</a><ion-icon
-                                                name="arrow-forward"></ion-icon></p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="whitespace"></div>
-
-
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero case-hero--screen">
+<div class="case-hero__copy">
+<p class="case-kicker">Web Development/Design</p>
+<h1>
+<span class="case-title-line">Riverton</span>
+<span class="case-title-line">High Auto</span>
+</h1>
+<p class="case-lede">The Riverton High Auto website was the first website that I built for a client.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+<a class="case-action" href="http://www.jatcwebsouth.org/mr.hales_website/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+<figure class="case-media">
+<button type="button" class="case-image-button" data-case-image aria-label="Riverton High Auto — View details">
+<img src="images/projects/riverton/main.png" alt="Riverton High Auto" fetchpriority="high" decoding="async">
+</button>
+</figure>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Web Development/Design</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>September 2020</dd>
+</div>
+<div>
+<dt>completed :</dt>
+<dd>December 2020</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>Jordan Academy</h3>
+<p>I built this website for an internship I had at the Jordan Academy for Technology and Careers.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>working with clients</h3>
+<p>The website taught me a lot about working with clients and how to meet their requirements as well as explaining things to them in a way that makes sense to a person who knows nothing about web development or design.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">03</span>
+<h3>HTML, CSS and JS</h3>
+<p>I used HTML, CSS and JS as well as a little bit of PHP to develop this site.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>The Riverton High Auto website was the first website that I built for a client. I built this website for an internship I had at the Jordan Academy for Technology and Careers.</p>
+<p>The website taught me a lot about working with clients and how to meet their requirements as well as explaining things to them in a way that makes sense to a person who knows nothing about web development or design. I used HTML, CSS and JS as well as a little bit of PHP to develop this site.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+<li>PHP</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>Riverton High Auto</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-screen">
+<div class="case-screen__bar" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<button type="button" class="case-image-button" data-case-image aria-label="Riverton High Auto — View details">
+<img src="images/projects/riverton/main.png" alt="Riverton High Auto" loading="lazy" decoding="async">
+</button>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="project.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">Axis Realty Group</span>
+</a>
+<a href="project5.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">University of Utah SDEII</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="Riverton High Auto">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
             <div class="footer">
                   <div class="container">
                         <br><br>

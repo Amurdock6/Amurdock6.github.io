@@ -15,8 +15,6 @@
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="css/projects.css">
-      <link rel="stylesheet" href="css/work.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -36,9 +34,12 @@
       <!-- Additional Scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="case-page" style="--case-accent: #a8dfe8">
       <div class="wrapper">
 
             <nav>
@@ -110,112 +111,124 @@
                   </ul>
             </div>
 
-            <div class="whitespace"></div>
-
-            <div class="container">
-                  <div class="hero-content">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-lg-12">
-                                    <br>
-
-                                    <h1 class="wow fadeInUp" data-wow-delay="1s">Android Race Dash</h1><br><br>
-
-                                    <div class="row">
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.2s">service :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Android App Development
-                                                </h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.4s">started :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">March 2025</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.6s">completed :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">work in progress</h6>
-                                          </div>
-                                    </div>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">
-                                          <!-- The Android Race Dash app originally started when I was having overheating
-                                          issues with my car and I wanted a way to get more accurate data and data that
-                                          wasn't even available in the OEM gauges on my 350z.
-
-                                          This led me to start development of ARD. The main function of the app is to
-                                          provide users with a digital dash full of all the features you would expect to
-                                          find in a modern day digital dash offered by the major car manufacturers. ARD
-                                          displays all sorts of useful info that you might not have access to normally
-                                          such as digital gauges that display high res values for almost all major car
-                                          data points, a Geforce Meter, lap timer, car service interval tracking, car
-                                          data logging, check engine light, airbag light, abs, and other car
-                                          troubleshooting diagnoses, maintenance records, 0-60 timer and more. All with
-                                          an easy to navigate UI that is fully customizable.
-
-                                          The way ARD works is by gathering data from measurement tools on your device
-                                          such as the gps, accelerometer, and gyroscope. In order to provide users with
-                                          real time high res data from their cars ECU we use a OBD-II scanner that the
-                                          user provides. I also plan on adding support for users that would like to tap
-                                          directly into their CAN bus in custom raspberry pi 4 applications.
-
-                                          ARD is developed using Java, Kotlin, and XML just like most other android
-                                          apps. Development of this app is still ongoing and the app is very much a work
-                                          in progress. Though most of the large technical challenges have already been
-                                          tackled and I use the app every single day on my commute to work and on the
-                                          weekend at track days and canyon drives. Some of the large technical
-                                          challenges I faced during development up to this point have been developing a
-                                          way for the app to interface with the OBD-II scanner, Creating Calculations
-                                          for the GeForce meter and getting those calculations to accurately display on
-                                          the UI. -->
-                                    
-                                          Android Race Dash began when my 350Z started overheating and the stock gauges weren’t precise enough to diagnose the problem. I built ARD to turn any Android device into a modern, customizable digital dash for daily driving and track days. It features fully customizable, drag-and-drop dashboards with analog and digital gauges (speed, RPM, coolant temp, horizontal temp bars, compass, G-meter, check-engine indicator, and more), plus unit conversions, thresholds, and rich styling. Beyond display, ARD reads and logs diagnostic trouble codes (powertrain/ABS/airbag), tracks maintenance with reminders and CSV export/printing, supports per-vehicle profiles (VIN, engine, fuel type, tank size, curb weight), and records data sessions for lap days or canyon runs while keeping the screen awake.
-
-                                          Under the hood, ARD connects to a user-supplied OBD-II scanner (Bluetooth/Wi-Fi) and can ingest external USB sensors (e.g., oil pressure via a Pro Micro). It fuses ECU PIDs with onboard GPS, accelerometer, and gyroscope to compute real-time telemetry like G-forces, lap times, and 0–60. Kotlin/Java components process raw streams, apply user-defined thresholds/styles, and render gauges in real time (UI built with XML/Compose). I use the app daily for commuting and at events; development is ongoing with plans for deeper CAN-bus integration and a larger gauge library. Notable challenges I’ve solved include robust OBD-II streaming, accurate G-force/lap timing calculations, and reliable power/sensor management during long sessions.
-                                    
-                                    </p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <!-- <a href="">  -->
-            <div class="project-img">
-                  <div class="container">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-md-8">
-                                    <div class="project image6 wow fadeInUp" data-wow-delay="0.8s"></div>
-                              </div>
-                              <div class="col-md-4">
-                                    <div class="project image6 wow fadeInUp" data-wow-delay="0.8s"></div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-            <!-- </a> -->
-
-            <br><br>
-
-            <div class="project-nav">
-                  <div class="container">
-                        <div class="row">
-                              <div class="col-lg-6 prev">
-                                    <p class="arrow-left"><ion-icon name="arrow-back"></ion-icon><a
-                                                href="350z-swap.html">previous</a></p>
-                              </div>
-                              <div class="col-lg-6 next">
-                                    <p class="arrow-right"><a href="project3.html">next</a><ion-icon
-                                                name="arrow-forward"></ion-icon></p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="whitespace"></div>
-
-
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero case-hero--screen">
+<div class="case-hero__copy">
+<p class="case-kicker">Android App Development</p>
+<h1>
+<span class="case-title-line">Android</span>
+<span class="case-title-line">Race Dash</span>
+</h1>
+<p class="case-lede">I built ARD to turn any Android device into a modern, customizable digital dash for daily driving and track days.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<figure class="case-media">
+<button type="button" class="case-image-button" data-case-image aria-label="Android Race Dash — View details">
+<img src="images/projects/ard.PNG" alt="Android Race Dash" fetchpriority="high" decoding="async">
+</button>
+</figure>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Android App Development</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>March 2025</dd>
+</div>
+<div>
+<dt>completed :</dt>
+<dd>work in progress</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>drag-and-drop dashboards</h3>
+<p>It features fully customizable, drag-and-drop dashboards with analog and digital gauges (speed, RPM, coolant temp, horizontal temp bars, compass, G-meter, check-engine indicator, and more), plus unit conversions, thresholds, and rich styling.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>real-time telemetry</h3>
+<p>It fuses ECU PIDs with onboard GPS, accelerometer, and gyroscope to compute real-time telemetry like G-forces, lap times, and 0–60.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">03</span>
+<h3>OBD-II streaming</h3>
+<p>Notable challenges I’ve solved include robust OBD-II streaming, accurate G-force/lap timing calculations, and reliable power/sensor management during long sessions.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>Android Race Dash began when my 350Z started overheating and the stock gauges weren’t precise enough to diagnose the problem. I built ARD to turn any Android device into a modern, customizable digital dash for daily driving and track days.</p>
+<p>It features fully customizable, drag-and-drop dashboards with analog and digital gauges (speed, RPM, coolant temp, horizontal temp bars, compass, G-meter, check-engine indicator, and more), plus unit conversions, thresholds, and rich styling. Beyond display, ARD reads and logs diagnostic trouble codes (powertrain/ABS/airbag), tracks maintenance with reminders and CSV export/printing, supports per-vehicle profiles (VIN, engine, fuel type, tank size, curb weight), and records data sessions for lap days or canyon runs while keeping the screen awake.</p>
+<p>Under the hood, ARD connects to a user-supplied OBD-II scanner (Bluetooth/Wi-Fi) and can ingest external USB sensors (e.g., oil pressure via a Pro Micro). It fuses ECU PIDs with onboard GPS, accelerometer, and gyroscope to compute real-time telemetry like G-forces, lap times, and 0–60.</p>
+<p>Kotlin/Java components process raw streams, apply user-defined thresholds/styles, and render gauges in real time (UI built with XML/Compose). I use the app daily for commuting and at events; development is ongoing with plans for deeper CAN-bus integration and a larger gauge library.</p>
+<p>Notable challenges I’ve solved include robust OBD-II streaming, accurate G-force/lap timing calculations, and reliable power/sensor management during long sessions.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>Kotlin/Java</li>
+<li>XML/Compose</li>
+<li>OBD-II</li>
+<li>Bluetooth/Wi-Fi</li>
+<li>USB</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>Android Race Dash</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-dashboard">
+<div class="case-screen">
+<div class="case-screen__bar" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<button type="button" class="case-image-button" data-case-image aria-label="Android Race Dash — View details">
+<img src="images/projects/ard.PNG" alt="Android Race Dash" loading="lazy" decoding="async">
+</button>
+</div>
+<figure class="case-dashboard__phone">
+<button type="button" class="case-image-button" data-case-image aria-label="G-meter — View details">
+<img src="images/projects/ardmobile.webp" alt="G-meter" loading="lazy" decoding="async">
+</button>
+<figcaption class="case-caption">G-meter</figcaption>
+</figure>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="350z-swap.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">350Z / VQ37VHR Engine Swap</span>
+</a>
+<a href="project3.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">E46 Finder</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="Android Race Dash">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
             <div class="footer">
                   <div class="container">
                         <br><br>

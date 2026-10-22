@@ -14,8 +14,6 @@
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="css/projects.css">
-      <link rel="stylesheet" href="css/work.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -35,9 +33,12 @@
       <!-- Additional Scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="case-page" style="--case-accent: #d6efad">
       <div class="wrapper">
 
             <!--------------- navbar starts here --------------->
@@ -110,85 +111,115 @@
                   </ul>
             </div>
 
-            <div class="whitespace"></div>
-
-            <div class="container">
-                  <div class="hero-content">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-lg-12">
-                                    <br>
-
-                                    <h1 class="wow fadeInUp" data-wow-delay="1s">Axis Realty Group</h1><br><br>
-
-                                    <div class="row">
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.2s">service :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Web Development/Design
-                                                </h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.4s">started :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">May 3 2021</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.6s">completed :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">August 1 2021</h6>
-                                          </div>
-                                    </div>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">Axis Realty Group was my first paid
-                                          project. During development I learned a lot of new skills and technologies.
-                                          Developed in WordPress as well as custom JS, PHP and CSS. Developing Axis
-                                          Realty Groups website was a great experience for me and developed my skills as
-                                          a developer drastically. During development I learned how to work with PHP
-                                          very proficiently as well as how to work with SFTP and FTP as well as many
-                                          other skills. I also learned many freelance skills during the development of
-                                          Axis Reality Groups website that are very valuable.
-                                    </p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <a href="https://www.axisutah.com/">
-                  <div class="project-img">
-                        <div class="container">
-                              <br><br>
-                              <div class="row">
-                                    <div class="col-md-8">
-                                          <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                          <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </a>
-
-            <br><br>
-
-            <div class="project-nav">
-                  <div class="container">
-                        <div class="row">
-                              <div class="col-lg-6 prev">
-                                    <p class="arrow-left"><ion-icon name="arrow-back"></ion-icon><a
-                                                href="project3.html">previous</a></p>
-                              </div>
-                              <div class="col-lg-6 next">
-                                    <p class="arrow-right"><a href="project1.html">next</a><ion-icon
-                                                name="arrow-forward"></ion-icon></p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="whitespace"></div>
-
-
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero case-hero--screen">
+<div class="case-hero__copy">
+<p class="case-kicker">Web Development/Design</p>
+<h1>
+<span class="case-title-line">Axis</span>
+<span class="case-title-line">Realty Group</span>
+</h1>
+<p class="case-lede">Axis Realty Group was my first paid project.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+<a class="case-action" href="https://www.axisutah.com/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+<figure class="case-media">
+<button type="button" class="case-image-button" data-case-image aria-label="Axis Realty Group — View details">
+<img src="images/projects/axis/main.png" alt="Axis Realty Group" fetchpriority="high" decoding="async">
+</button>
+</figure>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Web Development/Design</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>May 3 2021</dd>
+</div>
+<div>
+<dt>completed :</dt>
+<dd>August 1 2021</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>WordPress</h3>
+<p>Developed in WordPress as well as custom JS, PHP and CSS.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>PHP</h3>
+<p>During development I learned how to work with PHP very proficiently as well as how to work with SFTP and FTP as well as many other skills.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">03</span>
+<h3>freelance</h3>
+<p>I also learned many freelance skills during the development of Axis Reality Groups website that are very valuable.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>Axis Realty Group was my first paid project. During development I learned a lot of new skills and technologies.</p>
+<p>Developed in WordPress as well as custom JS, PHP and CSS. Developing Axis Realty Groups website was a great experience for me and developed my skills as a developer drastically.</p>
+<p>During development I learned how to work with PHP very proficiently as well as how to work with SFTP and FTP as well as many other skills. I also learned many freelance skills during the development of Axis Reality Groups website that are very valuable.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>WordPress</li>
+<li>JS</li>
+<li>PHP</li>
+<li>CSS</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>Axis Realty Group</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-screen">
+<div class="case-screen__bar" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<button type="button" class="case-image-button" data-case-image aria-label="Axis Realty Group — View details">
+<img src="images/projects/axis/main.png" alt="Axis Realty Group" loading="lazy" decoding="async">
+</button>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="project3.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">E46 Finder</span>
+</a>
+<a href="project1.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">Riverton High Auto</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="Axis Realty Group">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
             <div class="footer">
                   <div class="container">
                         <br><br>

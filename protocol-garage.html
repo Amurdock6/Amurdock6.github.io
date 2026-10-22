@@ -15,8 +15,6 @@
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="css/projects.css">
-      <link rel="stylesheet" href="css/work.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -36,9 +34,12 @@
       <!-- Additional Scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="case-page" style="--case-accent: #d6efad">
       <div class="wrapper">
 
             <nav>
@@ -110,81 +111,121 @@
                   </ul>
             </div>
 
-            <div class="whitespace"></div>
-
-            <div class="container">
-                  <div class="hero-content">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-lg-12">
-                                    <br>
-
-                                    <h1 class="wow fadeInUp" data-wow-delay="1s">Protocol Garage</h1><br><br>
-
-                                    <div class="row">
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.2s">service :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Full-Stack Web &amp; Cloud Architecture</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.4s">started :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">Early 2026</h6>
-                                          </div>
-
-                                          <div class="col-lg-4">
-                                                <p class="wow fadeInUp" data-wow-delay="1.6s">completed :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">Storefront &amp; API Complete</h6>
-                                          </div>
-                                    </div>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">
-                                          Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably. Rather than building on an oversized monolithic e-commerce CMS, I built Protocol Garage from the ground up as a high-performance, static-first storefront with edge serverless endpoints engineered specifically for state integrity, checkout idempotency, and graceful partial failure recovery.
-                                          <br><br>
-                                          The application separates catalog presentation from checkout orchestration, payment handling, and order persistence. The frontend is built using Astro and TypeScript, delivering static product and catalog pages with zero unnecessary client-side JavaScript. Edge API endpoints (/api/checkout and /api/webhooks/stripe) run on Cloudflare Workers backed by a Cloudflare D1 relational database (SQLite at the edge). All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.
-                                          <br><br>
-                                          To prevent race conditions, duplicate charges, or tampering, the checkout service enforces strict server-side catalog validation for all product variants, prices, and quantity limits. Before redirecting to Stripe, the service calculates a deterministic canonical cart fingerprint associated with a client attempt identifier. If a customer retries an identical checkout attempt, the service returns the existing checkout session alongside a stable provider idempotency key; if an attempt identifier is reused with altered cart items, the request is immediately rejected.
-                                          <br><br>
-                                          Handling payment provider events across distributed systems requires assuming networks will fail, delay, or replay requests. Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. Using conditional D1 batch transactions, the system explicitly categorizes events as new, duplicate, ignored, or failed. This design guarantees that duplicated webhook deliveries or out-of-order shipment events cannot corrupt order records or trigger double fulfillment. The entire checkout and event lifecycle is validated with Playwright browser tests and automated CI integration suites.
-                                    </p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="project-img">
-                  <div class="container">
-                        <br><br>
-                        <div class="row">
-                              <div class="col-md-8">
-                                    <div class="project image_protocolgarage wow fadeInUp" data-wow-delay="0.8s"></div>
-                              </div>
-                              <div class="col-md-4">
-                                    <div class="project image_protocolgarage wow fadeInUp" data-wow-delay="0.8s"></div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <br><br>
-
-            <div class="project-nav">
-                  <div class="container">
-                        <div class="row">
-                              <div class="col-lg-6 prev">
-                                    <p class="arrow-left"><ion-icon name="arrow-back"></ion-icon><a
-                                                href="canbus.html">previous</a></p>
-                              </div>
-                              <div class="col-lg-6 next">
-                                    <p class="arrow-right"><a href="350z-swap.html">next</a><ion-icon
-                                                name="arrow-forward"></ion-icon></p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="whitespace"></div>
-
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero">
+<div class="case-hero__copy">
+<p class="case-kicker">Full-Stack Web &amp; Cloud Architecture</p>
+<h1>
+<span class="case-title-line">Protocol</span>
+<span class="case-title-line">Garage</span>
+</h1>
+<p class="case-lede">Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<figure class="case-media">
+<button type="button" class="case-image-button" data-case-image aria-label="Protocol Garage — View details">
+<img src="images/projects/protocol_garage.webp" alt="Protocol Garage" fetchpriority="high" decoding="async">
+</button>
+</figure>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Full-Stack Web &amp; Cloud Architecture</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>Early 2026</dd>
+</div>
+<div>
+<dt>completed :</dt>
+<dd>Storefront &amp; API Complete</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>checkout retries</h3>
+<p>If a customer retries an identical checkout attempt, the service returns the existing checkout session alongside a stable provider idempotency key; if an attempt identifier is reused with altered cart items, the request is immediately rejected.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>Stripe Hosted Checkout</h3>
+<p>All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">03</span>
+<h3>payment events</h3>
+<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. Using conditional D1 batch transactions, the system explicitly categorizes events as new, duplicate, ignored, or failed.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably. Rather than building on an oversized monolithic e-commerce CMS, I built Protocol Garage from the ground up as a high-performance, static-first storefront with edge serverless endpoints engineered specifically for state integrity, checkout idempotency, and graceful partial failure recovery.</p>
+<p>The application separates catalog presentation from checkout orchestration, payment handling, and order persistence. The frontend is built using Astro and TypeScript, delivering static product and catalog pages with zero unnecessary client-side JavaScript.</p>
+<p>Edge API endpoints (/api/checkout and /api/webhooks/stripe) run on Cloudflare Workers backed by a Cloudflare D1 relational database (SQLite at the edge). All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
+<p>To prevent race conditions, duplicate charges, or tampering, the checkout service enforces strict server-side catalog validation for all product variants, prices, and quantity limits. Before redirecting to Stripe, the service calculates a deterministic canonical cart fingerprint associated with a client attempt identifier.</p>
+<p>If a customer retries an identical checkout attempt, the service returns the existing checkout session alongside a stable provider idempotency key; if an attempt identifier is reused with altered cart items, the request is immediately rejected. Handling payment provider events across distributed systems requires assuming networks will fail, delay, or replay requests.</p>
+<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. Using conditional D1 batch transactions, the system explicitly categorizes events as new, duplicate, ignored, or failed.  The entire checkout and event lifecycle is validated with Playwright browser tests and automated CI integration suites.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>Astro</li>
+<li>TypeScript</li>
+<li>Cloudflare Workers</li>
+<li>Cloudflare D1</li>
+<li>Stripe Hosted Checkout</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>Full-Stack Web &amp; Cloud Architecture</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-system">
+<div class="case-system__nodes">
+<div class="case-system__node">
+<small>static product and catalog pages</small>
+<strong>Astro</strong>
+</div>
+<div class="case-system__node">
+<small>Edge API endpoints</small>
+<strong>Cloudflare Workers</strong>
+</div>
+<div class="case-system__node">
+<small>relational database</small>
+<strong>Cloudflare D1</strong>
+</div>
+</div>
+<p class="case-system__note">The application separates catalog presentation from checkout orchestration, payment handling, and order persistence.</p>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="canbus.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">350Z / VQ37 CAN Gateway</span>
+</a>
+<a href="350z-swap.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">350Z / VQ37VHR Engine Swap</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="Protocol Garage">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
             <div class="footer">
                   <div class="container">
                         <br><br>

@@ -818,3 +818,10 @@ h6 {
           right: 0;
     }
 }
+
+@media(max-width: 768px) {
+    .stylestreak-feature {
+          /* Reserve room for the ribbon and its animated outer edge. */
+          margin-top: 64px;
+    }
+}
