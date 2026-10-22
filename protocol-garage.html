@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-      <meta name="keywords" content="Alexander Murdock, Alex Murdock, Alexander Murdock Portfolio, Alex Murdock Portfolio, Old Portfolio">
-      <meta name="description" content="The Portfolio of Alexander Murdock, Web Developer and Designer.">
+      <meta name="keywords" content="Alexander Murdock, Alex Murdock, Protocol Garage, Full Stack, Astro, TypeScript, Cloudflare Workers, Cloudflare D1, Stripe Checkout, Webhooks, Idempotency">
+      <meta name="description" content="Automotive parts storefront built with Astro, TypeScript, Cloudflare Workers, D1, and Stripe, featuring idempotent checkout and resilient payment webhook processing.">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta name="author" content="Alexander Murdock">
       <link rel="icon" href="icons/portfolio-logo.png">
 
-      <title>Alexander Murdock - Old Portfolio</title>
+      <title>Alexander Murdock - Protocol Garage</title>
 
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
@@ -40,6 +40,7 @@
 
 <body>
       <div class="wrapper">
+
             <nav>
                   <span id="brand">
                         <a href="index.html">Alex Murdock</a>
@@ -118,53 +119,52 @@
                               <div class="col-lg-12">
                                     <br>
 
-                                    <h1 class="wow fadeInUp" data-wow-delay="1s">Old Portfolio Website</h1><br><br>
+                                    <h1 class="wow fadeInUp" data-wow-delay="1s">Protocol Garage</h1><br><br>
 
                                     <div class="row">
                                           <div class="col-lg-4">
                                                 <p class="wow fadeInUp" data-wow-delay="1.2s">service :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Web Development/Design
-                                                </h6>
+                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Full-Stack Web &amp; Cloud Architecture</h6>
                                           </div>
 
                                           <div class="col-lg-4">
                                                 <p class="wow fadeInUp" data-wow-delay="1.4s">started :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">February 5 2021</h6>
+                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">Early 2026</h6>
                                           </div>
 
                                           <div class="col-lg-4">
                                                 <p class="wow fadeInUp" data-wow-delay="1.6s">completed :</p>
-                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">May 1 2021</h6>
+                                                <h6 class="wow fadeInUp" data-wow-delay="1.7s">Storefront &amp; API Complete</h6>
                                           </div>
                                     </div>
                                     <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">My first portfolio website was a very
-                                          optimistic project. I developed it during a time when I did not know a lot
-                                          about responsive web design and that shows with many of its bugs on mobile
-                                          devices and different screen sizes. However I did learn lots of new skills and
-                                          developed some very cool features for the site. I learned a ton more from this
-                                          project than I did from any other website. I developed this site using HTML,
-                                          CSS and JS.</p>
+                                    <p class="wow fadeInUp" data-wow-delay="1.8s">
+                                          Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably. Rather than building on an oversized monolithic e-commerce CMS, I built Protocol Garage from the ground up as a high-performance, static-first storefront with edge serverless endpoints engineered specifically for state integrity, checkout idempotency, and graceful partial failure recovery.
+                                          <br><br>
+                                          The application separates catalog presentation from checkout orchestration, payment handling, and order persistence. The frontend is built using Astro and TypeScript, delivering static product and catalog pages with zero unnecessary client-side JavaScript. Edge API endpoints (/api/checkout and /api/webhooks/stripe) run on Cloudflare Workers backed by a Cloudflare D1 relational database (SQLite at the edge). All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.
+                                          <br><br>
+                                          To prevent race conditions, duplicate charges, or tampering, the checkout service enforces strict server-side catalog validation for all product variants, prices, and quantity limits. Before redirecting to Stripe, the service calculates a deterministic canonical cart fingerprint associated with a client attempt identifier. If a customer retries an identical checkout attempt, the service returns the existing checkout session alongside a stable provider idempotency key; if an attempt identifier is reused with altered cart items, the request is immediately rejected.
+                                          <br><br>
+                                          Handling payment provider events across distributed systems requires assuming networks will fail, delay, or replay requests. Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. Using conditional D1 batch transactions, the system explicitly categorizes events as new, duplicate, ignored, or failed. This design guarantees that duplicated webhook deliveries or out-of-order shipment events cannot corrupt order records or trigger double fulfillment. The entire checkout and event lifecycle is validated with Playwright browser tests and automated CI integration suites.
+                                    </p>
                               </div>
                         </div>
                   </div>
             </div>
 
-            <a href="old/index.html">
-                  <div class="project-img">
-                        <div class="container">
-                              <br><br>
-                              <div class="row">
-                                    <div class="col-md-8">
-                                          <div class="project image2 wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                          <div class="project image2 wow fadeInUp" data-wow-delay="0.8s"></div>
-                                    </div>
+            <div class="project-img">
+                  <div class="container">
+                        <br><br>
+                        <div class="row">
+                              <div class="col-md-8">
+                                    <div class="project image_protocolgarage wow fadeInUp" data-wow-delay="0.8s"></div>
+                              </div>
+                              <div class="col-md-4">
+                                    <div class="project image_protocolgarage wow fadeInUp" data-wow-delay="0.8s"></div>
                               </div>
                         </div>
                   </div>
-            </a>
+            </div>
 
             <br><br>
 
@@ -173,10 +173,10 @@
                         <div class="row">
                               <div class="col-lg-6 prev">
                                     <p class="arrow-left"><ion-icon name="arrow-back"></ion-icon><a
-                                                href="project1.html">previous</a></p>
+                                                href="canbus.html">previous</a></p>
                               </div>
                               <div class="col-lg-6 next">
-                                    <p class="arrow-right"><a href="project7.html">next</a><ion-icon
+                                    <p class="arrow-right"><a href="350z-swap.html">next</a><ion-icon
                                                 name="arrow-forward"></ion-icon></p>
                               </div>
                         </div>
@@ -184,7 +184,6 @@
             </div>
 
             <div class="whitespace"></div>
-
 
             <div class="footer">
                   <div class="container">
@@ -211,7 +210,7 @@
                                     <div class="col-lg-4" id="personal">
                                           <p class="wow fadeInUp">connect with me</p>
                                           <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a
-                                                      href="https://www.linkedin.com/in/alexander-murdock/">ln
+                                                      href="https://www.linkedin.com/in/alex-murdock/">ln
                                                       @Alexander Murdock</a></h4>
                                           <br><br>
                                     </div>
@@ -223,7 +222,7 @@
                                                 <li id="gh" class="wow fadeInUp" data-wow-delay="0.4s"><a
                                                             href="https://github.com/Amurdock6">gh</a></li>
                                                 <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s"><a
-                                                            href="https://www.linkedin.com/in/alexander-murdock/">ln</a>
+                                                            href="https://www.linkedin.com/in/alex-murdock/">ln</a>
                                                 </li>
                                           </ul>
 
@@ -242,46 +241,11 @@
                   </div>
             </div>
 
-            <br><br><br><br>
-
       </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-      <script type="text/javascript">
-
-            $("#toggle").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
-
-            $("#resize ul li a").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
-
-            $(".close-btn").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
-
-            TweenMax.from("#brand", 1, {
-                  delay: 0.4,
-                  y: 10,
-                  opacity: 0,
-                  ease: Expo.easeInOut
-            })
-
-            TweenMax.staggerFrom("#menu li a", 1, {
-                  delay: 0.4,
-                  opacity: 0,
-                  ease: Expo.easeInOut
-            }, 0.1);
-
+      <!-- wow.js script init -->
+      <script>
             new WOW().init();
-
-
       </script>
 </body>
 

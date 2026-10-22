@@ -370,13 +370,16 @@ a#freelance {
 
 @media screen and (min-width: 2250px) {
     nav #brand {
-            line-height: 7.15vh;
+        line-height: 48px;
     }
-}
 
-@media screen and (min-width: 3250px) {
-    nav #brand {
-        line-height: 6.15vh;
+    #freelance {
+        margin-top: 0;
+    }
+
+    nav #brand a#freelance,
+    a#freelance {
+        top: -18px;
     }
 }
 

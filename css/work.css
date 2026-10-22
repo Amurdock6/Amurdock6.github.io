@@ -496,25 +496,6 @@ h6 {
     cursor: pointer;
 }
 
-.project3 {
-    background: url(../images/projects/old_portfolio.jpg) no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.project3::after {
-    content: "old portfolio website.";
-    font-family: "Roboto Mono";
-    font-size: 36px;
-    position: relative;
-    color: #fff;
-    display: block;
-    top: 10%;
-    left: -50%;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-}
 
 .project4 {
     background: url(../images/projects/e46_finder.webp) no-repeat 50% 50%;
@@ -574,6 +555,67 @@ h6 {
     cursor: pointer;
 }
 
+.project_canbus {
+    background: url(../images/projects/canbus.webp) no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+    height: 700px;
+}
+
+.project_canbus::after {
+    content: "canbus hacking.";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 41%;
+    right: 33%;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.project_protocolgarage {
+    background: url(../images/projects/protocol_garage.webp) no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+    height: 700px;
+}
+
+.project_protocolgarage::after {
+    content: "protocol garage.";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 36%;
+    left: -40%;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.project_350z_swap {
+    background: url(../images/projects/350z_swap.webp) no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+    height: 700px;
+}
+
+.project_350z_swap::after {
+    content: "350z engine swap.";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 36%;
+    right: 33%;
+    bottom: 0;
+    cursor: pointer;
+}
+
 .project7 {
     background: url(../images/projects/ard.PNG) no-repeat 50% 50%;
     background-size: cover;
@@ -593,10 +635,26 @@ h6 {
     cursor: pointer;
 }
 
-.project.project7 {
+.project.project7,
+.project.project_canbus,
+.project.project_protocolgarage,
+.project.project_350z_swap {
     height: 700px; /* Set the height to 100% of its parent container */
     background-size: cover; /* Ensure the background image covers the entire container */
     background-position: center; /* Center the background image */
+}
+
+.project1::after,
+.project1_work::after,
+.project2::after,
+.project4::after,
+.project5::after,
+.project6::after,
+.project7::after,
+.project_canbus::after,
+.project_protocolgarage::after,
+.project_350z_swap::after {
+    white-space: nowrap;
 }
 
 .center {
@@ -604,7 +662,7 @@ h6 {
   padding-top: 30px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 991.98px) {
     .project {
           width: 90% !important;
           margin: 14px auto;
@@ -633,7 +691,7 @@ h6 {
           display: none;
     }
 
-    .project1::after, .project1_work::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after {
+    .project1::after, .project1_work::after, .project2::after, .project4::after, .project5::after, .project6::after, .project7::after, .project_canbus::after, .project_protocolgarage::after, .project_350z_swap::after {
           left:0;
           right:0;
           top: 100%;
@@ -641,6 +699,7 @@ h6 {
           text-align: center;
           font-size: 28px;
           margin-top: 1vh;
+          white-space: normal;
     }
 
     h1.wow.fadeInUp {

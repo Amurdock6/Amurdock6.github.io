@@ -1,0 +1,218 @@
+/* Clip the grain without creating a scroll container that traps sticky maps. */
+.career-page .wrapper { overflow: clip; }
+
+.career {
+    --route: #f1c083;
+    max-width: 1240px;
+    margin: 0 auto 120px;
+    padding: 160px 40px 0;
+}
+
+.career__heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #333;
+}
+
+.career__heading h1 {
+    margin: 0;
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 300;
+    letter-spacing: -.065em;
+}
+
+.career__heading > span {
+    color: #aaa;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.career__journey {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(30px, 6vw, 90px);
+    align-items: start;
+}
+
+.career-map {
+    position: sticky;
+    top: 100px;
+    padding-top: 28px;
+}
+
+.career-map__surface {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #435247;
+    border-radius: 12px;
+    background: #101e1c;
+    box-shadow: 0 24px 70px #0005, inset 0 0 0 5px #ffffff04;
+}
+
+.career-map__drawing {
+    display: block;
+    width: 100%;
+    height: min(61vh, 620px);
+    color: var(--route);
+}
+
+.career-map__contour { stroke: #a5bd89; stroke-width: .8; opacity: .17; }
+.career-map__contour--major { stroke-width: 1.3; opacity: .3; }
+.career-map__river-bank { fill: none; stroke: #48706a; stroke-width: 17; opacity: .35; }
+.career-map__river { fill: none; stroke: #1d3c40; stroke-width: 12; }
+.career-map__compass { stroke: #c7d5c2; fill: #c7d5c2; stroke-width: .7; opacity: .6; }
+.career-map__compass text { stroke: none; font: 10px "Roboto Mono", monospace; }
+
+.career-map__casing {
+    stroke: #0b1717;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.career-map__road {
+    stroke: #9aaf98;
+    stroke-width: 1.5;
+    stroke-dasharray: 3 6;
+    opacity: .7;
+}
+
+.career-map__progress,
+.career-map__glow {
+    stroke: var(--route);
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.career-map__glow { stroke-width: 7; filter: url(#career-glow); opacity: .6; }
+.career-map__stop { cursor: pointer; }
+.career-map__stop .career-map__hit { fill: transparent; stroke: none; }
+.career-map__pin-ring { fill: #162825; stroke: #647f6b; stroke-width: .8; }
+.career-map__pin {
+    fill: #14221e;
+    stroke: #8a9e84;
+    stroke-width: 1.5;
+}
+
+.career-map__number {
+    fill: #d9e1d3;
+    font: 11px "Roboto Mono", monospace;
+}
+
+.career-map__year { fill: #c3cdbb; font: 11px "Roboto Mono", monospace; paint-order: stroke; stroke: #162825; stroke-width: 5px; }
+
+.career-map__stop.is-visited .career-map__pin,
+.career-map__stop:hover .career-map__pin,
+.career-map__stop:focus .career-map__pin {
+    stroke: var(--route);
+    fill: #463c2c;
+    stroke-width: 2;
+}
+
+.career-map__stop[aria-current] .career-map__pin-ring { stroke: var(--route); stroke-width: 1.5; }
+.career-map__stop[aria-current] .career-map__year { fill: var(--route); }
+
+.career-map__stop:focus-visible {
+    outline: 2px solid var(--route);
+    outline-offset: 5px;
+}
+
+.career-map__traveler { fill: #fff5df; pointer-events: none; }
+.career-map__halo { fill: var(--route); opacity: .3; }
+
+.career-map__caption {
+    display: grid;
+    gap: 9px;
+    min-height: 118px;
+    padding: 22px 26px;
+    border-top: 1px solid #435247;
+    background: #0d1715;
+}
+
+.career-map__count { color: var(--route); font-size: 11px; letter-spacing: .12em; }
+.career-map__title { font-size: 15px; font-weight: 400; }
+.career-map__date { color: #a8afa1; font-size: 11px; }
+
+.career-stop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 85vh;
+    padding: 65px 0;
+    scroll-margin-top: 110px;
+}
+
+.career-stop:last-child { min-height: 90vh; }
+
+.career-stop__date {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+    color: #bbb;
+    font-size: 12px;
+}
+
+.career-stop__date > span {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    color: var(--route);
+}
+
+.career-stop__card {
+    display: block;
+    border: 1px solid #363636;
+    border-radius: 3px;
+    background: #141414;
+    overflow: hidden;
+    transition: border-color .2s ease;
+}
+
+.career-stop.is-active .career-stop__card { border-color: #a28a65; }
+.career-stop__card:hover { border-color: var(--route); text-decoration: none; }
+.career-stop__card:focus-visible { outline: 2px solid var(--route); outline-offset: 5px; }
+
+.career-stop__card > img {
+    display: block;
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid #363636;
+}
+
+.career-stop__copy { padding: 28px; }
+.career-stop__copy .career-stop__role { margin-bottom: 14px; color: var(--route); font-size: 11px; line-height: 1.8; }
+.career-stop__copy h2 { font-size: clamp(23px, 2.4vw, 32px); font-weight: 400; line-height: 1.3; letter-spacing: -.04em; margin-bottom: 20px; }
+.career-stop__copy p { color: #b5b5b5; font-size: 13px; line-height: 1.9; }
+.career-stop__link { display: flex; justify-content: space-between; padding-top: 20px; font-size: 12px; }
+.career-stop__link > span { color: var(--route); font-size: 20px; line-height: 1; }
+
+@media (max-width: 700px) {
+    .career { padding: 125px 20px 0; margin-bottom: 70px; }
+    .career__heading { padding-bottom: 24px; }
+    .career__heading > span { font-size: 10px; }
+    .career__journey { grid-template-columns: 1fr; gap: 0; }
+    .career-map { top: 80px; z-index: 5; padding-top: 10px; padding-bottom: 10px; background: #0f0f0f; }
+    .career-map__drawing { height: auto; aspect-ratio: 520 / 200; }
+    .career-map__year { display: none; }
+    .career-map__caption { min-height: 0; padding: 12px 16px; grid-template-columns: auto 1fr; column-gap: 16px; row-gap: 4px; }
+    .career-map__count { grid-row: span 2; align-self: center; font-size: 10px; }
+    .career-map__title { font-size: 12px; }
+    .career-map__date { font-size: 10px; line-height: 1.6; }
+    .career-stop { min-height: 78vh; padding: 40px 0; scroll-margin-top: 340px; }
+    .career-stop:last-child { min-height: 78vh; }
+    .career-stop__copy { padding: 24px; }
+    .career-stop__card > img { height: 155px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .career-stop__card { transition: none; }
+    .career-map__traveler { display: none; }
+}

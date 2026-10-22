@@ -17,10 +17,6 @@
     background-size: cover;
 }
 
-.image2{
-  background: url(../images/projects/old_portfolio/old_portfolio.png) no-repeat  50% 36%;
-  background-size: cover;
-}
 
 .image3{
   background: url(../images/projects/e46_finder/e46-frist-pic.webp) no-repeat  50% 36%;
@@ -49,6 +45,21 @@
 
 .image7 {
   background: linear-gradient(rgba(15, 15, 15, 0.05), rgba(15, 15, 15, 0.18)), url(../images/projects/stylestreak/wardrobe-hero.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.image_canbus {
+  background: url(../images/projects/canbus.webp) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.image_protocolgarage {
+  background: url(../images/projects/protocol_garage.webp) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.image_350z_swap {
+  background: url(../images/projects/350z_swap.webp) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -488,10 +499,6 @@
     background-size: cover;
   }
 
-  .image2{
-    background: url(../images/projects/old_portfolio/old_portfolio.jpg) no-repeat  50% 70%;
-    background-size: cover;
-  }
 
   .image3{
     background: url(../images/projects/e46_finder/e46-mobile.webp) no-repeat  50% 70%;
@@ -615,7 +622,7 @@
   transition: 1s;
 }
 
-.image4, .image3, .image2, .image1, .image{
+.image4, .image3, .image1, .image, .image6, .image_canbus, .image_protocolgarage, .image_350z_swap{
   transition: 1s;
 }
 
@@ -626,7 +633,7 @@
   margin-right: -75px;
 }
 
-.image4:hover, .image2:hover, .image1:hover{
+.image4:hover, .image1:hover, .image6:hover, .image_canbus:hover, .image_protocolgarage:hover, .image_350z_swap:hover{
   transition: 0.8s;
   height: 560px;
 }
@@ -669,7 +676,7 @@ p.no-previous{
   }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 991.98px) {
   .project {
         width: 90% !important;
         margin: 14px auto;
@@ -698,7 +705,7 @@ p.no-previous{
         display: none;
   }
 
-  .project1::after, .project1_work::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after {
+  .project1::after, .project1_work::after, .project2::after, .project4::after, .project5::after, .project6::after, .project7::after, .project_canbus::after, .project_protocolgarage::after, .project_350z_swap::after {
         left:0;
         right:0;
         top: 100%;
@@ -706,6 +713,7 @@ p.no-previous{
         text-align: center;
         font-size: 28px;
         margin-top: 1vh;
+        white-space: normal;
   }
 
   h1.wow.fadeInUp {
