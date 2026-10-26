@@ -216,7 +216,8 @@ a{
 .project-ribbon__tails {
       position: absolute;
       top: 82px;
-      left: 16px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 88px;
       height: 84px;
       z-index: -1;

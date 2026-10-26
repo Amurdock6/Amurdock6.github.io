@@ -29,6 +29,8 @@
 .case-hero-phones { display: flex; align-items: center; justify-content: center; gap: 20px; min-width: 0; padding: 40px 25px; background: radial-gradient(ellipse, #244745, transparent 70%); }
 .case-hero-phones .case-image-button { width: 45%; max-width: 210px; flex-shrink: 0; border: 5px solid #414c48; border-radius: 25px; transform: rotate(-6deg) translateY(-14px); }
 .case-hero-phones .case-image-button:nth-child(2) { transform: rotate(6deg) translateY(20px); }
+.case-hero-phones--wardrobe { gap: 12px; padding-inline: 12px; }
+.case-hero-phones--wardrobe .case-image-button:nth-child(n) { width: 30%; max-width: 180px; transform: none; }
 .case-hero .case-hero-phones img { display: block; width: 100%; height: auto; padding: 0; object-fit: contain; }
 .case-media::before { content: ""; position: absolute; z-index: -1; inset: -18px 20px 18px -18px; border: 1px solid #ffffff25; }
 .case-caption { color: #aeb2a8; font-size: 11px; line-height: 1.8; margin-top: 16px; }
@@ -78,7 +80,6 @@
 .case-phones figure { min-width: 0; margin: 0; }
 .case-phones .case-image-button { border: 5px solid #363c3a; border-radius: 24px; }
 .case-phones img { display: block; width: 100%; height: auto; }
-.case-phones figure:nth-child(2) { margin-top: 50px; }
 .case-phones figcaption { font-size: 11px; color: #b9beb3; line-height: 1.8; padding-top: 18px; }
 .case-award { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; margin-top: 45px; padding: 24px 0; border-block: 1px solid #ffffff30; }
 .case-award strong { font-family: "Space Grotesk", sans-serif; font-size: 64px; letter-spacing: -.07em; color: var(--case-accent); }
@@ -132,7 +133,6 @@
     .case-system--hero .case-system__node strong { font-size: 32px; }
     .case-phones { padding: 30px 20px; gap: 24px; grid-template-columns: repeat(3, minmax(200px, 1fr)); overflow-x: auto; scroll-snap-type: x mandatory; }
     .case-phones figure { scroll-snap-align: center; }
-    .case-phones figure:nth-child(2) { margin-top: 0; }
     .case-dashboard { grid-template-columns: 1fr; gap: 32px; padding: 20px; }
     .case-phones .case-image-button { border-radius: 20px; }
     .case-award { gap: 20px; }
