@@ -19,11 +19,6 @@ a {
     color: #007bff !important;
 }
 
-::selection {
-    color: #121212;
-    background-color: #ffcc00;
-}
-
 /* nav */
 nav {
     background: #ffffff !important;

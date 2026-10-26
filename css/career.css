@@ -1,8 +1,11 @@
 /* Clip the grain without creating a scroll container that traps sticky maps. */
 .career-page .wrapper { overflow: clip; }
 
-.career {
+.career-page {
     --route: #f1c083;
+}
+
+.career {
     max-width: 1240px;
     margin: 0 auto 120px;
     padding: 160px 40px 0;

@@ -35,7 +35,6 @@
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="js/wow.min.js"></script>
       <link rel="stylesheet" href="css/project-detail.css">
-      <link rel="stylesheet" href="css/project-media.css">
       <script src="js/project-detail.js" defer></script>
       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -116,14 +115,14 @@
             <main class="case-study" id="main-content">
 <a class="case-back" href="index.html#project-gallery">
 <span aria-hidden="true">↙</span> projects</a>
-<header class="case-hero">
+<header class="case-hero case-hero--screen">
 <div class="case-hero__copy">
 <p class="case-kicker">Embedded Systems &amp; Protocol Engineering</p>
 <h1>
 <span class="case-title-line">350Z / VQ37</span>
 <span class="case-title-line">CAN Gateway</span>
 </h1>
-<p class="case-lede">Connecting a 2003 Nissan 350Z chassis with an engine-swapped 3.7L VQ37VHR powertrain introduced a fundamental communication gap.</p>
+<p class="case-lede">Connecting a 2005 Nissan 350Z chassis with an engine-swapped 3.7L VQ37VHR powertrain introduced a fundamental communication gap.</p>
 <div class="case-actions">
 <a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
 </a>
@@ -131,7 +130,7 @@
 </div>
 <figure class="case-media">
 <button type="button" class="case-image-button" data-case-image aria-label="350Z / VQ37 CAN Gateway — View details">
-<img src="images/projects/canbus.webp" alt="350Z / VQ37 CAN Gateway" fetchpriority="high" decoding="async">
+<img src="images/projects/canbus-gateway.svg" alt="350Z / VQ37 CAN Gateway" fetchpriority="high" decoding="async">
 </button>
 </figure>
 </header>
@@ -154,59 +153,32 @@
 <article class="case-highlight">
 <span class="case-highlight__number" aria-hidden="true">01</span>
 <h3>dual-CAN</h3>
-<p>I designed and built a dual-CAN automotive gateway in Arduino C++ targeting an ESP32 micro-controller.</p>
+<p>I designed and built a dual-CAN automotive gateway in C++ targeting an ESP32 micro-controller.</p>
 </article>
 <article class="case-highlight">
 <span class="case-highlight__number" aria-hidden="true">02</span>
-<h3>300 ms</h3>
-<p>For speed translation, the gateway monitors source speed packets on CAN ID 0x354 and modifies bytes 4–5 of target frame 0x280 only while source telemetry is fresh within a strict 300 ms window.</p>
+<h3>source telemetry</h3>
+<p>If source packets drop or time out, target frames pass through untouched.</p>
 </article>
 <article class="case-highlight">
 <span class="case-highlight__number" aria-hidden="true">03</span>
 <h3>differential test harness</h3>
-<p>To ensure behavioral parity across firmware migrations without risking live hardware, I developed a Python capture and analysis suite (tools/compare.py) and an offline C++ differential test harness (tests/gauges.cpp).</p>
+<p>To ensure behavioral parity across firmware migrations without risking live hardware, I developed a Python capture and analysis suite and an offline C++ differential test harness.</p>
 </article>
-</div>
-<div class="case-photo-gallery">
-<figure>
-<button type="button" class="case-image-button" data-case-image>
-<img src="images/projects/canbus/esp32-and-laptop.webp" alt="esp32andlaptopandcanbushacking.jpg" width="1080" height="1920" loading="lazy" decoding="async">
-</button>
-</figure>
-<figure>
-<button type="button" class="case-image-button" data-case-image>
-<img src="images/projects/canbus/canbus-ma-and-esp32.webp" alt="canbus_m&amp;a_and_esp32.jpg" width="1080" height="1920" loading="lazy" decoding="async">
-</button>
-</figure>
-<figure>
-<button type="button" class="case-image-button" data-case-image>
-<img src="images/projects/canbus/canbus-wiring.webp" alt="canbuswiringmess.jpg" width="1080" height="1920" loading="lazy" decoding="async">
-</button>
-</figure>
-<figure>
-<button type="button" class="case-image-button" data-case-image>
-<img src="images/projects/canbus/ma-connectors.webp" alt="m&amp;a_connectors.jpg" width="1080" height="1920" loading="lazy" decoding="async">
-</button>
-</figure>
-<figure>
-<button type="button" class="case-image-button" data-case-image>
-<img src="images/projects/canbus/ma-connector-diagram.webp" alt="m&amp;A_connector_diagram.jpg" width="2560" height="1440" loading="lazy" decoding="async">
-</button>
-</figure>
 </div>
 </section>
 <details class="case-detail">
 <summary>View details</summary>
 <div class="case-prose">
-<p>Connecting a 2003 Nissan 350Z chassis with an engine-swapped 3.7L VQ37VHR powertrain introduced a fundamental communication gap. The older chassis electronics and the newer ECU communicate across disparate CAN bus protocols, message rates, and payload byte layouts.</p>
+<p>Connecting a 2005 Nissan 350Z chassis with an engine-swapped 3.7L VQ37VHR powertrain introduced a fundamental communication gap. The older chassis electronics and the newer ECU communicate across disparate CAN bus protocols, message rates, and payload byte layouts.</p>
 <p>Without an active hardware translator, critical OEM cluster instruments—including vehicle speed, tachometer, and engine coolant temperature—cannot interpret telemetry from the modern powertrain. I designed and built a dual-CAN automotive gateway in Arduino C++ targeting an ESP32 micro-controller.</p>
 <p>By combining the ESP32&#x27;s native TWAI (Two-Wire Automotive Interface) controller with an external MCP2515 SPI CAN transceiver, the gateway physically isolates the chassis and powertrain buses while selectively translating broadcast frames in real time. The firmware includes hardware abstraction layers, explicit timing paces, and gated transmission safety controls.</p>
-<p>A core engineering problem in vehicle message translation is preventing stale data from causing erratic vehicle behavior. For speed translation, the gateway monitors source speed packets on CAN ID 0x354 and modifies bytes 4–5 of target frame 0x280 only while source telemetry is fresh within a strict 300 ms window.</p>
-<p>If source packets drop or time out, target frames pass through untouched.  To ensure behavioral parity across firmware migrations without risking live hardware, I developed a Python capture and analysis suite (tools/compare.py) and an offline C++ differential test harness (tests/gauges.cpp). These tools run candidate firmware against recorded wire-level baselines from historical RP2040 implementations, comparing output mappings, source expiry, and message pacing across the entire operational domain before firmware is loaded onto physical hardware.</p>
+<p>A core engineering problem in vehicle message translation is preventing stale data from causing erratic vehicle behavior.</p>
+<p>If source packets drop or time out, target frames pass through untouched.  To ensure behavioral parity across firmware migrations without risking live hardware, I developed a Python capture and analysis suite and an offline C++ differential test harness. These tools run candidate firmware against recorded wire-level baselines from historical RP2040 implementations, comparing output mappings, source expiry, and message pacing across the entire operational domain before firmware is loaded onto physical hardware.</p>
 </div>
 </details>
 <ul class="case-stack">
-<li>Arduino C++</li>
+<li>C++</li>
 <li>ESP32</li>
 <li>TWAI</li>
 <li>MCP2515</li>
@@ -220,16 +192,16 @@
 <div class="case-system">
 <div class="case-system__nodes">
 <div class="case-system__node">
-<small>source speed packets</small>
-<strong>0x354</strong>
+<small>powertrain</small>
+<strong>VQ37VHR</strong>
 </div>
 <div class="case-system__node">
-<small>target frame</small>
-<strong>0x280</strong>
+<small>dual-CAN</small>
+<strong>ESP32</strong>
 </div>
 <div class="case-system__node">
-<small>source telemetry</small>
-<strong>300 ms</strong>
+<small>chassis</small>
+<strong>2005 350Z</strong>
 </div>
 </div>
 <p class="case-system__note">If source packets drop or time out, target frames pass through untouched.</p>

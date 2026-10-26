@@ -9,9 +9,14 @@ html, body {
       color: #fff !important;
 }
 
-::selection{
-      color: red;
-      background-color: none;
+*::selection {
+      color: #0f0f0f;
+      background-color: var(--selection-accent, var(--case-accent, var(--project-accent, var(--education-accent, var(--route, #d6efad)))));
+}
+
+.stylestreak-project,
+.stylestreak-feature {
+      --selection-accent: #80ecf0;
 }
 
  ::-webkit-scrollbar {
