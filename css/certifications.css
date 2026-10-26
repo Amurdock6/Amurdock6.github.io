@@ -74,27 +74,14 @@
 .certificate-viewer__close { position: absolute; right: 4px; top: 2px; width: 44px; height: 44px; border: 0; background: transparent; color: #fff; font-size: 28px; cursor: pointer; }
 .certificate-viewer__close:focus-visible { outline: 2px solid #f1c083; }
 html.certificate-open { overflow: hidden; }
-/* Keep the existing site navigation readable at intermediate widths. */
-.certifications-page nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid #ffffff0a; }
-.certifications-page nav #brand { margin: 0; line-height: 1.6; font-size: 13px; }
-.certifications-page nav #freelance { position: static; display: inline; margin: 0; color: #aaa !important; font-size: 10px; font-weight: 400; }
-.certifications-page nav #menu { position: static; float: none; display: flex; gap: 26px; margin: 0; padding: 0; }
-.certifications-page nav #menu li { padding: 0; font-size: 12px; line-height: 1.5; }
-.certifications-page nav #menu li a { display: flex; gap: 3px; margin: 0; }
-.certifications-page nav #menu li a span:nth-child(1) { order: 1; }
-.certifications-page nav #menu li a span:nth-child(3) { display: none; }
-.certifications-page nav #menu a[aria-current="page"] { text-decoration: underline; text-underline-offset: 8px; text-decoration-color: var(--education-accent); }
 @media (max-width: 1080px) {
     .credentials { padding: 140px 32px 0; }
     .credentials__intro { align-items: start; flex-direction: column; gap: 26px; }
     .education__degree-layout { gap: 30px; }
     .education__university { padding: 28px; }
     .education__honors { padding-left: 22px; }
-    .certifications-page nav { padding: 0 24px; }
-    .certifications-page nav #menu { gap: 18px; }
 }
 @media (max-width: 882px) {
-    .certifications-page nav #menu { display: none; }
     .education__degree-layout { grid-template-columns: 1fr; gap: 32px; margin-top: 36px; }
     .education__major { max-width: 560px; font-size: clamp(34px, 6.7vw, 52px); }
     .education__honors { display: grid; grid-template-columns: 1fr 1.6fr; border-left: 0; border-top: 1px solid var(--education-line); padding: 24px 0 0; }
@@ -141,12 +128,10 @@ html.certificate-open { overflow: hidden; }
     .credential:hover { transform: none; }
 }
 /* The shared navigation's split-text effect targets all list spans. */
-.certifications-page main li > span,
-.certifications-page nav #menu li a > span {
+.certifications-page main li > span {
     position: static;
     clip-path: none;
     overflow: visible;
     transform: none;
     transition: none;
 }
-.certifications-page nav #menu li a > span:nth-child(1) { margin-left: 0; }
