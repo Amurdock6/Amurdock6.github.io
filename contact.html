@@ -136,12 +136,9 @@
 
                         <div class="contact-panel">
                               <div class="contact-panel-top" aria-hidden="true"><span></span><span></span><span></span></div>
-                              <!-- Delivery setup: add the verified Formspree endpoint as the form action,
-                                   remove the submit guard, and remove disabled from the fieldset below.
-                                   Keep submission disabled until the endpoint is supplied by Alex. -->
-                              <form id="contact-form" method="post" onsubmit="return false;" aria-labelledby="contact-form-title">
+                              <form id="contact-form" action="https://formspree.io/f/mkjjjewy" method="POST" aria-labelledby="contact-form-title">
                                     <h2 id="contact-form-title">Send Message</h2>
-                                    <fieldset disabled>
+                                    <fieldset>
                                           <div class="contact-fields">
                                                 <div class="contact-field">
                                                       <label for="contact-name">Name :</label>
