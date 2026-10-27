@@ -123,6 +123,7 @@
 <span class="case-title-line">Garage</span>
 </h1>
 <p class="case-lede">Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably.</p>
+<p class="case-lede">I built Protocol Garage’s website to sell physical products I’d developed over the years, primarily during the engine swap, and to give future products a home.</p>
 <div class="case-actions">
 <a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
 </a>
@@ -156,18 +157,13 @@
 <div class="case-highlights">
 <article class="case-highlight">
 <span class="case-highlight__number" aria-hidden="true">01</span>
-<h3>checkout retries</h3>
-<p>If a customer retries an identical checkout attempt, the service returns the existing checkout session alongside a stable provider idempotency key; if an attempt identifier is reused with altered cart items, the request is immediately rejected.</p>
-</article>
-<article class="case-highlight">
-<span class="case-highlight__number" aria-hidden="true">02</span>
 <h3>Stripe Hosted Checkout</h3>
 <p>All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
 </article>
 <article class="case-highlight">
-<span class="case-highlight__number" aria-hidden="true">03</span>
+<span class="case-highlight__number" aria-hidden="true">02</span>
 <h3>payment events</h3>
-<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. Using conditional D1 batch transactions, the system explicitly categorizes events as new, duplicate, ignored, or failed.</p>
+<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events.</p>
 </article>
 </div>
 </section>
@@ -176,10 +172,10 @@
 <div class="case-prose">
 <p>Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably. Rather than building on an oversized monolithic e-commerce CMS, I built Protocol Garage from the ground up as a high-performance, static-first storefront with edge serverless endpoints engineered specifically for state integrity, checkout idempotency, and graceful partial failure recovery.</p>
 <p>The application separates catalog presentation from checkout orchestration, payment handling, and order persistence. The frontend is built using Astro and TypeScript, delivering static product and catalog pages with zero unnecessary client-side JavaScript.</p>
-<p>Edge API endpoints (/api/checkout and /api/webhooks/stripe) run on Cloudflare Workers backed by a Cloudflare D1 relational database (SQLite at the edge). All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
-<p>To prevent race conditions, duplicate charges, or tampering, the checkout service enforces strict server-side catalog validation for all product variants, prices, and quantity limits. Before redirecting to Stripe, the service calculates a deterministic canonical cart fingerprint associated with a client attempt identifier.</p>
-<p>If a customer retries an identical checkout attempt, the service returns the existing checkout session alongside a stable provider idempotency key; if an attempt identifier is reused with altered cart items, the request is immediately rejected. Handling payment provider events across distributed systems requires assuming networks will fail, delay, or replay requests.</p>
-<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. Using conditional D1 batch transactions, the system explicitly categorizes events as new, duplicate, ignored, or failed.  The entire checkout and event lifecycle is validated with Playwright browser tests and automated CI integration suites.</p>
+<p>Edge API endpoints run on Cloudflare Workers backed by a Cloudflare D1 relational database (SQLite at the edge). All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
+<p>To prevent race conditions, duplicate charges, or tampering, the checkout service enforces strict server-side catalog validation for all product variants, prices, and quantity limits.</p>
+<p>Handling payment provider events across distributed systems requires assuming networks will fail, delay, or replay requests.</p>
+<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. The entire checkout and event lifecycle is validated with Playwright browser tests and automated CI integration suites.</p>
 </div>
 </details>
 <ul class="case-stack">
@@ -213,13 +209,13 @@
 </div>
 </section>
 <div class="case-next" aria-label="Project navigation">
-<a href="canbus.html">
-<span class="case-next__label">↙ previous</span>
-<span class="case-next__title">350Z / VQ37 CAN Gateway</span>
-</a>
 <a href="350z-swap.html">
-<span class="case-next__label">next ↗</span>
+<span class="case-next__label">↙ previous</span>
 <span class="case-next__title">350Z / VQ37VHR Engine Swap</span>
+</a>
+<a href="project3.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">E46 Finder</span>
 </a>
 </div>
 </main>

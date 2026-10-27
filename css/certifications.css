@@ -3,6 +3,7 @@
     --education-muted: #aaa8a2;
     --education-line: #343432;
     --education-accent: #d4b997;
+    --selection-accent: var(--education-accent);
 }
 .certifications-page .wrapper { overflow: clip; }
 .certifications-page .wrapper::after { opacity: .24; }

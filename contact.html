@@ -15,10 +15,11 @@
       <!-- Stylesheets -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="css/contact-form.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+      <link rel="stylesheet" href="css/contact-form.css">
 
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -36,7 +37,7 @@
       <script src="js/wow.min.js"></script>
 </head>
 
-<body>
+<body class="contact-page">
       <div class="wrapper">
 
             <nav>
@@ -110,67 +111,57 @@
                   </ul>
             </div>
 
-            <div class="whitespace contact-top-spacing"></div>
-
             <main class="container contact-main">
-                  <div class="hero-content contact-content">
-                        <div class="row contact-row">
-                              <div class="col-lg-12 contact-column">
-
-                                    <h3 class="wow fadeInUp" data-wow-delay="1s">say hello 👋</h3><br>
-                                    <p class="contact-intro wow fadeInUp" data-wow-delay="1.2s">I am open to software engineering
-                                          opportunities involving mobile applications, full-stack products, platform
-                                          automation, or integrations. Email me at
-                                          <a class="contact-email" href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>
-                                          to discuss a role or project.
-                                    </p>
-
+                  <div class="contact-layout">
+                        <section class="contact-copy" aria-labelledby="contact-heading">
+                              <div class="contact-art" aria-hidden="true">
+                                    <div class="contact-orbit"></div>
+                                    <svg viewBox="0 0 120 90" fill="none">
+                                          <rect x="10" y="15" width="100" height="64" rx="8" />
+                                          <path d="m12 20 48 35 48-35M12 75l31-28m65 28L77 47" />
+                                    </svg>
                               </div>
-                        </div>
-                  </div>
-            </main>
+                              <h1 id="contact-heading">say hello 👋</h1>
+                              <p class="contact-intro">I am open to software engineering
+                                    opportunities involving mobile applications, full-stack products, platform
+                                    automation, or integrations. Email me at
+                                    <a class="contact-email" href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>
+                                    to discuss a role or project.
+                              </p>
+                              <div class="contact-links">
+                                    <a href="https://github.com/Amurdock6">gh <span aria-hidden="true">↗</span></a>
+                                    <a href="https://www.linkedin.com/in/alex-murdock/">ln @Alexander Murdock <span aria-hidden="true">↗</span></a>
+                              </div>
+                        </section>
 
-            <!-- Does not work on GitHub Pages -->
-            <!-- <div class="container-fluid">
-                  <div class="row">
-                        <div class="col-lg-8">
-                              <form name="contact-form" id="contact-form" method="post" action="php/form.php">
-
-                                    <ul>
-
-                                          <li class="wow fadeInUp" data-wow-delay="1.4s">
-                                                <label for="contact-name">Name :</label>
-                                                <div class="textarea">
-                                                      <input type="text" name="name" id="contact-name" value="" required autocomplete="name">
+                        <div class="contact-panel">
+                              <div class="contact-panel-top" aria-hidden="true"><span></span><span></span><span></span></div>
+                              <!-- Delivery setup: add the verified Formspree endpoint as the form action,
+                                   remove the submit guard, and remove disabled from the fieldset below.
+                                   Keep submission disabled until the endpoint is supplied by Alex. -->
+                              <form id="contact-form" method="post" onsubmit="return false;" aria-labelledby="contact-form-title">
+                                    <h2 id="contact-form-title">Send Message</h2>
+                                    <fieldset disabled>
+                                          <div class="contact-fields">
+                                                <div class="contact-field">
+                                                      <label for="contact-name">Name :</label>
+                                                      <input type="text" name="name" id="contact-name" required autocomplete="name" maxlength="200">
                                                 </div>
-                                          </li>
-
-                                          <li class="wow fadeInUp" data-wow-delay="1.6s">
-                                                <label for="contact-email">Email :</label>
-                                                <div class="textarea">
-                                                      <input type="email" name="email" id="contact-email" value="" required autocomplete="email">
+                                                <div class="contact-field">
+                                                      <label for="contact-email">Email :</label>
+                                                      <input type="email" name="email" id="contact-email" required autocomplete="email" maxlength="254">
                                                 </div>
-                                          </li>
-
-                                          <li class="wow fadeInUp" data-wow-delay="1.6s">
-                                                <label for="contact-project">Message :</label>
-                                                <div class="textarea">
-                                                      <textarea name="message" id="contact-project" rows="6" value="" required autocomplete="off">
-                                          </textarea>
-                                                </div>
-                                          </li>
-
-                                    </ul>
-
-                                    <button type="submit" name="submit" id="submit" class="send wow fadeInUp">Send
-                                          Message</button>
-
+                                          </div>
+                                          <div class="contact-field">
+                                                <label for="contact-message">Message :</label>
+                                                <textarea name="message" id="contact-message" rows="6" required maxlength="10000"></textarea>
+                                          </div>
+                                          <button type="submit" class="contact-submit">Send Message <span aria-hidden="true">↗</span></button>
+                                    </fieldset>
                               </form>
                         </div>
                   </div>
-            </div> -->
-
-            <div class="whitespace contact-footer-spacing"></div>
+            </main>
 
             <div class="footer">
                   <div class="container">

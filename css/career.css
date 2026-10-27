@@ -3,6 +3,7 @@
 
 .career-page {
     --route: #f1c083;
+    --selection-accent: var(--route);
 }
 
 .career {

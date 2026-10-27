@@ -1,4 +1,8 @@
 /* blogpage.css */
+body {
+    --selection-accent: #007bff;
+}
+
 html {
     scroll-behavior: smooth;
 }
