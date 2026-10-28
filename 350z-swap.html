@@ -40,7 +40,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="case-page" style="--case-accent: #f1b3a2">
+<body class="case-page" style="--case-accent: #efd789">
       <div class="wrapper">
 
             <nav>
@@ -123,7 +123,7 @@
 <span class="case-title-line">350Z / VQ37VHR</span>
 <span class="case-title-line">Engine Swap</span>
 </h1>
-<p class="case-lede">Connecting a 2005 Nissan 350Z chassis with an engine-swapped 3.7L VQ37VHR powertrain introduced an array of exciting engieering challenges I got to solve from first principles!</p>
+<p class="case-lede">Swapping a 2005 Nissan 350Z chassis with a 3.7L VQ37VHR powertrain introduced an array of exciting challenges I got to solve and engineer solutions to!</p>
 <div class="case-actions">
 <a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
 </a>
@@ -162,6 +162,18 @@
 </div>
 </div>
 </div>
+<details class="case-detail" open>
+<summary>View details</summary>
+<div class="case-prose">
+<p>My 2005 350z originally came with a VQ35DE Rev-up engine. After about two years of chasing overheating issues, testing everything I could think of, and replacing just about the entire cooling system, it was obvious the issue was internal to the engine and it needed to come out. And if I was already pulling the engine, well. I might as well swap it right! I wanted something more reliable, with more power, and a better platform to build on down the road all without sacrificing weight distribution and vehicle dynamics. So I went with a VQ37VHR and the rest of the drivetrain from a 2018 370z Nismo.</p>
+<p>I found the drivetrain on facebook marketplace of all places. It was not local to me but it was perfect. It was a 6 speed manual transmission car with only 3000 miles on the clock and came with the ECU and all the wiring harness pieces I needed! The only downside was it was in Snoqualmie, Washington. Fortunately I was heading to Washington for spring break anyways! So it all worked out perfectly. I flew to Seattle, enjoyed my spring break, and rented a truck to haul the drive train back to Utah.</p>
+<p>When I got back from my trip I took the car and drivetrain down to my uncle’s house and, with help from him, my cousin, and grandpa, we got to work tearing it apart. This is not a well documented swap, so there was a lot to figure out along the way. Some things surprised me with how easily they bolted up. Other things took several nights of troubleshooting before we figured out what was actually wrong.</p>
+<p>My work included custom wiring, automatic fan controls with a manual override, modifications to the intake and exhaust, and figuring out how to fit the cooling system around everything else. I also designed and 3D printed parts for the intake and PCV system. There were plenty of times where something almost fit, but “almost” meant another evening of measuring, modifying, and trying again.</p>
+<p>Getting it running was its own project. One cylinder had a weak ignition signal that I eventually traced back to the ECU using an oscilloscope, wiring tests, and a separate wire to rule out the harness. Replacing the ECU fixed that issue. Later, another misfire turned out to be a bad connector. Similar symptoms, completely different problems. I also expanded my <a href="project6.html">Android Race Dash</a> app throughout the swap so I could log what the engine was doing while driving and added hardware support for an oil pressure sender so I could view the engine's oil pressure in the app.</p>
+<p>The electronics had their own compatibility issues too. The original 350z chassis and newer ECU don’t understand all the same CAN bus messages, so I developed a <a href="canbus.html">translation bridge</a> to get the factory RPM, and coolant gauge working and it also provides the ECU vehicle speed data it can actually understand. There is enough going on there that I have a separate project dedicated to it. That you can check out <a href="canbus.html">here</a> if you are interested:</p>
+<p>The car now runs and drives great! I’m still working through a couple emissions issues to get it registered here in Utah but if you are in a place where emissions don’t matter the swap is done! This swap has involved countless hours of troubleshooting, reverse engineering complex systems, breaking things down to first principles and figuring out how to integrate and make everything work together!</p>
+</div>
+</details>
 <div class="case-photo-gallery">
 <figure>
 <button type="button" class="case-image-button" data-case-image>
