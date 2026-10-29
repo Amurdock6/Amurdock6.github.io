@@ -115,6 +115,14 @@
     transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .5s ease;
 }
 
+.project-scene--canbus .project-scene__visual img {
+    box-sizing: border-box;
+    object-fit: contain;
+    object-position: center;
+    padding: 12px 12px 12px 8%;
+    background: #fff;
+}
+
 .project-scene__arrow {
     position: absolute;
     z-index: 2;

@@ -27,6 +27,7 @@
 .case-hero .case-image-button { background: radial-gradient(ellipse at center, #32372c, #171917 75%); }
 .case-hero .case-image-button img { display: block; width: 100%; height: 510px; object-fit: cover; }
 .case-hero--screen .case-image-button img { object-fit: contain; padding: 24px; }
+.case-hero.case-hero--canbus .case-image-button img { padding: clamp(32px, 4vw, 48px); }
 .case-hero-phones { display: flex; align-items: center; justify-content: center; gap: 20px; min-width: 0; padding: 40px 25px; background: radial-gradient(ellipse, #244745, transparent 70%); }
 .case-hero-phones .case-image-button { width: 45%; max-width: 210px; flex-shrink: 0; border: 5px solid #414c48; border-radius: 25px; transform: rotate(-6deg) translateY(-14px); }
 .case-hero-phones .case-image-button:nth-child(2) { transform: rotate(6deg) translateY(20px); }

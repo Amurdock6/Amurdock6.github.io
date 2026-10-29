@@ -115,14 +115,14 @@
             <main class="case-study" id="main-content">
 <a class="case-back" href="index.html#project-gallery">
 <span aria-hidden="true">↙</span> projects</a>
-<header class="case-hero case-hero--screen">
+<header class="case-hero case-hero--screen case-hero--canbus">
 <div class="case-hero__copy">
 <p class="case-kicker">Embedded Systems &amp; Protocol Engineering</p>
 <h1>
 <span class="case-title-line">350Z / VQ37</span>
 <span class="case-title-line">CAN Gateway</span>
 </h1>
-<p class="case-lede">Connecting a 2005 Nissan 350Z chassis with an engine-swapped 3.7L VQ37VHR powertrain introduced a fundamental communication gap.</p>
+<p class="case-lede">Swaping a 3.7L VQ37VHR powertrain into a 2005 Nissan 350Z chassis introduced substantial CAN bus challenges.</p>
 <div class="case-actions">
 <a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
 </a>
@@ -130,7 +130,7 @@
 </div>
 <figure class="case-media">
 <button type="button" class="case-image-button" data-case-image aria-label="350Z / VQ37 CAN Gateway — View details">
-<img src="images/projects/canbus-gateway.svg" alt="350Z / VQ37 CAN Gateway" fetchpriority="high" decoding="async">
+<img src="images/projects/esp32-dev-board.jpg" alt="350Z / VQ37 CAN Gateway" fetchpriority="high" decoding="async">
 </button>
 </figure>
 </header>
@@ -141,7 +141,7 @@
 </div>
 <div>
 <dt>started :</dt>
-<dd>Fall 2024</dd>
+<dd>Fall 2026</dd>
 </div>
 </dl>
 <section class="case-section" id=highlighted-work>
@@ -170,8 +170,8 @@
 <details class="case-detail">
 <summary>View details</summary>
 <div class="case-prose">
-<p>Connecting a 2005 Nissan 350Z chassis with an engine-swapped 3.7L VQ37VHR powertrain introduced a fundamental communication gap. The older chassis electronics and the newer ECU communicate across disparate CAN bus protocols, message rates, and payload byte layouts.</p>
-<p>Without an active hardware translator, critical OEM cluster instruments—including vehicle speed, tachometer, and engine coolant temperature—cannot interpret telemetry from the modern powertrain. I designed and built a dual-CAN automotive gateway in Arduino C++ targeting an ESP32 micro-controller.</p>
+<p>Swaping a 3.7L VQ37VHR powertrain into a 2005 Nissan 350Z chassis introduced a fundamental communication gap. The older chassis electronics and the newer ECU communicate across disparate CAN bus protocols, message rates, and payload byte layouts.</p>
+<p>Without an active hardware translator, critical OEM clusters including tachometer, and engine coolant temperature plus data like vehicle speed cannot interpret signals from the modern powertrain. I designed and built a dual-CAN automotive gateway in C++ targeting an ESP32 micro-controller.</p>
 <p>By combining the ESP32&#x27;s native TWAI (Two-Wire Automotive Interface) controller with an external MCP2515 SPI CAN transceiver, the gateway physically isolates the chassis and powertrain buses while selectively translating broadcast frames in real time. The firmware includes hardware abstraction layers, explicit timing paces, and gated transmission safety controls.</p>
 <p>A core engineering problem in vehicle message translation is preventing stale data from causing erratic vehicle behavior.</p>
 <p>If source packets drop or time out, target frames pass through untouched.  To ensure behavioral parity across firmware migrations without risking live hardware, I developed a Python capture and analysis suite and an offline C++ differential test harness. These tools run candidate firmware against recorded wire-level baselines from historical RP2040 implementations, comparing output mappings, source expiry, and message pacing across the entire operational domain before firmware is loaded onto physical hardware.</p>
