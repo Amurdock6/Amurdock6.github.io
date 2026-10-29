@@ -122,8 +122,9 @@
 <span class="case-title-line">Protocol</span>
 <span class="case-title-line">Garage</span>
 </h1>
-<p class="case-lede">Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably.</p>
-<p class="case-lede">I built Protocol Garage’s website to sell physical products I’d developed over the years, primarily during the engine swap, and to give future products a home.</p>
+<p class="case-lede">Protocol Garage is an automotive parts storefront and order management platform designed to handle e-commerce checkout and asynchronous payment events reliably.</p>
+<br>
+<p class="case-lede">I built Protocol Garage’s to sell physical products I've developed over the years, primarily during the engine swap, and to give future products a home.</p>
 <div class="case-actions">
 <a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
 </a>
@@ -142,7 +143,7 @@
 </div>
 <div>
 <dt>started :</dt>
-<dd>Early 2026</dd>
+<dd>August 2026</dd>
 </div>
 <div>
 <dt>completed :</dt>
@@ -170,7 +171,7 @@
 <details class="case-detail">
 <summary>View details</summary>
 <div class="case-prose">
-<p>Protocol Garage is an automotive parts storefront and order management foundation designed to handle e-commerce checkout and asynchronous payment events reliably. Rather than building on an oversized monolithic e-commerce CMS, I built Protocol Garage from the ground up as a high-performance, static-first storefront with edge serverless endpoints engineered specifically for state integrity, checkout idempotency, and graceful partial failure recovery.</p>
+<p>Protocol Garage is an automotive parts storefront and order management platform designed to handle e-commerce checkout and asynchronous payment events reliably. Rather than building on an oversized monolithic e-commerce CMS, I built Protocol Garage from the ground up as a high-performance, static-first storefront with edge serverless endpoints engineered specifically for state integrity, checkout idempotency, and graceful partial failure recovery.</p>
 <p>The application separates catalog presentation from checkout orchestration, payment handling, and order persistence. The frontend is built using Astro and TypeScript, delivering static product and catalog pages with zero unnecessary client-side JavaScript.</p>
 <p>Edge API endpoints run on Cloudflare Workers backed by a Cloudflare D1 relational database (SQLite at the edge). All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
 <p>To prevent race conditions, duplicate charges, or tampering, the checkout service enforces strict server-side catalog validation for all product variants, prices, and quantity limits.</p>
