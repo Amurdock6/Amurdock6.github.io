@@ -1,0 +1,190 @@
+.about-page {
+      --about-accent: #d6efad;
+      --about-muted: #8c8e88;
+      --about-line: #ffffff26;
+}
+
+.about-page .wrapper { overflow: clip; }
+.about-page .wrapper::after { opacity: 0.3; }
+
+.about-layout {
+      width: min(100% - 80px, 1020px);
+      margin: 132px auto 100px;
+}
+
+.about-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--about-line);
+}
+
+.about-heading h1 {
+      margin: 0;
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.075em;
+}
+
+.about-heading > span {
+      color: var(--about-accent);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+}
+
+.about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+      align-items: start;
+      gap: clamp(32px, 5vw, 72px);
+}
+
+.about-gallery {
+      position: sticky;
+      top: 112px;
+      min-width: 0;
+}
+
+.about-gallery__photo { margin: 0; }
+.about-gallery__photo[hidden] { display: none; }
+
+/* Let every photograph keep its original proportions, including the graduation portrait. */
+.about-gallery__photo > img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+}
+
+.about-gallery__photo figcaption {
+      margin-top: 18px;
+      color: #e5e7e0;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+}
+
+.about-gallery__controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0 16px;
+      border-bottom: 1px solid var(--about-line);
+}
+
+.about-gallery__count {
+      color: var(--about-accent);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+}
+
+.about-gallery__count > span { color: #676a62; }
+.about-gallery__buttons { display: flex; gap: 4px; }
+
+.about-gallery__buttons button {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border: 1px solid var(--about-line);
+      border-radius: 50%;
+      background: transparent;
+      color: #cccfc5;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      transition: color 160ms, border-color 160ms;
+}
+
+.about-gallery__buttons [data-gallery-pause] { font-size: 10px; }
+.about-gallery__buttons button:hover { color: var(--about-accent); border-color: var(--about-accent); }
+
+.about-gallery__thumbnails {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      padding-top: 16px;
+}
+
+.about-gallery__thumb {
+      position: relative;
+      min-width: 0;
+      padding: 0 0 8px;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      background: transparent;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 160ms, border-color 160ms;
+}
+
+.about-gallery__thumb img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: 32% 25%;
+      border-radius: 1px;
+}
+
+.about-gallery__thumb span {
+      position: absolute;
+      bottom: 12px;
+      left: 5px;
+      padding: 2px 4px;
+      color: #fff;
+      background: #101010b3;
+      font-size: 9px;
+}
+
+.about-gallery__thumb:hover,
+.about-gallery__thumb[aria-pressed="true"] { opacity: 1; }
+.about-gallery__thumb[aria-pressed="true"] { border-color: var(--about-accent); }
+
+.about-gallery button:focus-visible {
+      outline: 2px solid var(--about-accent);
+      outline-offset: 4px;
+}
+
+.about-story p {
+      margin: 0;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--about-line);
+      color: #a5a79f;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.95;
+}
+
+.about-story p:first-child {
+      padding-top: 0;
+      color: #e1e3da;
+      font-size: 14px;
+      line-height: 1.9;
+}
+
+.about-story p:last-child { border-bottom: 0; padding-bottom: 0; }
+.about-story a { text-decoration: underline; text-decoration-color: #d6efad66; text-underline-offset: 4px; }
+.about-story a:hover { text-decoration-color: var(--about-accent); }
+
+.about-page .footer .container { max-width: 1050px; }
+.about-page .footer .info h4 { font-size: 13px; overflow-wrap: anywhere; }
+.about-page .footer .info p,
+.about-page .footer .info li,
+.about-page .footer .collab p { font-size: 12px; }
+
+@media (max-width: 768px) {
+      .about-layout { width: calc(100% - 40px); margin-top: 112px; margin-bottom: 48px; }
+      .about-heading { padding-bottom: 22px; margin-bottom: 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .about-gallery { position: static; }
+      .about-story p { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+      .about-gallery button { transition: none; }
+}

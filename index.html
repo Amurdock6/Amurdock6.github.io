@@ -40,6 +40,7 @@
       <script src="js/t.min.js"></script>
       <script src="js/scrollbar.js"></script>
       <script src="js/wow.min.js"></script>
+      <script src="js/mobile-nav.js" defer></script>
 </head>
 <body>
       <div class="wrapper">
@@ -95,13 +96,11 @@
                               </a></li>
                   </ul>
 
-                  <div id="toggle">
-                        <div class="span">menu</div>
-                  </div>
+                  <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
             </nav>
 
-            <div id="resize">
-                  <div class="close-btn">close</div>
+            <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+                  <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
 
                   <ul id="menu">
                         <li><a href="index.html" id="active-selector" class="">home<span>.</span></a></li>
@@ -418,20 +417,11 @@
       <script type="text/javascript">
             // navigation starts here
 
-            $("#toggle").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $("#resize ul li a").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $(".close-btn").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
+
+
+
 
             // navigation ends here
 

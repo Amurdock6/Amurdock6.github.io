@@ -42,6 +42,7 @@
 
       <!-- Lightmode Script -->
       <script src="/js/lightmode.js"></script>
+      <script src="../js/mobile-nav.js" defer></script>
 </head>
 
 <body>
@@ -110,13 +111,11 @@
                   </li>
             </ul>
 
-            <div id="toggle">
-                  <div class="span">menu</div>
-            </div>
+            <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
       </nav>
 
-      <div id="resize">
-            <div class="close-btn">close</div>
+      <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+            <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
             <ul id="menu">
                   <li><a href="/index.html">home<span>.</span></a></li>
                   <li><a href="/index.html#projects">projects<span>.</span></a></li>
@@ -152,7 +151,7 @@
                         <h2>posted: <span>12/18/2024</span></h2><h3>10 minute read</h3>
                   </div>
             </header>
-            
+
             <hr />
             <br>
 
@@ -160,7 +159,7 @@
             <div class="carousel">
                   <!-- Prev Button -->
                   <button class="carousel-btn prev" id="prevBtn">&#9664;</button>
-                  
+
                   <!-- Main Carousel Images -->
                   <div class="carousel-images" id="carouselImages">
                         <img src="/images/blog-posts/post1/hardware.webp" alt="Raspberry pi 4b 8gb with ada fruit HAT." class="carousel-image" data-enlargeable/>
@@ -170,13 +169,13 @@
                         <img src="/images/blog-posts/post1/backSeatWiring.webp" alt="Complete set up including pi and all electronics in back of 350z glovebox." class="carousel-image" data-enlargeable/>
                         <img src="/images/blog-posts/post1/laptopInDaZ.webp" alt="Show casing screen and ARD being developed in the car." class="carousel-image" data-enlargeable/>
                   </div>
-      
+
                   <!-- Progress Bar Container with Pause/Play Button -->
                   <div class="progress-bar-container">
                         <button class="carousel-btn pause-play" id="pausePlayBtn">&#10074;&#10074;</button> <!-- Pause Icon -->
                         <div class="progress-bar" id="progressBar"></div>
                   </div>
-      
+
                   <!-- Next Button -->
                   <button class="carousel-btn next" id="nextBtn">&#9654;</button>
             </div>
@@ -210,7 +209,7 @@
                               sharing what I've learned so that others attempting a similar project have the information I wish I'd had at the
                               start. If you're looking, to build your own Digital Dash, consider this a guide or at least some
                               inspiration.<br><br>
-                        
+
                               So, what exactly is this Digital Dash? As the name suggests, it's a system that displays and logs a wide range of
                               real-time data from your car, sourced from various inputs including an OBDII scanner, accelerometer, gyroscope,
                               and
@@ -277,16 +276,16 @@
                         </p>
 
                         <hr/>
-                        
+
                         <p>
                               To install the screen, I ran an HDMI cable and a Micro USB to USB-A cable from the screen’s location back to the
                               glove box area behind the passenger seat, where I store the Raspberry pi and all the additional hardware. Note
                               that I had to use a 270-degree HDMI adapter to make the screen fit properly and also trim a bit of the plastic
                               inside the dash. All the cutting is internal and not visible once installed.
                         </p>
-                        
+
                         <br>
-                        
+
                         <p>
                               In my case, the cover that normally goes over the navigation opening is missing, so trimming the inside wasn’t an
                               issue. However, if you still have the cover in your 350z, you’ll want to make sure your modifications don’t interfere with its
@@ -335,16 +334,16 @@
                               diagram I created. Following this and installing my shut down script will yield you the same results that I have
                               in my set up.
                         </p>
-                        
+
                         <img class="full-size-image" src="/images/blog-posts/post1/wiring-diagram.webp" alt="Complete wiring diagram showing how the pi and all its related hardware is wired into the cars 12v system." data-enlargeable/>
-                        
+
                         <hr />
-                        
+
                         <p>
                               I am no electrical engineer so there might be an easier way to do this without the relays. That being said, this
                               setup is working great and I’ve had no issues.
                         </p>
-                        
+
                         <p>
                               The Raspberry pi 4B requires 5V to run, but since cars provide 12V, I needed to step the voltage down. To do this,
                               I used 12V to 5V DC-DC Buck Converters, <a href="https://www.amazon.com/Converter-Voltage-Waterproof-Regulator-Step-Down/dp/B07Y2V1F8V/ref=asc_df_B07Y2V1F8V?mcid=4f9b9e4c200333ecafe22a27f0155c4e&tag=hyprod-20&linkCode=df0&hvadid=693558272631&hvpos=&hvnetw=g&hvrand=12734499194843680300&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1026984&hvtargid=pla-843941145334&th=1">these ones</a> 
@@ -400,7 +399,7 @@
                                     Main Power Timer Relay:<br>
                                     When the accessory power wire loses power (e.g., the car turns off), this relay continues supplying power to
                                     the Raspberry pi for 50 seconds. This gives the Pi enough time to execute a safe shutdown sequence.
-                        
+
                               </li>
                               <li>
                                     Normally Closed Relay:<br>
@@ -424,27 +423,27 @@
                               The shutdown script is a small piece of code I wrote in C, which monitors GPIO Pin 18 for a high signal. When the
                               Normally Closed Relay sends power to this pin, the script tells the Raspberry pi to begin the shutdown process.
                         </p>
-                        
+
                         <p>
                               The script itself was straightforward to write, but getting it to work on an Android-based OS running on the Pi
                               took some trial and error. Here’s what I did:
                         </p>
-                        
+
                         <p>Place the script in the <code>/system/bin</code> directory, as this is where executable scripts are stored in Android. Set the correct permissions using the following command:</p>
 
                         <div class="code-container">
                             <button class="copy-btn" onclick="copyToClipboard(event)">Copy</button>
                             <pre><code>chmod 755 /system/bin/shutdown_script.sh</code></pre>
                         </div>
-                        
+
                         <p>Since modifying files in the <code>/system</code> directory requires root access, use the <code>su</code> command before copying the script to the directory:</p>
-                        
+
                         <div class="code-container">
                             <button class="copy-btn" onclick="copyToClipboard(event)">Copy</button>
                             <pre><code>su 
 cp shutdown_script.sh /system/bin/</code></pre>
                         </div>
-                        
+
                         <hr />
                         <h3>Mounting the Kill Switch:</h3>
                         <p>
@@ -539,9 +538,9 @@ cp shutdown_script.sh /system/bin/</code></pre>
                         <a href="https://www.adafruit.com/product/2324">Adafruit Ultimate GPS HAT for Raspberry pi</a> - $30 <br>
                   </div>
             </main>
-      
+
             <div class="whitespace"></div>
-      
+
       </div>
       <div class="footer">
             <div class="container">
@@ -601,20 +600,11 @@ cp shutdown_script.sh /system/bin/</code></pre>
       <script src="/js/blog.js"></script>
       <script type="text/javascript">
 
-            $("#toggle").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $("#resize ul li a").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $(".close-btn").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
+
+
+
 
             TweenMax.from("#brand", 1, {
                   delay: 0.4,

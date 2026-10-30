@@ -34,9 +34,11 @@
       <!-- Additional Scripts -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
       <script src="js/wow.min.js"></script>
+      <script src="js/mobile-nav.js" defer></script>
+      <link rel="stylesheet" href="css/about.css">
 </head>
 
-<body>
+<body class="about-page">
       <div class="wrapper">
 
             <nav>
@@ -90,14 +92,12 @@
                               </a></li>
                   </ul>
 
-                  <div id="toggle">
-                        <div class="span">menu</div>
-                  </div>
+                  <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
 
             </nav>
 
-            <div id="resize">
-                  <div class="close-btn">close</div>
+            <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+                  <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
 
                   <ul id="menu">
                         <li><a href="index.html">home<span>.</span></a></li>
@@ -110,62 +110,67 @@
                   </ul>
             </div>
 
-            <div class="container">
-                  <div class="row">
-                        <div class="col-lg-12 about wow fadeInUp" data-wow-delay="1s">
-                              <section class="about-carousel carousel" aria-label="Photos of my car">
-                                    <button class="carousel-btn prev" id="prevBtn" type="button"
-                                          aria-label="Previous photo">&#9664;</button>
-
-                                    <div class="carousel-images" id="carouselImages" aria-live="polite">
-                                          <figure class="about-carousel__slide">
-                                                <picture>
-                                                      <source media="(max-width: 650px)"
-                                                            srcset="images/projects/about-mobile.webp">
-                                                      <img class="about-carousel__image about-carousel__image--portrait" src="images/projects/about.webp"
-                                                            alt="My 350Z">
-                                                </picture>
-                                                <figcaption>My 350Z</figcaption>
-                                          </figure>
-
-                                          <figure class="about-carousel__slide">
-                                                <img class="about-carousel__image"
-                                                      src="images/projects/350z-swap/car-in-canyon.webp"
-                                                      alt="My 350Z">
-                                                <figcaption>My 350Z</figcaption>
-                                          </figure>
+            <main class="about-layout">
+                  <header class="about-heading">
+                        <h1>about me.</h1>
+                        <span aria-hidden="true">AM / 01</span>
+                  </header>
+                  <div class="about-grid">
+                        <section class="about-gallery" aria-label="Photos">
+                              <div class="about-gallery__stage" aria-live="polite">
+                                    <figure class="about-gallery__photo">
+                                          <img src="images/about/graduation.webp" alt="" width="1800" height="1200" decoding="async">
+                                          <figcaption>Graduation</figcaption>
+                                    </figure>
+                                    <figure class="about-gallery__photo" hidden>
+                                          <img src="images/about/museum.webp" alt="" width="1800" height="1355" decoding="async">
+                                          <figcaption>Nissan Heritage Museum</figcaption>
+                                    </figure>
+                                    <figure class="about-gallery__photo" hidden>
+                                          <img src="images/projects/350z-swap/car-in-canyon.webp" alt="" width="1920" height="1080" decoding="async">
+                                          <figcaption>My 350Z</figcaption>
+                                    </figure>
+                                    <figure class="about-gallery__photo" hidden>
+                                          <img src="images/about/ferry.webp" alt="" width="956" height="720" decoding="async">
+                                          <figcaption>Ferry Ride</figcaption>
+                                    </figure>
+                              </div>
+                              <div class="about-gallery__controls">
+                                    <span class="about-gallery__count" aria-hidden="true">01 <span>/ 04</span></span>
+                                    <div class="about-gallery__buttons">
+                                          <button type="button" data-gallery-prev aria-label="Previous photo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5m0 0 6-6m-6 6 6 6"/></svg></button>
+                                          <button type="button" data-gallery-pause aria-label="Pause slideshow">&#10074;&#10074;</button>
+                                          <button type="button" data-gallery-next aria-label="Next photo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg></button>
                                     </div>
-
-                                    <div class="progress-bar-container">
-                                          <button class="carousel-btn pause-play" id="pausePlayBtn" type="button"
-                                                aria-label="Pause slideshow">&#10074;&#10074;</button>
-                                          <div class="progress-bar" id="progressBar"></div>
-                                    </div>
-
-                                    <button class="carousel-btn next" id="nextBtn" type="button"
-                                          aria-label="Next photo">&#9654;</button>
-                              </section>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="container">
-                  <div class="hero-content">
-                        <br><br>
-
-                        <div class="row">
-                              <div class="col-lg-12">
-                                    <h3 class="wow fadeInUp" data-wow-delay="1.2s">about me.</h3><br>
-
-                                    <p class="wow fadeInUp">My name is Alex Murdock. I do full-stack web development,
+                              </div>
+                              <div class="about-gallery__thumbnails">
+                                    <button class="about-gallery__thumb" type="button" aria-label="Graduation" aria-pressed="true" data-photo="0">
+                                          <img src="images/about/graduation.webp" alt="" loading="lazy">
+                                          <span aria-hidden="true">01</span>
+                                    </button>
+                                    <button class="about-gallery__thumb" type="button" aria-label="Nissan Heritage Museum" aria-pressed="false" data-photo="1">
+                                          <img src="images/about/museum.webp" alt="" loading="lazy">
+                                          <span aria-hidden="true">02</span>
+                                    </button>
+                                    <button class="about-gallery__thumb" type="button" aria-label="My 350Z" aria-pressed="false" data-photo="2">
+                                          <img src="images/projects/350z-swap/car-in-canyon.webp" alt="" loading="lazy">
+                                          <span aria-hidden="true">03</span>
+                                    </button>
+                                    <button class="about-gallery__thumb" type="button" aria-label="Ferry Ride" aria-pressed="false" data-photo="3">
+                                          <img src="images/about/ferry.webp" alt="" loading="lazy">
+                                          <span aria-hidden="true">04</span>
+                                    </button>
+                              </div>
+                        </section>
+                        <div class="about-story">
+                              <p>My name is Alex Murdock. I do full-stack web development,
                                           mobile app development, AI-powered product development, and ServiceNow
                                           development. I am located in Riverton, Utah and am a devoted car enthusiast.
                                           When I am not coding or designing a new project, I am usually working on my
                                           35th anniversary <a href="350z-swap.html">350Z</a> or spending time at a car meet with my friends. My
                                           favorite cars that I have driven are a heavily modified R35 GTR and a Porsche
                                           GT3 RS 991.2.</p>
-
-                                    <p class="wow fadeInUp" data-wow-delay="0.2s">I taught myself how to code when I was
+                              <p>I taught myself how to code when I was
                                           15 years old using HTML and CSS to create basic web pages, and ever since then
                                           I have been hooked on building things with technology. During my senior
                                           year of high school, I attended the Jordan Academy for Technology and Careers
@@ -173,14 +178,12 @@
                                           three Adobe Certified Professional certificates, and a Bottega coding
                                           foundations certificate. That experience, along with early internship work,
                                           turned coding from an interest into the career I wanted to pursue.</p>
-
-                                    <p class="wow fadeInUp" data-wow-delay="0.2s">I graduated from the University of
+                              <p>I graduated from the University of
                                           Utah in May 2026 with a Bachelor of Science in Software Development and a
                                           minor in Business, following the Web and Mobile track. Professionally, I work
                                           as a ServiceNow Developer at the University of Utah Health and continue
                                           building full-stack, mobile, and AI projects outside of work.</p>
-
-                                    <p class="wow fadeInUp" data-wow-delay="0.2s">The project I am most proud of is
+                              <p>The project I am most proud of is
                                           <a href="https://stylestreak.fashion/">StyleStreak</a>, the AI-powered wardrobe and outfit planning app I created for my
                                           senior capstone project. I came up with the idea, recruited the four-person team, led
                                           the product direction and project planning, shaped the architecture, and
@@ -188,13 +191,9 @@
                                           of the Firebase foundation, outfit generation, trip planning and packing,
                                           closet intake and filtering, AI integrations and AI benchmarking and Analysis tooling, testing, and CI/CD. <a href="https://stylestreak.fashion/">StyleStreak</a>
                                           won first place at the University of Utah Senior Capstone Demo Day.</p>
-
-                              </div>
                         </div>
                   </div>
-            </div>
-
-            <div class="whitespace"></div>
+            </main>
 
             <div class="footer">
                   <div class="container">
@@ -260,20 +259,11 @@
       <script type="text/javascript">
 
             // navigation starts here
-            $("#toggle").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $("#resize ul li a").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $(".close-btn").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
+
+
+
 
             // navigation ends here
 
@@ -301,7 +291,7 @@
       <script>
             document.getElementById('active-selector').className = 'active-page';
       </script>
-      <script src="js/carousel.js"></script>
+      <script src="js/about-gallery.js"></script>
 </body>
 
 </html>

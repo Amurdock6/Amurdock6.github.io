@@ -502,7 +502,7 @@ a{
 
 .about-carousel__image--contain {
       object-fit: contain;
-      padding: 34px;
+      padding: 0;
 }
 
 .about-carousel__image--portrait {
@@ -595,10 +595,6 @@ a{
       .about {
             height: 445px;
             margin-top: 100px;
-      }
-
-      .about-carousel__image--contain {
-            padding: 20px;
       }
 
       .about-carousel__image--portrait {

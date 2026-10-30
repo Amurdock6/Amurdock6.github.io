@@ -38,6 +38,7 @@
       <link rel="stylesheet" href="css/project-media.css">
       <script src="js/project-detail.js" defer></script>
       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+      <script src="js/mobile-nav.js" defer></script>
 </head>
 
 <body class="case-page" style="--case-accent: #efd789">
@@ -94,13 +95,11 @@
                               </a></li>
                   </ul>
 
-                  <div id="toggle">
-                        <div class="span">menu</div>
-                  </div>
+                  <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
             </nav>
 
-            <div id="resize">
-                  <div class="close-btn">close</div>
+            <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+                  <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
 
                   <ul id="menu">
                         <li><a href="index.html">home<span>.</span></a></li>
@@ -358,20 +357,11 @@
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script type="text/javascript">
 
-            $("#toggle").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $("#resize ul li a").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
 
-            $(".close-btn").click(function () {
-                  $(this).toggleClass('on');
-                  $("#resize").toggleClass("active");
-            });
+
+
+
 
             TweenMax.from("#brand", 1, {
                   delay: 0.4,
