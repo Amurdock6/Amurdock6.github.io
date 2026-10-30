@@ -1,5 +1,5 @@
 .about-page {
-      --about-accent: #d6efad;
+      --about-accent: var(--site-accent);
       --about-muted: #8c8e88;
       --about-line: #ffffff26;
 }
@@ -168,7 +168,7 @@
 }
 
 .about-story p:last-child { border-bottom: 0; padding-bottom: 0; }
-.about-story a { text-decoration: underline; text-decoration-color: #d6efad66; text-underline-offset: 4px; }
+.about-story a { text-decoration: underline; text-decoration-color: #f1c08366; text-underline-offset: 4px; }
 .about-story a:hover { text-decoration-color: var(--about-accent); }
 
 .about-page .footer .container { max-width: 1050px; }

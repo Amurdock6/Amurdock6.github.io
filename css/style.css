@@ -1,3 +1,8 @@
+:root {
+      --site-accent: #f1c083;
+      --site-accent-dark: #85521e;
+}
+
 html, body {
       cursor: url(../icons/cursor.png), auto !important;
       margin: 0;
@@ -11,7 +16,7 @@ html, body {
 
 *::selection {
       color: #0f0f0f;
-      background-color: var(--selection-accent, var(--case-accent, var(--project-accent, var(--education-accent, var(--route, #d6efad)))));
+      background-color: var(--selection-accent, var(--case-accent, var(--project-accent, var(--education-accent, var(--route, var(--site-accent))))));
 }
 
 .stylestreak-project,

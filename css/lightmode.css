@@ -82,8 +82,8 @@ hr {
     #resize .close-btn, #resize .close-btn span { color: #444; }
     body #resize #menu li, body #resize #menu li:last-child { border-color: #00000018; }
     body #resize #menu li a { color: #222 !important; }
-    body #resize #menu li a[aria-current] { color: #416121 !important; }
-    #resize #menu li a[aria-current]::after { color: #416121; }
+    body #resize #menu li a[aria-current] { color: var(--site-accent-dark) !important; }
+    #resize #menu li a[aria-current]::after { color: var(--site-accent-dark); }
     #resize #menu li a:hover { background: #00000005; }
-    #resize a:focus-visible, #resize button:focus-visible, nav #toggle:focus-visible { outline-color: #416121; }
+    #resize a:focus-visible, #resize button:focus-visible, nav #toggle:focus-visible { outline-color: var(--site-accent-dark); }
 }

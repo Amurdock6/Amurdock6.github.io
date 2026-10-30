@@ -1,5 +1,5 @@
 .contact-page {
-    --contact-accent: #c5edb2;
+    --contact-accent: var(--site-accent);
     --selection-accent: var(--contact-accent);
 }
 
@@ -24,13 +24,13 @@
     width: 144px;
     height: 144px;
     margin-bottom: 30px;
-    background: radial-gradient(circle, #c5edb214, transparent 70%);
+    background: radial-gradient(circle, #f1c08314, transparent 70%);
 }
 
 .contact-orbit {
     position: absolute;
     inset: 0;
-    border: 1px solid #c5edb22e;
+    border: 1px solid #f1c0832e;
     border-radius: 50%;
     transform: rotate(-25deg);
 }
@@ -44,7 +44,7 @@
     height: 7px;
     background: var(--contact-accent);
     border-radius: 50%;
-    box-shadow: 0 0 20px #c5edb25c;
+    box-shadow: 0 0 20px #f1c0835c;
 }
 
 .contact-art svg {
@@ -72,7 +72,7 @@
 .contact-page .contact-email {
     color: var(--contact-accent) !important;
     text-decoration: underline;
-    text-decoration-color: #c5edb255;
+    text-decoration-color: #f1c08355;
     text-underline-offset: 5px;
     overflow-wrap: anywhere;
 }
@@ -101,7 +101,7 @@
     overflow: hidden;
     border: 1px solid #ffffff24;
     border-radius: 14px;
-    background: linear-gradient(140deg, #1c211a 0%, #161616 45%, #121212 100%);
+    background: linear-gradient(140deg, #272018 0%, #161616 45%, #121212 100%);
     box-shadow: 0 24px 70px #00000033;
 }
 
@@ -180,13 +180,13 @@
     border: 1px solid var(--contact-accent);
     border-radius: 6px;
     background: var(--contact-accent);
-    color: #172012;
+    color: #241a10;
     font: inherit;
     font-size: .85rem;
     transition: background .2s;
 }
 
-.contact-submit:hover:not(:disabled) { background: #daf6cd; }
+.contact-submit:hover:not(:disabled) { background: #f8d7ad; }
 .contact-submit span { font-size: 1.2rem; }
 #contact-form :disabled { cursor: not-allowed; }
 #contact-form .contact-submit:disabled { opacity: .5; }

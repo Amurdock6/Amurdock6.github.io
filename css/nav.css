@@ -617,11 +617,11 @@ nav #menu li:nth-child(7) span:nth-child(1) {
         color: #777;
     }
     #resize #menu li a::after { content: '↗'; font-size: 20px; color: #666; }
-    body #resize #menu li a[aria-current] { color: #d6efad !important; }
-    #resize #menu li a[aria-current]::after { content: '•'; color: #d6efad; }
+    body #resize #menu li a[aria-current] { color: var(--site-accent) !important; }
+    #resize #menu li a[aria-current]::after { content: '•'; color: var(--site-accent); }
     #resize #menu li a:hover { padding-left: 8px; background: #ffffff05; }
     #resize a:focus-visible, #resize button:focus-visible, nav #toggle:focus-visible {
-        outline: 2px solid #d6efad;
+        outline: 2px solid var(--site-accent);
         outline-offset: 4px;
     }
 }

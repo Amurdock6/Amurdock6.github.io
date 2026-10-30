@@ -6,7 +6,7 @@
 }
 
 .project-scene {
-    --project-accent: #d6efad;
+    --project-accent: var(--site-accent);
     position: relative;
     isolation: isolate;
     display: grid;

@@ -1,5 +1,5 @@
 /* Project stories share the gallery's type, fine rules and project accents. */
-.case-page { --case-accent: #d6efad; --selection-accent: var(--case-accent); }
+.case-page { --case-accent: var(--site-accent); --selection-accent: var(--case-accent); }
 .stylestreak-project { --selection-accent: #80ecf0; }
 .case-study { width: min(1360px, calc(100% - 112px)); margin: 0 auto; padding: 142px 0 70px; }
 .case-study *, .case-lightbox * { box-sizing: border-box; }
