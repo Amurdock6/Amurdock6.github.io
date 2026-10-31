@@ -116,22 +116,39 @@
                         <span aria-hidden="true">AM / 01</span>
                   </header>
                   <div class="about-grid">
+                        <div class="about-intro">
+                              <p><span class="about-intro__lead">My name is Alex Murdock.</span> I do full-stack web development,
+                                          mobile app development, AI-powered product development, and ServiceNow
+                                          development. I am located in Riverton, Utah and am a devoted car enthusiast.
+                                          When I am not coding or designing a new project, I am usually working on my
+                                          35th anniversary <a href="350z-swap.html">350Z</a> or spending time at a car meet with my friends. My
+                                          favorite cars that I have driven are a heavily modified R35 GTR and a Porsche
+                                          GT3 RS 991.2.</p>
+                        </div>
                         <section class="about-gallery" aria-label="Photos">
                               <div class="about-gallery__stage" aria-live="polite">
                                     <figure class="about-gallery__photo">
-                                          <img src="images/about/graduation.webp" alt="" width="1800" height="1200" decoding="async">
+                                          <a class="about-gallery__photo-link" href="images/about/graduation.webp" aria-label="Graduation">
+                                                <img src="images/about/graduation.webp" alt="Graduation" width="1800" height="1200" decoding="async">
+                                          </a>
                                           <figcaption>Graduation</figcaption>
                                     </figure>
                                     <figure class="about-gallery__photo" hidden>
-                                          <img src="images/about/museum.webp" alt="" width="1800" height="1355" decoding="async">
+                                          <a class="about-gallery__photo-link" href="images/about/museum.webp" aria-label="Nissan Heritage Museum">
+                                                <img src="images/about/museum.webp" alt="Nissan Heritage Museum" width="1800" height="1355" decoding="async">
+                                          </a>
                                           <figcaption>Nissan Heritage Museum</figcaption>
                                     </figure>
                                     <figure class="about-gallery__photo" hidden>
-                                          <img src="images/projects/350z-swap/car-in-canyon.webp" alt="" width="1920" height="1080" decoding="async">
+                                          <a class="about-gallery__photo-link" href="images/about/350z.webp" aria-label="My 350Z">
+                                                <img src="images/about/350z.webp" alt="My 350Z" width="2000" height="1124" decoding="async">
+                                          </a>
                                           <figcaption>My 350Z</figcaption>
                                     </figure>
                                     <figure class="about-gallery__photo" hidden>
-                                          <img src="images/about/ferry.webp" alt="" width="956" height="720" decoding="async">
+                                          <a class="about-gallery__photo-link" href="images/about/ferry.webp" aria-label="Ferry Ride">
+                                                <img src="images/about/ferry.webp" alt="Ferry Ride" width="956" height="720" decoding="async">
+                                          </a>
                                           <figcaption>Ferry Ride</figcaption>
                                     </figure>
                               </div>
@@ -153,7 +170,7 @@
                                           <span aria-hidden="true">02</span>
                                     </button>
                                     <button class="about-gallery__thumb" type="button" aria-label="My 350Z" aria-pressed="false" data-photo="2">
-                                          <img src="images/projects/350z-swap/car-in-canyon.webp" alt="" loading="lazy">
+                                          <img src="images/about/350z.webp" alt="" loading="lazy">
                                           <span aria-hidden="true">03</span>
                                     </button>
                                     <button class="about-gallery__thumb" type="button" aria-label="Ferry Ride" aria-pressed="false" data-photo="3">
@@ -162,14 +179,8 @@
                                     </button>
                               </div>
                         </section>
-                        <div class="about-story">
-                              <p>My name is Alex Murdock. I do full-stack web development,
-                                          mobile app development, AI-powered product development, and ServiceNow
-                                          development. I am located in Riverton, Utah and am a devoted car enthusiast.
-                                          When I am not coding or designing a new project, I am usually working on my
-                                          35th anniversary <a href="350z-swap.html">350Z</a> or spending time at a car meet with my friends. My
-                                          favorite cars that I have driven are a heavily modified R35 GTR and a Porsche
-                                          GT3 RS 991.2.</p>
+                  </div>
+                  <div class="about-story">
                               <p>I taught myself how to code when I was
                                           15 years old using HTML and CSS to create basic web pages, and ever since then
                                           I have been hooked on building things with technology. During my senior
@@ -191,9 +202,13 @@
                                           of the Firebase foundation, outfit generation, trip planning and packing,
                                           closet intake and filtering, AI integrations and AI benchmarking and Analysis tooling, testing, and CI/CD. <a href="https://stylestreak.fashion/">StyleStreak</a>
                                           won first place at the University of Utah Senior Capstone Demo Day.</p>
-                        </div>
                   </div>
             </main>
+
+            <dialog class="about-viewer" aria-label="about me.">
+                  <button class="about-viewer__close" type="button" aria-label="close">×</button>
+                  <img class="about-viewer__image" alt="">
+            </dialog>
 
             <div class="footer">
                   <div class="container">
