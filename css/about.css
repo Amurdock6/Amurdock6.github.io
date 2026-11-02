@@ -55,6 +55,8 @@
       color: var(--about-muted);
 }
 
+.about-intro p + p { margin-top: 24px; }
+
 .about-intro__lead {
       display: block;
       margin-bottom: 26px;
