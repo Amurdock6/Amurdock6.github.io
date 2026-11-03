@@ -69,6 +69,18 @@ h2 {
   width: 75%;
 }
 
+.blog-post-wrapper--essay {
+  margin-bottom: 2rem;
+}
+
+.blog-post-wrapper--essay .blog-image img {
+  height: auto;
+}
+
+.blog-post-wrapper--essay .title-area {
+  gap: 1rem;
+}
+
 .title-area {
   display: flex;
   justify-content: space-between;
