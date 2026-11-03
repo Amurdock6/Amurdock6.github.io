@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta name="keywords" content="Alexander Murdock, Alex Murdock, Protocol Garage, Full Stack, Astro, TypeScript, Cloudflare Workers, Cloudflare D1, Stripe Checkout, Webhooks, Idempotency">
+      <meta name="description" content="Automotive parts storefront built with Astro, TypeScript, Cloudflare Workers, D1, and Stripe, featuring idempotent checkout and resilient payment webhook processing.">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="Alexander Murdock">
+      <link rel="icon" href="icons/portfolio-logo.png">
+
+      <title>Alexander Murdock - Protocol Garage</title>
+
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/nav.css">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+      <!-- On Scroll Animations -->
+      <link rel="stylesheet" href="css/animate.css">
+
+      <!-- jQuery - load before Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- Additional Scripts -->
+      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+      <script src="js/mobile-nav.js" defer></script>
+</head>
+
+<body class="case-page" style="--case-accent: #f1b3a2">
+      <div class="wrapper">
+
+            <nav>
+                  <span id="brand">
+                        <a href="index.html">Alex Murdock</a>
+                        <br>
+                        <a href="index.html" id="freelance">Software Engineer</a>
+                  </span>
+
+                  <ul id="menu">
+                        <li><a href="index.html">
+                                    <span>.</span>
+                                    <span>home</span>
+                                    <span>home</span>
+                              </a></li>
+
+                        <li><a href="index.html#projects">
+                                    <span>.</span>
+                                    <span>projects</span>
+                                    <span>projects</span>
+                              </a></li>
+
+                        <li><a href="work.html">
+                                    <span>.</span>
+                                    <span>work</span>
+                                    <span>work</span>
+                              </a></li>
+
+                        <li><a href="education.html">
+                                    <span>.</span>
+                                    <span>education</span>
+                                    <span>education</span>
+                              </a></li>
+
+                        <li><a href="blog.html">
+                                    <span>.</span>
+                                    <span>blog</span>
+                                    <span>blog</span>
+                              </a></li>
+
+                        <li><a href="about.html">
+                                    <span>.</span>
+                                    <span>about me</span>
+                                    <span>about me</span>
+                              </a></li>
+
+                        <li><a href="contact.html">
+                                    <span>.</span>
+                                    <span>contact</span>
+                                    <span>contact</span>
+                              </a></li>
+                  </ul>
+
+                  <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
+            </nav>
+
+            <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+                  <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
+
+                  <ul id="menu">
+                        <li><a href="index.html">home<span>.</span></a></li>
+                        <li><a href="index.html#projects">projects<span>.</span></a></li>
+                        <li><a href="work.html">work<span>.</span></a></li>
+                        <li><a href="education.html">education<span>.</span></a></li>
+                        <li><a href="blog.html">blog<span>.</span></a></li>
+                        <li><a href="about.html">about me<span>.</span></a></li>
+                        <li><a href="contact.html">contact<span>.</span></a></li>
+                  </ul>
+            </div>
+
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero">
+<div class="case-hero__copy">
+<p class="case-kicker">Full-Stack Web &amp; Cloud Architecture</p>
+<h1>
+<span class="case-title-line">Protocol</span>
+<span class="case-title-line">Garage</span>
+</h1>
+<p class="case-lede">Protocol Garage is an automotive parts storefront and order management platform designed to handle e-commerce checkout and asynchronous payment events reliably.</p>
+<br>
+<p class="case-lede">I built Protocol Garage’s to sell physical products I've developed over the years, primarily during the engine swap, and to give future products a home.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<figure class="case-media">
+<button type="button" class="case-image-button" data-case-image aria-label="Protocol Garage — View details">
+<img src="images/projects/protocol_garage.webp" alt="Protocol Garage" fetchpriority="high" decoding="async">
+</button>
+</figure>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Full-Stack Web &amp; Cloud Architecture</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>August 2026</dd>
+</div>
+<div>
+<dt>completed :</dt>
+<dd>Storefront &amp; API Complete</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>Stripe Hosted Checkout</h3>
+<p>All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>payment events</h3>
+<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>Protocol Garage is an automotive parts storefront and order management platform designed to handle e-commerce checkout and asynchronous payment events reliably. Rather than building on an oversized monolithic e-commerce CMS, I built Protocol Garage from the ground up as a high-performance, static-first storefront with edge serverless endpoints engineered specifically for state integrity, checkout idempotency, and graceful partial failure recovery.</p>
+<p>The application separates catalog presentation from checkout orchestration, payment handling, and order persistence. The frontend is built using Astro and TypeScript, delivering static product and catalog pages with zero unnecessary client-side JavaScript.</p>
+<p>Edge API endpoints run on Cloudflare Workers backed by a Cloudflare D1 relational database (SQLite at the edge). All cardholder payment entry is delegated directly to Stripe Hosted Checkout, ensuring raw payment credentials never touch application servers.</p>
+<p>To prevent race conditions, duplicate charges, or tampering, the checkout service enforces strict server-side catalog validation for all product variants, prices, and quantity limits.</p>
+<p>Handling payment provider events across distributed systems requires assuming networks will fail, delay, or replay requests.</p>
+<p>Protocol Garage cryptographically verifies Stripe webhook signatures before claiming events. The entire checkout and event lifecycle is validated with Playwright browser tests and automated CI integration suites.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>Astro</li>
+<li>TypeScript</li>
+<li>Cloudflare Workers</li>
+<li>Cloudflare D1</li>
+<li>Stripe Hosted Checkout</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>Full-Stack Web &amp; Cloud Architecture</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-system">
+<div class="case-system__nodes">
+<div class="case-system__node">
+<small>static product and catalog pages</small>
+<strong>Astro</strong>
+</div>
+<div class="case-system__node">
+<small>Edge API endpoints</small>
+<strong>Cloudflare Workers</strong>
+</div>
+<div class="case-system__node">
+<small>relational database</small>
+<strong>Cloudflare D1</strong>
+</div>
+</div>
+<p class="case-system__note">The application separates catalog presentation from checkout orchestration, payment handling, and order persistence.</p>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="350z-swap.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">350Z / VQ37VHR Engine Swap</span>
+</a>
+<a href="project3.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">E46 Finder</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="Protocol Garage">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
+            <div class="footer">
+                  <div class="container">
+                        <br><br>
+
+                        <div class="collab">
+                              <div class="row">
+                                    <div class="col-lg-12">
+                                          <p class="wow fadeInUp">Got an interesting project? I can help.</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <br>
+
+                        <div class="hr">
+                              <div class="row"></div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="info">
+                              <div class="row">
+                                    <div class="col-lg-4" id="personal">
+                                          <p class="wow fadeInUp">connect with me</p>
+                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a
+                                                      href="https://www.linkedin.com/in/alex-murdock/">ln
+                                                      @Alexander Murdock</a></h4>
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-lg-4" id="media">
+                                          <p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
+
+                                          <ul>
+                                                <li id="gh" class="wow fadeInUp" data-wow-delay="0.4s"><a
+                                                            href="https://github.com/Amurdock6">gh</a></li>
+                                                <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s"><a
+                                                            href="https://www.linkedin.com/in/alex-murdock/">ln</a>
+                                                </li>
+                                          </ul>
+
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-lg-4" id="address">
+                                          <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
+                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a
+                                                      href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>
+                                          </h4>
+                                          <br><br>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+      </div>
+
+      <!-- wow.js script init -->
+      <script>
+            new WOW().init();
+      </script>
+</body>
+
+</html>

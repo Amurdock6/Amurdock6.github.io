@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta name="keywords" content="Alexander Murdock, Alex Murdock, Alexander Murdock Portfolio, Alex Murdock Portfolio, Old Portfolio">
+    <meta name="keywords" content="Alexander Murdock, Alex Murdock, Alexander Murdock Portfolio, Alex Murdock Portfolio">
     <meta name="description" content="Technical project notes from software engineer Alex Murdock, including automotive software, Android, hardware, and full-stack development.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +36,7 @@
     <!-- Additional Scripts -->
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script src="js/wow.min.js"></script>
+      <script src="js/mobile-nav.js" defer></script>
 </head>
 
 
@@ -67,10 +68,10 @@
                         <span>work</span>
                     </a></li>
 
-                <li><a href="certifications.html">
+                <li><a href="education.html">
                         <span>.</span>
-                        <span>certifications</span>
-                        <span>certifications</span>
+                        <span>education</span>
+                        <span>education</span>
                     </a></li>
 
                 <li><a href="blog.html">
@@ -92,18 +93,17 @@
                     </a></li>
             </ul>
 
-            <div id="toggle">
-                <div class="span">menu</div>
-            </div>
+            <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
         </nav>
 
-        <div id="resize">
-            <div class="close-btn">close</div>
+        <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+            <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
 
             <ul id="menu">
                 <li><a href="index.html">home<span>.</span></a></li>
+                <li><a href="index.html#projects">projects<span>.</span></a></li>
                 <li><a href="work.html">work<span>.</span></a></li>
-                <li><a href="certifications.html">certifications<span>.</span></a></li>
+                <li><a href="education.html">education<span>.</span></a></li>
                 <li><a href="blog.html" id="active-selector" class="">blog<span>.</span></a></li>
                 <li><a href="about.html">about me<span>.</span></a></li>
                 <li><a href="contact.html">contact<span>.</span></a></li>
@@ -153,6 +153,7 @@
                                 <label for="tag-filter">Filter by Tag:</label>
                                 <select id="tag-filter">
                                     <option value="all">All</option>
+                                    <option value="ai">AI</option>
                                     <option value="webdev">Web Development</option>
                                     <option value="android">Android</option>
                                     <option value="c">C</option>
@@ -177,6 +178,23 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="posts">
+                                <a href="/blogposts/ai-future-software-engineering.html" class="blog-post-wrapper blog-post-wrapper--essay wow fadeInUp"
+                                    data-wow-delay="1.25s" data-tags="ai">
+                                    <div class="blog-image">
+                                        <img src="/images/blog-posts/ai-future-software-engineering/main.webp" alt="" width="5120" height="1440" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="text-side">
+                                        <div class="title-area">
+                                            <h3>My thoughts on AI and the future of software engineering</h3>
+                                            <h4 class="filters">AI</h4>
+                                        </div>
+                                        <div class="hr"><div class="row"></div></div>
+                                        <div class="short-description">
+                                            <p>I believe we’re living through the end of traditional software engineering as we’ve known it, but also entering a new golden age of people actually building things. And that makes me excited!</p>
+                                        </div>
+                                    </div>
+                                </a>
+
                                 <!-- post 1-->
                                 <a href="/blogposts/post1.html" class="blog-post-wrapper wow fadeInUp"
                                     data-wow-delay="1.25s" data-tags="c android 350z electrical">
@@ -208,7 +226,7 @@
 
                                 </a>
 
-                                <!-- post 2-->
+
 
                             </div>
                         </div>
@@ -243,7 +261,7 @@
                                 <div class="col-lg-4" id="personal">
                                     <p class="wow fadeInUp">connect with me</p>
                                     <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a
-                                            href="https://www.linkedin.com/in/alexander-murdock/">ln @Alexander
+                                            href="https://www.linkedin.com/in/alex-murdock/">ln @Alexander
                                             Murdock</a></h4>
                                     <br><br>
                                 </div>
@@ -255,7 +273,7 @@
                                         <li id="gh" class="wow fadeInUp" data-wow-delay="0.4s"><a
                                                 href="https://github.com/Amurdock6">gh</a></li>
                                         <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s"><a
-                                                href="https://www.linkedin.com/in/alexander-murdock/">ln</a></li>
+                                                href="https://www.linkedin.com/in/alex-murdock/">ln</a></li>
                                     </ul>
 
                                     <br><br>
@@ -276,8 +294,10 @@
                 <br><br><br><br>
 
             </div>
+        </div>
+    </div>
 
-            <!-- the cursor -->
+    <!-- the cursor -->
             <div id="custom-cursor">
                 <span>Click Me! Click Me! Click Me! Click Me! Click Me!</span>
             </div>
@@ -288,20 +308,11 @@
             <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
             <script type="text/javascript">
 
-                $("#toggle").click(function () {
-                    $(this).toggleClass('on');
-                    $("#resize").toggleClass("active");
-                });
 
-                $("#resize ul li a").click(function () {
-                    $(this).toggleClass('on');
-                    $("#resize").toggleClass("active");
-                });
 
-                $(".close-btn").click(function () {
-                    $(this).toggleClass('on');
-                    $("#resize").toggleClass("active");
-                });
+
+
+
 
                 TweenMax.from("#brand", 1, {
                     delay: 0.4,
@@ -386,7 +397,6 @@
                 // Hide cursor initially
                 customCursor.style.display = 'none';
             </script>
-    </div>
 </body>
 
 </html>

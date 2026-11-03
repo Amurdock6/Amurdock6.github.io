@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta name="keywords" content="Alexander Murdock, Alex Murdock, CAN Bus Hacking, Automotive Engineering, ESP32, TWAI, MCP2515, Nissan 350Z, VQ37VHR, Reverse Engineering">
+      <meta name="description" content="Dual-CAN gateway firmware and validation tooling for an engine-swapped 350Z, bridging vehicle protocols with freshness boundaries and differential testing.">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="Alexander Murdock">
+      <link rel="icon" href="icons/portfolio-logo.png">
+
+      <title>Alexander Murdock - 350Z CAN Bus Gateway</title>
+
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/nav.css">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+      <!-- On Scroll Animations -->
+      <link rel="stylesheet" href="css/animate.css">
+
+      <!-- jQuery - load before Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- Additional Scripts -->
+      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="css/project-detail.css">
+      <script src="js/project-detail.js" defer></script>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+      <script src="js/mobile-nav.js" defer></script>
+</head>
+
+<body class="case-page" style="--case-accent: #78dce8">
+      <div class="wrapper">
+
+            <nav>
+                  <span id="brand">
+                        <a href="index.html">Alex Murdock</a>
+                        <br>
+                        <a href="index.html" id="freelance">Software Engineer</a>
+                  </span>
+
+                  <ul id="menu">
+                        <li><a href="index.html">
+                                    <span>.</span>
+                                    <span>home</span>
+                                    <span>home</span>
+                              </a></li>
+
+                        <li><a href="index.html#projects">
+                                    <span>.</span>
+                                    <span>projects</span>
+                                    <span>projects</span>
+                              </a></li>
+
+                        <li><a href="work.html">
+                                    <span>.</span>
+                                    <span>work</span>
+                                    <span>work</span>
+                              </a></li>
+
+                        <li><a href="education.html">
+                                    <span>.</span>
+                                    <span>education</span>
+                                    <span>education</span>
+                              </a></li>
+
+                        <li><a href="blog.html">
+                                    <span>.</span>
+                                    <span>blog</span>
+                                    <span>blog</span>
+                              </a></li>
+
+                        <li><a href="about.html">
+                                    <span>.</span>
+                                    <span>about me</span>
+                                    <span>about me</span>
+                              </a></li>
+
+                        <li><a href="contact.html">
+                                    <span>.</span>
+                                    <span>contact</span>
+                                    <span>contact</span>
+                              </a></li>
+                  </ul>
+
+                  <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
+            </nav>
+
+            <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+                  <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
+
+                  <ul id="menu">
+                        <li><a href="index.html">home<span>.</span></a></li>
+                        <li><a href="index.html#projects">projects<span>.</span></a></li>
+                        <li><a href="work.html">work<span>.</span></a></li>
+                        <li><a href="education.html">education<span>.</span></a></li>
+                        <li><a href="blog.html">blog<span>.</span></a></li>
+                        <li><a href="about.html">about me<span>.</span></a></li>
+                        <li><a href="contact.html">contact<span>.</span></a></li>
+                  </ul>
+            </div>
+
+            <main class="case-study" id="main-content">
+<a class="case-back" href="index.html#project-gallery">
+<span aria-hidden="true">↙</span> projects</a>
+<header class="case-hero case-hero--screen case-hero--canbus">
+<div class="case-hero__copy">
+<p class="case-kicker">Embedded Systems &amp; Protocol Engineering</p>
+<h1>
+<span class="case-title-line">350Z / VQ37</span>
+<span class="case-title-line">CAN Gateway</span>
+</h1>
+<p class="case-lede">Swaping a 3.7L VQ37VHR powertrain into a 2005 Nissan 350Z chassis introduced substantial CAN bus challenges.</p>
+<div class="case-actions">
+<a class="case-action" href="#highlighted-work">Highlighted work <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<figure class="case-media">
+<button type="button" class="case-image-button" data-case-image aria-label="350Z / VQ37 CAN Gateway — View details">
+<img src="images/projects/esp32-dev-board.jpg" alt="350Z / VQ37 CAN Gateway" fetchpriority="high" decoding="async">
+</button>
+</figure>
+</header>
+<dl class="case-meta">
+<div>
+<dt>service :</dt>
+<dd>Embedded Systems &amp; Protocol Engineering</dd>
+</div>
+<div>
+<dt>started :</dt>
+<dd>Fall 2026</dd>
+</div>
+</dl>
+<section class="case-section" id=highlighted-work>
+<div class="case-section__heading">
+<h2>Highlighted work</h2>
+<span class="case-section__index" aria-hidden="true">01</span>
+</div>
+<div class="case-highlights">
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">01</span>
+<h3>dual-CAN</h3>
+<p>I designed and built a dual-CAN automotive gateway in C++ targeting an ESP32 micro-controller.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">02</span>
+<h3>source telemetry</h3>
+<p>If source packets drop or time out, target frames pass through untouched.</p>
+</article>
+<article class="case-highlight">
+<span class="case-highlight__number" aria-hidden="true">03</span>
+<h3>differential test harness</h3>
+<p>To ensure behavioral parity across firmware migrations without risking live hardware, I developed a Python capture and analysis suite and an offline C++ differential test harness.</p>
+</article>
+</div>
+</section>
+<details class="case-detail">
+<summary>View details</summary>
+<div class="case-prose">
+<p>Swaping a 3.7L VQ37VHR powertrain into a 2005 Nissan 350Z chassis introduced a fundamental communication gap. The older chassis electronics and the newer ECU communicate across disparate CAN bus protocols, message rates, and payload byte layouts.</p>
+<p>Without an active hardware translator, critical OEM clusters including tachometer, and engine coolant temperature plus data like vehicle speed cannot interpret signals from the modern powertrain. I designed and built a dual-CAN automotive gateway in C++ targeting an ESP32 micro-controller.</p>
+<p>By combining the ESP32&#x27;s native TWAI (Two-Wire Automotive Interface) controller with an external MCP2515 SPI CAN transceiver, the gateway physically isolates the chassis and powertrain buses while selectively translating broadcast frames in real time. The firmware includes hardware abstraction layers, explicit timing paces, and gated transmission safety controls.</p>
+<p>A core engineering problem in vehicle message translation is preventing stale data from causing erratic vehicle behavior.</p>
+<p>If source packets drop or time out, target frames pass through untouched.  To ensure behavioral parity across firmware migrations without risking live hardware, I developed a Python capture and analysis suite and an offline C++ differential test harness. These tools run candidate firmware against recorded wire-level baselines from historical RP2040 implementations, comparing output mappings, source expiry, and message pacing across the entire operational domain before firmware is loaded onto physical hardware.</p>
+</div>
+</details>
+<ul class="case-stack">
+<li>C++</li>
+<li>ESP32</li>
+<li>TWAI</li>
+<li>MCP2515</li>
+<li>Python</li>
+</ul>
+<section class="case-section" >
+<div class="case-section__heading">
+<h2>CAN Gateway</h2>
+<span class="case-section__index" aria-hidden="true">02</span>
+</div>
+<div class="case-system">
+<div class="case-system__nodes">
+<div class="case-system__node">
+<small>powertrain</small>
+<strong>VQ37VHR</strong>
+</div>
+<div class="case-system__node">
+<small>dual-CAN</small>
+<strong>ESP32</strong>
+</div>
+<div class="case-system__node">
+<small>chassis</small>
+<strong>2005 350Z</strong>
+</div>
+</div>
+<p class="case-system__note">If source packets drop or time out, target frames pass through untouched.</p>
+</div>
+</section>
+<div class="case-next" aria-label="Project navigation">
+<a href="project6.html">
+<span class="case-next__label">↙ previous</span>
+<span class="case-next__title">Android Race Dash</span>
+</a>
+<a href="350z-swap.html">
+<span class="case-next__label">next ↗</span>
+<span class="case-next__title">350Z / VQ37VHR Engine Swap</span>
+</a>
+</div>
+</main>
+<dialog class="case-lightbox" aria-label="350Z / VQ37 CAN Gateway">
+<button type="button" aria-label="close">close ×</button>
+<img alt="">
+</dialog>
+            <div class="footer">
+                  <div class="container">
+                        <br><br>
+
+                        <div class="collab">
+                              <div class="row">
+                                    <div class="col-lg-12">
+                                          <p class="wow fadeInUp">Got an interesting project? I can help.</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <br>
+
+                        <div class="hr">
+                              <div class="row"></div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="info">
+                              <div class="row">
+                                    <div class="col-lg-4" id="personal">
+                                          <p class="wow fadeInUp">connect with me</p>
+                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a
+                                                      href="https://www.linkedin.com/in/alex-murdock/">ln
+                                                      @Alexander Murdock</a></h4>
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-lg-4" id="media">
+                                          <p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
+
+                                          <ul>
+                                                <li id="gh" class="wow fadeInUp" data-wow-delay="0.4s"><a
+                                                            href="https://github.com/Amurdock6">gh</a></li>
+                                                <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s"><a
+                                                            href="https://www.linkedin.com/in/alex-murdock/">ln</a>
+                                                </li>
+                                          </ul>
+
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-lg-4" id="address">
+                                          <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
+                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a
+                                                      href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>
+                                          </h4>
+                                          <br><br>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+      </div>
+
+      <!-- wow.js script init -->
+      <script>
+            new WOW().init();
+      </script>
+</body>
+
+</html>

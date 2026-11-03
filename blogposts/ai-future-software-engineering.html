@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta name="description" content="I believe we’re living through the end of traditional software engineering as we’ve known it, but also entering a new golden age of people actually building things. And that makes me excited!">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="Alexander Murdock">
+      <link rel="icon" href="/icons/portfolio-logo.png">
+
+      <title>Alex Murdock - My thoughts on AI and the future of software engineering</title>
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/css/nav.css">
+      <link rel="stylesheet" href="/css/blogpage.css">
+
+      <!-- Light Mode CSS (Disabled by Default) -->
+      <link rel="stylesheet" href="/css/lightmode.css" id="light-mode-style" disabled>
+
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+      <!-- ionicons -->
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="/css/animate.css">
+      <script src="/js/wow.min.js"></script>
+
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- Lightmode Script -->
+      <script src="/js/lightmode.js"></script>
+      <script src="../js/mobile-nav.js" defer></script>
+</head>
+
+<body>
+      <nav>
+            <span id="brand">
+                  <a href="/index.html">Alex Murdock</a>
+                  <br>
+                  <a href="/index.html" id="freelance">Software Engineer</a>
+            </span>
+
+            <ul id="menu">
+                  <li>
+                        <a href="/index.html">
+                              <span>.</span>
+                              <span>home</span>
+                              <span>home</span>
+                        </a>
+                  </li>
+
+                  <li>
+                        <a href="/index.html#projects">
+                              <span>.</span>
+                              <span>projects</span>
+                              <span>projects</span>
+                        </a>
+                  </li>
+
+                  <li>
+                        <a href="/work.html">
+                              <span>.</span>
+                              <span>work</span>
+                              <span>work</span>
+                        </a>
+                  </li>
+
+                  <li>
+                        <a href="/education.html">
+                              <span>.</span>
+                              <span>education</span>
+                              <span>education</span>
+                        </a>
+                  </li>
+
+                  <li>
+                        <a href="/blog.html">
+                              <span>.</span>
+                              <span>blog</span>
+                              <span>blog</span>
+                        </a>
+                  </li>
+
+                  <li>
+                        <a href="/about.html">
+                              <span>.</span>
+                              <span>about me</span>
+                              <span>about me</span>
+                        </a>
+                  </li>
+
+                  <li>
+                        <a href="/contact.html">
+                              <span>.</span>
+                              <span>contact</span>
+                              <span>contact</span>
+                        </a>
+                  </li>
+            </ul>
+
+            <button id="toggle" type="button" aria-controls="resize" aria-expanded="false">menu<span class="menu-icon" aria-hidden="true"></span></button>
+      </nav>
+
+      <div id="resize" role="dialog" aria-label="menu" aria-modal="true" aria-hidden="true" inert>
+            <button class="close-btn" type="button">close<span aria-hidden="true"> ×</span></button>
+            <ul id="menu">
+                  <li><a href="/index.html">home<span>.</span></a></li>
+                  <li><a href="/index.html#projects">projects<span>.</span></a></li>
+                  <li><a href="/work.html">work<span>.</span></a></li>
+                  <li><a href="/education.html">education<span>.</span></a></li>
+                  <li><a href="/blog.html" id="active-selector" class="">blog<span>.</span></a></li>
+                  <li><a href="/about.html">about me<span>.</span></a></li>
+                  <li><a href="/contact.html">contact<span>.</span></a></li>
+            </ul>
+      </div>
+
+      <div class="whitespace"></div>
+
+      <main class="container blogpost essay-post">
+            <article aria-labelledby="post-title">
+                  <header>
+                        <div class="title-and-theme">
+                              <h1 id="post-title">My thoughts on AI and the future of software engineering</h1>
+                              <span id="theme-toggle" aria-label="Toggle Light/Dark Mode" role="button" tabindex="0">
+                                    <ion-icon name="sunny-outline" class="icon sun-icon"></ion-icon>
+                                    <ion-icon name="moon-outline" class="icon moon-icon"></ion-icon>
+                              </span>
+                        </div>
+                        <p class="post-meta">
+                              <span>posted: <time datetime="2026-11-02">11/02/2026</time></span>
+                              <span>13 minute read</span>
+                        </p>
+                  </header>
+                  <a class="essay-post__image" href="/images/blog-posts/ai-future-software-engineering/main.webp">
+                        <img src="/images/blog-posts/ai-future-software-engineering/main.webp" alt="My thoughts on AI and the future of software engineering" width="5120" height="1440" decoding="async" fetchpriority="high">
+                  </a>
+                  <div class="tableOfContents" aria-labelledby="quick-links-title">
+                        <h2 id="quick-links-title">Quick Links:</h2>
+                        <ul>
+                        <li><a href="#what-the-job-is-becoming">What the job is becoming</a></li>
+                        <li><a href="#my-experience-with-ai">Why I’m so invested in it / My experience with AI</a></li>
+                        <li><a href="#what-makes-an-engineer-valuable">What makes an engineer valuable today?</a></li>
+                        <li><a href="#concerns-with-ai">Concerns with AI</a></li>
+                        <li><a href="#the-money-behind-ai">The money behind AI and where I think this is going</a></li>
+                        <li><a href="#closing-thoughts">Closing thoughts</a></li>
+                        </ul>
+                  </div>
+                  <div class="hero-content essay-post__body">
+                  <p>I believe we’re living through the end of traditional software engineering as we’ve known it, but also entering a new golden age of people actually building things. And that makes me excited!</p>
+
+                  <p>Over the past year or so, I’ve easily been spending 10+ hours a day building stuff with Codex, Claude Code, Gemini, and other AI tools. I’ve used them to build everything from websites and mobile apps to reverse-engineering and building embedded CAN bus translation software for my engine-swapped <a href="/350z-swap.html">350Z</a>. I’ve even recently been experimenting with AI to build CAD models for parts on my car. It is truly amazing how much these tools can do. Not only can they do these things, but they can do them extremely well! I’ve never had more fun building things than now!</p>
+
+                  <p>I’m personally all in on the AI revolution. I fully believe it is, and will continue to be, completely revolutionary for the way we build and ship software.</p>
+
+                  <h2 id="what-the-job-is-becoming">What the job is becoming</h2>
+
+                  <p>The role of a software engineer has always been about delivering new features, fixing bugs, clearing technical debt, or more simply put, solving problems with software. Writing code was something we had to do to achieve those goals. It was just a means to an end.</p>
+
+                  <p>Now with AI, all that time-consuming coding work is done by AI. I don’t know of a single dev still writing code by hand. It’s no longer a part of the job. Instead, the modern software engineer spends their time making larger architectural decisions, validating that what the AI built actually works, and ensuring it’s an effective, secure solution to the problem that needs to be solved.</p>
+
+                  <p>A big part of the job is now wrangling AI agents, quickly switching between tasks, and figuring out how to best maximize their output while trying to keep token usage low. In a lot of ways, it seems more like we’re moving towards being software development managers, where the AI agents are our team.</p>
+
+                  <p>I think being able to use these tools effectively is the most important skill a modern software engineer can develop. If you’re still writing most of your code by hand or skeptical of these tools, I would strongly suggest reevaluating how you’re using them.</p>
+
+                  <p>That doesn’t mean the engineering work disappears. You still need to understand the problem, make decisions about how the system should work, and know whether the result is any good. Just because you have a bunch of generated code doesn’t automatically mean you’ve solved the problem. You still have to validate and test to make sure what was generated actually works.</p>
+
+                  <p>But then again, that’s how it’s always been. Only now, instead of spending so much time actually writing the code, AI does that for us. Which means the amount of work a developer should be able to complete is much higher! We can build more, faster, and quite frankly, a lot of the AI-generated code is better than what many devs were writing by hand.</p>
+
+                  <p>To me, this is exciting because it frees me up to spend more time on the part of the job I’ve always enjoyed most. Actually building things! Coding was fun, and I do miss those late night coding sessions where I would be digging super deep into a particular feature or bug and get into the “zone”. But for me, the most fun was always in using these cool technologies to create something. AI makes that so much easier to do.</p>
+
+                  <h2 id="my-experience-with-ai">Why I’m so invested in it / My experience with AI</h2>
+
+                  <p>I easily have 2,000+ hours using these tools now, probably closer to 3,000. I’ve been using them since they first came out. I’m constantly using them, experimenting with them, and researching better ways to work with them. I’ve tried all the major frontier models and some of the lesser-known models.</p>
+
+                  <p>I’ve used all sorts of different models for everything from software development to integrating AI into my apps for things like outfit suggestions, image editing, and item detection, just to name a few examples. I've even built my own evaluation suites to help me and the StyleStreak team evaluate AI models for production use in the app. The biggest change for me, as I’ve been saying, is just how much more I can build and where I’m spending my time while working on projects.</p>
+
+                  <p>One example is <a href="/project7.html">StyleStreak</a>, the AI-powered wardrobe and outfit planning app I created for my senior capstone project. I came up with the idea, recruited the team, and led the product direction and architecture. It won first place at the University of Utah Senior Capstone Demo Day!</p>
+
+                  <p>I would highly recommend you take a look at this project if you haven’t already. It is really impressive what a group of four undergraduate students were able to build in two semesters of work. I’m not going to spend too much time glazing my own project here. But the main point I want to get across is just how much more we were able to achieve using AI in our development process, especially compared to previous capstone teams.</p>
+
+                  <p>Another project is the <a href="/canbus.html">embedded CAN bus translation software</a> for my engine-swapped 350Z. This type of work would have taken, at the very least, weeks if not months to do before AI.</p>
+
+                  <p>You would first have to capture the 350Z’s CAN bus traffic, figure out which CAN IDs and bytes contained the data you needed, and how that data was encoded. Then you would have to do the same for a vehicle with a VQ37VHR ECU, figure out how to translate the values, and map them to the CAN messages that the VQ37VHR ECU is expecting. And that’s just at the high level.</p>
+
+                  <p>To make all of that actually work, you would first have to figure out where to even wire an ESP32 device into the system, which would involve searching through hundreds of pages of service manual documentation. Then you’d have to write a bunch of super complex C or C++ code to capture that data on the CAN bus, translate only the messages and values you need, all while maintaining a transparent bridge that allows all other traffic through.</p>
+
+                  <p>Oh, and that code is some of the most complex, technical, in-the-weeds code one can write. There are so many foot guns, and performance is critical since delays can cause the bus to lag and important messages to get dropped entirely.</p>
+
+                  <p>With AI, I simply gave it the high-level details of what I wanted to do and told it to search the factory service manuals. Within minutes, it told me exactly where to tie the ESP32 into the CAN bus and wrote me about 1,000 lines of C++ code. I flashed it onto my ESP32, and boom, I had a CAN capture device I could use to decode the bus and eventually build my CAN bus bridge.</p>
+
+                  <p>In one afternoon, I had a fully working and tested transparent translation bridge on my ESP32 that could forward vehicle speed data from the 350Z chassis to the VQ37VHR ECU, and it fixed the error code the ECU was reporting. Truly mind blowing!</p>
+
+                  <p>I have so many other examples, and I’m still discovering new things these tools can do every day that just blow my mind! But I’ll leave it at these two projects to showcase why I think AI is the most transformative technology of my life so far and why I am so heavily bought into it.</p>
+
+                  <p>I feel lucky to have learned to program when I did. I had those critical years of learning the foundations of computer science without AI influencing that learning, and being able to build projects without it. I think that is a huge advantage. That being said, if you couldn’t tell, now that AI is here, I’ve fully embraced it, and I’m more productive than ever.</p>
+
+                  <h2 id="what-makes-an-engineer-valuable">What makes an engineer valuable today?</h2>
+
+                  <p>From my own experience, the value a software engineer delivers isn’t captured by the number of lines of code they write or the number of pull requests they submit. It’s about how much high-quality work they can deliver that produces real value for a company or individual.</p>
+
+                  <p>Code quality still matters. So do architecture, security, testing, and maintainability. Those are all part of delivering a good product. But the outcome is what matters. Did we actually solve the problem, and does the result work well?</p>
+
+                  <p>I’ve seen a lot of developers struggle with this shift, whether because they’re actively trying to avoid the tools or because they haven’t figured out how to be productive with them yet. I don’t think simply having access to AI is enough. Learning to use it effectively takes practice.</p>
+
+                  <p>The people who thrive will be those who can adapt quickly and use these tools to deliver high-quality, well-polished products. That’s where I’ve been putting my time, and I consider myself highly effective with them.</p>
+
+                  <p>And I would say, if you are still in school or recently graduated, these are the skills that are going to set you apart and make you valuable to a team.</p>
+
+                  <p>But this brings me to something I’m a lot less excited about when it comes to AI.</p>
+
+                  <h2 id="concerns-with-ai">Concerns with AI</h2>
+
+                  <p>The first thing I am going to touch on, because it is the most relevant to me, is what AI is doing to new grads and students searching for jobs in software engineering.</p>
+
+                  <p>From talking to people I know who recently graduated, I would say that around 80% of them still do not have jobs within software or a related field after graduating back in May of 2026.</p>
+
+                  <p>To further explain how bad it is to be a new grad in this market, I went to dinner with my old capstone team back in September. Only one other teammate and I had jobs in software-related fields. So only half the winning team amongst the entire CS, DS, and Software Development graduating class had a job...</p>
+
+                  <p>The project was judged by industry professionals too, the very people who are supposed to be hiring us, and still, only half the team had a job post-grad.</p>
+
+                  <p>So what is causing this? Why are companies not hiring juniors anymore? I think the largest contributor is AI.</p>
+
+                  <p>Junior engineering roles are gradually going extinct. There are still openings for sure, but there are a lot fewer entry-level positions compared to the number of mid-level or senior engineer openings.</p>
+
+                  <p>Add on top of that the mass layoffs big tech has been doing over the past couple of years, plus the insane number of people who went to school to get a CS degree, and we have one of the most competitive job markets there has ever been.</p>
+
+                  <p>All of that is bad enough. There is a ton of competition and way more juniors looking for a job than there are jobs available. But why are companies creating so few junior positions in the first place?</p>
+
+                  <p>I think we need to first examine what the junior developer’s role was on a software team pre-AI.</p>
+
+                  <p>It used to be that junior engineers were your code monkeys. You would assign them some task to do, and they would go out, come up with a solution, write some code, hopefully test it, and come back to you with some work to review. Oftentimes with some minor mistakes here and there that you would either help fix or advise them on how to fix.</p>
+
+                  <p>Sounds a lot like an AI agent, doesn’t it? That’s essentially what I am doing with Codex or Claude all day.</p>
+
+                  <p>So why would a company want to hire a team of junior engineers and pay their expensive salaries when they can spend a fraction of that on tokens and give that work to more experienced engineers?</p>
+
+                  <p>I am not saying this is the right thing to do. In fact, I think the role of the junior engineer is still important. Without them, the pool of experienced engineers will eventually dry up.</p>
+
+                  <p>But then again, does that even matter? Will we even have software engineers in the future?</p>
+
+                  <p>I think we will, but not nearly at the scale we do today. I believe the demand for software engineers will greatly shrink in the next 5-10 years, and I think the door for new grads to get a job in the software space is being closed behind me as companies are coming to the same realization.</p>
+
+                  <p>I think the best way to survive in this new world is to become one of the absolute best engineers at working with and effectively utilizing AI coding agents and tools to deliver quality products and work that deliver real value to a company.</p>
+
+                  <p>I hope I am wrong. I believe it was Jensen Huang who said something along the lines of: because software is so cheap and fast to make now, the demand for software will go up, and because of that, so will the demand for software engineers.</p>
+
+                  <p>But looking around at the landscape today, I don’t see that being the case. And at the rate at which tools like Codex and Claude are improving, I really don’t see that being the case.</p>
+
+                  <h2 id="the-money-behind-ai">The money behind AI and where I think this is going</h2>
+
+                  <p>This on its own could probably be a whole other blog post. But I’ll try and keep it short.</p>
+
+                  <p>The other thing that really concerns me is how the hell the current AI economy is supposed to work long-term. I'm all in on AI as a technology, but that doesn't mean I think the way it's currently being financed makes any sense.</p>
+
+                  <p>The amount of money being poured into AI infrastructure is absolutely insane. We're talking hundreds of billions of dollars being spent on GPUs, data centers, and training models. These companies are generating a ton of revenue, but they're also spending unbelievable amounts of money, and I just don't see how the current level of investment can continue forever.</p>
+
+                  <p>What concerns me even more is some of the financing arrangements going on between Nvidia, the AI labs, and the companies building these data centers. You have companies investing in other companies that then turn around and spend that money buying their GPUs or computing services. In other words, circular financing. There's a lot of money moving around between the same group of companies, and it makes me wonder how much of this demand is actually sustainable without all that investment continuing to pour in.</p>
+
+                  <p>Then you look at Anthropic's recent IPO filings, and some of the numbers are just mind blowing. They have nearly $900 billion in future compute and infrastructure commitments, with around $70 billion due within the next year alone.</p>
+
+                  <p>And then there's the way they're reporting revenue. Reuters reported that nearly half of Anthropic's 2025 revenue came through Amazon and Google's cloud platforms, which also happen to be major investors in Anthropic and suppliers of its computing infrastructure. Anthropic reports the full amount of those marketplace sales as revenue, then records the cloud providers cut separately as an expense. OpenAI has criticized this approach, arguing it makes Anthropic's revenue appear billions of dollars higher than it would under a different accounting method.</p>
+
+                  <p>Now, Anthropic says this follows established accounting practices, and I'm not saying they're committing fraud. But when you combine these accounting differences with the circular financing arrangements, the massive future spending commitments, and the amount of money these companies are raising, I think there are some serious questions about how sustainable this whole thing really is.</p>
+
+                  <p>How much longer can this level of spending continue before these companies actually have to generate enough money to support it?</p>
+
+                  <p>Something is going to have to give eventually. These companies can't rely on investors to keep funding these massive expansions forever. At some point, they need to make enough money to justify what they're spending.</p>
+
+                  <p>So how are they going to do that?</p>
+
+                  <p>I think we're going to see more expensive subscriptions, tighter usage limits, and a lot more advertising. We're already starting to see ads introduced into some AI products, and I worry about where that goes from here. These companies have an incredible amount of information about their users. What happens when the AI you're relying on for advice also has a financial incentive to recommend you a particular product or service? I really don't want to see these tools turn into another advertising platform where monetization starts getting in the way of actually being useful.</p>
+
+                  <p>And this is where I think open-weight models are going to become increasingly important.</p>
+
+                  <p>The open-weight models available today are already extremely impressive, and they continue to improve. You can run some genuinely capable coding models on your own hardware without paying a company for every token you use.</p>
+
+                  <p>The problem is that the hardware is still so expensive. I've been looking into building a local AI setup myself, and used RTX 3090s with 24 GB of VRAM are easily going for around $1,200 in my local market. That's a pretty big upfront investment when you can get access to frontier models for $20 a month. Even paying for a couple of subscriptions is significantly cheaper, especially when you factor in electricity and the fact that these models keep improving.</p>
+
+                  <p>For me personally, I've found the most effective setup to be using a combination of models. I like using the strongest frontier reasoning models I have access to for planning, architecture, and figuring out how I want something implemented. Then I can hand that plan off to a cheaper model like Gemini to actually do the implementation.</p>
+
+                  <p>Right now, I pay $20 a month for ChatGPT Plus and have access to Gemini through my school account, so I'm spending almost nothing compared to the amount of work I'm getting done. I do occasionally hit usage limits, but for the most part, it's been a great setup.</p>
+
+                  <p>I'd love to eventually replace those cheaper implementation models with open-weight models running locally. Not only would I have more control over my setup, but I wouldn't have to worry about usage limits or what these companies decide to charge in the future.</p>
+
+                  <p>I don't see myself replacing the strongest frontier models for architecture, complex reasoning, and planning anytime soon, though. I think there's still a lot of value in having the smartest model available working through the bigger decisions, especially when security and reliability are involved. Of course, you still need to validate what it produces.</p>
+
+                  <p>But I do think we'll see more developers moving toward a hybrid setup like this. Use the frontier models where their intelligence really matters, and use cheaper or locally hosted open-weight models for the rest.</p>
+
+                  <p>If investment in AI infrastructure starts slowing down and GPUs become more affordable, I think that could accelerate this shift even further.</p>
+
+                  <p>I don't know exactly how this all plays out. Maybe the economics improve enough that the frontier labs can keep offering increasingly powerful models at lower prices. Or maybe the current AI investment boom eventually comes crashing down.</p>
+
+                  <p>Either way, I don't think AI itself is going anywhere. The technology is far too useful for that. But I do think the way we access it, pay for it, and build software with it is going to change quite a bit over the next few years.</p>
+
+                  <p>I know my outlook won’t be popular with everyone. But whether you’re on board with it or not, I believe AI will continue changing the way we build software and the world as a whole. I’d much rather be figuring out how to get the most out of it and adapt than be complacent while I sit around and wait for it to replace me.</p>
+
+                  <h2 id="closing-thoughts">Closing thoughts</h2>
+
+                  <p>I truly feel this is the best time there has ever been to be someone who likes to build cool things. I can build more now with less friction than I ever could before, and I’m having more fun now than I ever have!</p>
+
+                  <p>At the same time, on a professional note, I have a pretty poor outlook on the future of software engineering as a profession. I think we're going to see fewer people getting paid to build software, and I have serious doubts about how sustainable the current AI economy is.</p>
+
+                  <p>And that's the strange part about all of this. I've never been more excited about the future of building software, but I've also never been more concerned about the future of being paid to build it.</p>
+
+                  <p>I hope I'm wrong about some of these concerns. But regardless of what happens, I think AI is here to stay, and the way we build software is never going back to what it was. I'd much rather be learning how to get the most out of these tools, adapting, and building things than sitting around waiting for it to replace me.</p>
+                  </div>
+            </article>
+      </main>
+
+      <div class="footer">
+            <div class="container">
+                  <br><br>
+
+                  <div class="collab">
+                        <div class="row">
+                              <div class="col-lg-12">
+                                    <p class="wow fadeInUp">Got an interesting project? I can help.</p>
+                              </div>
+                        </div>
+                  </div>
+
+                  <br>
+
+                  <div class="hr">
+                        <div class="row"></div>
+                  </div>
+
+                  <br><br>
+
+                  <div class="info">
+                        <div class="row">
+                              <div class="col-lg-4" id="personal">
+                                    <p class="wow fadeInUp">connect with me</p>
+                                    <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a href="https://www.linkedin.com/in/alex-murdock/">ln @Alexander Murdock</a></h4>
+                                    <br><br>
+                              </div>
+
+                              <div class="col-lg-4" id="media">
+                                    <p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
+
+                                    <ul>
+                                          <li id="gh" class="wow fadeInUp" data-wow-delay="0.4s"><a href="https://github.com/Amurdock6">gh</a></li>
+                                          <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s"><a href="https://www.linkedin.com/in/alex-murdock/">ln</a>
+                                          </li>
+                                    </ul>
+
+                                    <br><br>
+                              </div>
+
+                              <div class="col-lg-4" id="address">
+                                    <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
+                                    <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a href="mailto:alexanderrmurdock@gmail.com">alexanderrmurdock@gmail.com</a>
+                                    </h4>
+                                    <br><br>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <br><br><br><br>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+      <script type="text/javascript">
+
+
+
+
+
+
+
+            TweenMax.from("#brand", 1, {
+                  delay: 0.4,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+
+            TweenMax.staggerFrom("#menu li a", 1, {
+                  delay: 0.4,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            }, 0.1);
+
+            new WOW().init();
+
+      </script>
+      <dialog class="photo-viewer" aria-label="My thoughts on AI and the future of software engineering">
+            <div class="photo-viewer__controls">
+                  <button type="button" data-zoom-out aria-label="Zoom out">−</button>
+                  <button type="button" data-zoom-in aria-label="Zoom in">+</button>
+                  <button type="button" data-close aria-label="close">×</button>
+            </div>
+            <div class="photo-viewer__stage" tabindex="0">
+                  <img src="/images/blog-posts/ai-future-software-engineering/main.webp" alt="My thoughts on AI and the future of software engineering" draggable="false">
+            </div>
+      </dialog>
+      <script src="/js/photo-viewer.js"></script>
+</body>
+
+</html>

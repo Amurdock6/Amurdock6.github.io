@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="960" viewBox="0 0 1200 960" fill="none">
+  <title>350Z / VQ37 CAN Gateway</title>
+  <desc>A high-level illustration of an ESP32 gateway connecting the VQ37VHR powertrain and 2005 Nissan 350Z chassis. The traces are decorative.</desc>
+  <defs>
+    <radialGradient id="ambient">
+      <stop stop-color="#3c3022"/>
+      <stop offset="1" stop-color="#121613"/>
+    </radialGradient>
+    <linearGradient id="board" x1="390" y1="310" x2="810" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#303a33"/>
+      <stop offset="1" stop-color="#17201a"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="490" y1="400" x2="710" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#383a30"/>
+      <stop offset="1" stop-color="#151b16"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="70" x2="1130" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#eec18b" stop-opacity=".15"/>
+      <stop offset=".35" stop-color="#eec18b"/>
+      <stop offset=".65" stop-color="#eec18b"/>
+      <stop offset="1" stop-color="#eec18b" stop-opacity=".15"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#dbe7d7" stroke-opacity=".045"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-100%" width="200%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#000" flood-opacity=".6"/>
+    </filter>
+  </defs>
+
+  <path fill="url(#ambient)" d="M0 0h1200v960H0z"/>
+  <path fill="url(#grid)" d="M0 0h1200v960H0z"/>
+  <path d="M48 112V48h64m976 0h64v64M48 848v64h64m976 0h64v-64" stroke="#eec18b" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M82 110h40" stroke="#eec18b" stroke-width="3"/>
+  <text x="140" y="118" fill="#d6d9d1" font-family="monospace" font-size="22" letter-spacing="3">350Z / VQ37</text>
+  <circle cx="1106" cy="110" r="5" fill="#eec18b"/>
+
+  <g font-family="sans-serif">
+    <text x="110" y="238" fill="#f3e5d1" font-size="36" letter-spacing="-1">VQ37VHR</text>
+    <text x="110" y="274" fill="#a6ad9f" font-family="monospace" font-size="20">powertrain</text>
+    <text x="1090" y="238" text-anchor="end" fill="#f3e5d1" font-size="36" letter-spacing="-1">2005 350Z</text>
+    <text x="1090" y="274" text-anchor="end" fill="#a6ad9f" font-family="monospace" font-size="20">chassis</text>
+  </g>
+
+  <g stroke="#7d8976" stroke-opacity=".22" stroke-width="2">
+    <path d="M72 356h176l54 54h80M72 642h176l54-54h80M1128 356H952l-54 54h-80M1128 642H952l-54-54h-80"/>
+    <path d="M110 326v344M1090 326v344" stroke-dasharray="3 12"/>
+  </g>
+  <g stroke="url(#signal)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 458h194l48 48h92M72 550h148l48 48h138M1128 458H934l-48 48h-92M1128 550H980l-48 48H794" filter="url(#glow)" opacity=".65"/>
+    <path d="M72 458h194l48 48h92M72 550h148l48 48h138M1128 458H934l-48 48h-92M1128 550H980l-48 48H794"/>
+  </g>
+  <g fill="#eec18b">
+    <circle cx="182" cy="458" r="6"/>
+    <circle cx="308" cy="598" r="6"/>
+    <circle cx="1018" cy="458" r="6"/>
+    <circle cx="892" cy="598" r="6"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="390" y="326" width="420" height="372" rx="30" fill="url(#board)" stroke="#9b9c7a" stroke-width="2"/>
+    <rect x="406" y="342" width="388" height="340" rx="18" stroke="#727f68" stroke-opacity=".45"/>
+    <g fill="#141b16" stroke="#879077" stroke-width="2">
+      <circle cx="424" cy="360" r="7"/>
+      <circle cx="776" cy="360" r="7"/>
+      <circle cx="424" cy="664" r="7"/>
+      <circle cx="776" cy="664" r="7"/>
+    </g>
+    <g stroke="#c7b58d" stroke-width="8" stroke-linecap="square">
+      <path d="M462 434h24m-24 26h24m-24 26h24m-24 26h24m-24 26h24m-24 26h24m-24 26h24"/>
+      <path d="M714 434h24m-24 26h24m-24 26h24m-24 26h24m-24 26h24m-24 26h24m-24 26h24"/>
+      <path d="M522 376v24m26-24v24m26-24v24m26-24v24m26-24v24m26-24v24m26-24v24"/>
+      <path d="M522 624v24m26-24v24m26-24v24m26-24v24m26-24v24m26-24v24m26-24v24"/>
+    </g>
+    <rect x="482" y="396" width="236" height="232" rx="12" fill="url(#chip)" stroke="#eec18b" stroke-opacity=".7" stroke-width="2"/>
+    <rect x="496" y="410" width="208" height="204" rx="5" stroke="#eec18b" stroke-opacity=".12"/>
+    <circle cx="504" cy="418" r="4" fill="#eec18b" fill-opacity=".6"/>
+    <path d="M560 458h80m-64 12h48" stroke="#eec18b" stroke-opacity=".4" stroke-width="2"/>
+    <text x="600" y="526" text-anchor="middle" fill="#f3e5d1" font-family="sans-serif" font-size="42" letter-spacing="1">ESP32</text>
+    <text x="600" y="566" text-anchor="middle" fill="#c8ba9d" font-family="monospace" font-size="19" letter-spacing="2">dual-CAN</text>
+  </g>
+
+  <text x="600" y="802" text-anchor="middle" fill="#f3e5d1" font-family="sans-serif" font-size="52" letter-spacing="-2">CAN Gateway</text>
+  <path d="M480 842h240" stroke="#eec18b" stroke-opacity=".3"/>
+  <text x="600" y="887" text-anchor="middle" fill="#a6ad9f" font-family="monospace" font-size="20" letter-spacing="4">C++ · ESP32 · Python</text>
+</svg>

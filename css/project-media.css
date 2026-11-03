@@ -1,0 +1,37 @@
+.case-photo-gallery,
+.case-video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.case-photo-gallery figure,
+.case-video-gallery figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.case-photo-gallery img,
+.case-video-gallery video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #171a17;
+}
+
+.case-video-gallery video:focus-visible {
+    outline: 2px solid var(--case-accent);
+    outline-offset: 6px;
+}
+
+@media (max-width: 760px) {
+    .case-photo-gallery,
+    .case-video-gallery {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 28px;
+    }
+}
